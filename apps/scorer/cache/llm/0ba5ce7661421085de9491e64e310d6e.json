@@ -1,0 +1,105 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "increase the cash rate target by 25 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "inflation has fallen substantially since its peak in 2022",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.4
+      },
+      {
+        "phrase": "it picked up materially in the second half of 2025",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "some of the increase in inflation reflects greater capacity pressures",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "sharply higher fuel prices, which, if sustained, will add to inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "material risk that inflation will remain above target for longer",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Growth in private demand strengthened substantially more than was expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "unemployment rate has been a little lower than expected",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "measures of labour underutilisation remain at low rates",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "inflationary pressures picked up materially in the second half of 2025",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "labour market has tightened a little recently",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "capacity pressures are slightly greater than previously assessed",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "could add to global and domestic inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "inflation is likely to remain above target for some time",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "risks have tilted further to the upside, including to inflation expectations",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "It was therefore appropriate to increase the cash rate target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance through rate increases driven by material inflation risks, capacity pressures, tight labour market conditions, and upside risks to inflation expectations."
+  }
+}

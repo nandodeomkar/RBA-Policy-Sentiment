@@ -1,0 +1,75 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "Inflation has fallen substantially since the peak in 2022",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Both headline and trimmed mean inflation were within the 2–3 per cent range",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "inflation in the September quarter may be higher than expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "private demand is recovering a little more rapidly than expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "private consumption is picking up as real household incomes rise",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "labour market conditions have been broadly steady in recent months and remain a little tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "wages growth has eased from its peak",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.4
+      },
+      {
+        "phrase": "growth in unit labour costs remains high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "stronger-than-expected data on growth and inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "indications that inflation may be persistent in some areas",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "the Board decided that it was appropriate to maintain the cash rate",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.4
+      }
+    ],
+    "rationale": "The RBA signals a cautious hold stance, balancing dovish inflation progress against hawkish concerns about persistent inflation, strong demand, and tight labour markets."
+  }
+}

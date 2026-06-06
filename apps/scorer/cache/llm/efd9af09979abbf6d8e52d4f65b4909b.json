@@ -1,0 +1,93 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "decided to raise the cash rate target by 25 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "Inflation in Australia has passed its peak but is still too high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "is proving more persistent than expected a few months ago",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "progress looks to be slower than earlier expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "an increase in interest rates was warranted today",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "the risk of inflation remaining higher for longer has increased",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "Underlying inflation was higher than expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "the economy is experiencing a period of below-trend growth",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Conditions in the labour market have eased but they remain tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "household consumption growth is weak",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "the economy is forecast to grow below trend",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "employment is expected to grow slower than the labour force",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Returning inflation to target within a reasonable timeframe remains the Boards priority",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Board remains resolute in its determination to return inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance dominated by inflation concerns, with a 25bp rate increase justified by persistent inflation above target and upside surprises, partially offset by dovish signals regarding below-trend growth and labour market easing."
+  }
+}

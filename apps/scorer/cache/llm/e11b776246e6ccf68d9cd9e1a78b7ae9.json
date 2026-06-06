@@ -1,0 +1,81 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "increase the cash rate target by 25 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "at 7 per cent is still too high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "a further increase in interest rates was warranted today",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "services price inflation is still very high and broadly based",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "Unit labour costs are also rising briskly",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "the labour market remains very tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "unemployment rate at a near 50-year low",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Todays further adjustment in interest rates will help",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "Some further tightening of monetary policy may be required",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "the path to achieving a soft landing remains a narrow one",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "below-trend growth in the economy",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "substantial slowing in household spending",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.65
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance on inflation control through rate increases and warnings about persistent price pressures, while acknowledging dovish growth concerns regarding below-trend economic expansion and household consumption weakness."
+  }
+}

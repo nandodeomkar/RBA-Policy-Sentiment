@@ -1,0 +1,63 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "maintain the targets of 10 basis points for the cash rate",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "purchase an additional $100 billion of bonds",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Inflation remains low and below central bank targets",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "strong growth in employment and a welcome decline in the unemployment rate",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "Wage and price pressures remain subdued",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflation and wages growth are expected to pick up, but to do so only gradually",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The Board remains committed to maintaining highly supportive monetary conditions",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Board will not increase the cash rate until actual inflation is sustainably within the…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "The Board does not expect these conditions to be met until 2024 at the earliest",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The RBA maintains accommodative policy settings with no rate increases expected until 2024, citing subdued inflation and wage pressures despite strong near-term growth and employment improvements."
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "Inflation has fallen substantially since the peak in 2022",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Measures of underlying inflation are around 3½ per cent, which is still some way from…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflation returning sustainably to the midpoint of the target until 2026",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "inflationary pressures are declining in line with these recent forecasts, but risks remain",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "While underlying inflation is still high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Growth in output has been weak",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "the economy grew by only 0.8 per cent over the past year",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "employment grew strongly over the three months to October",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Wage pressures have eased more than expected",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "monetary policy remains restrictive and is working as anticipated",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Some of the upside risks to inflation appear to have eased",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "underlying inflation is more indicative of inflation momentum, and it remains too high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Board remains resolute in its determination to return inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance on inflation (still elevated, risks remain) balanced against dovish growth concerns (weak output), while maintaining an unchanged policy rate and emphasizing data-dependent decisions."
+  }
+}

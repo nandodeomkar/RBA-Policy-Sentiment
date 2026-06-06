@@ -1,0 +1,105 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "maintain the cash rate target at 10 basis points",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "cease further purchases under the bond purchase program",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "spending is expected to pick up as case numbers trend lower",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "GDP growth of around 4¼ per cent over 2022",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "labour market has recovered strongly",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "unemployment rate declining to 4.2 per cent in December",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "high numbers of job vacancies suggest further gains in employment",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "unemployment rate to fall to below 4 per cent later in the year",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Wages growth has picked up",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "A further pick-up in wages growth is expected as the labour market tightens",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Inflation has picked up more quickly than the RBA had expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "underlying inflation to increase further in coming quarters to around 3¼ per cent",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "faster-than-expected progress has been made towards the RBA's goals",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "it will not increase the cash rate until actual inflation is sustainably within the 2…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "it is too early to conclude that it is sustainably within the target band",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The Board is prepared to be patient",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      }
+    ],
+    "rationale": "The RBA signals a gradual tightening bias by ending QE while maintaining dovish forward guidance, acknowledging faster inflation than expected but emphasizing patience pending sustained inflation within target and modest wage growth."
+  }
+}

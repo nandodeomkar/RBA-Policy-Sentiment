@@ -1,0 +1,81 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "Inflation in Australia has passed its peak but is still too high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "the prices of many services are continuing to rise briskly",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Rent inflation also remains elevated",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "the economy is still experiencing a period of below-trend growth",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "High inflation is weighing on peoples real incomes",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "household consumption growth is weak",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "conditions in the labour market remain tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "the unemployment rate is expected to rise gradually",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "Returning inflation to target within a reasonable timeframe remains the Boards priority",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "High inflation makes life difficult for everyone and damages the functioning of the economy",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Some further tightening of monetary policy may be required to ensure that inflation returns to…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The Board remains resolute in its determination to return inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance on inflation control while acknowledging dovish growth and employment concerns, maintaining a hold while reserving the option for further tightening if inflation does not return to target as expected."
+  }
+}

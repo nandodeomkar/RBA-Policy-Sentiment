@@ -1,0 +1,123 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "inflation continues to moderate, in line with the RBAs latest forecasts",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "continuing excess demand in the economy and strong domestic cost pressures",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Higher interest rates are working to establish a more sustainable balance",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "conditions in the labour market continue to ease gradually",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "remain tighter than is consistent with sustained full employment and inflation at target",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Wages growth picked up a little further in the December quarter",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "appears to have peaked with indications it will moderate over the year ahead",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "encouraging signs that inflation is moderating",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "growth has slowed",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "Household consumption growth remains particularly weak",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "growth in unit labour costs remains very high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflation to return to the target range of 2–3 per cent in 2025",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "unemployment rate and the broader underutilisation rate are expected to increase a bit further",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "services price inflation has remained persistent",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Returning inflation to target within a reasonable timeframe remains the Boards highest priority",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "inflation is easing, it remains high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "it will be some time yet before inflation is sustainably in the target range",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The Board is not ruling anything in or out",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Board remains resolute in its determination to return inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance by emphasizing persistent inflation concerns, excess demand, and strong cost pressures, while maintaining the cash rate unchanged and reserving the option for future tightening."
+  }
+}

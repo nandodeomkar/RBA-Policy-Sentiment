@@ -1,0 +1,81 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "decided to increase the cash rate target by 25 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "Global inflation remains very high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflation has peaked in Australia",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "central forecast is for inflation to decline this year and next",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Growth over the next couple of years is expected to be below trend",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Household consumption growth has slowed due to the tighter financial conditions",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The labour market remains very tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "unemployment is expected to increase",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Wages growth is continuing to pick up in response to the tight labour market",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "remains alert to the risk of a prices-wages spiral",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "further tightening of monetary policy will be needed to ensure that inflation returns to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "remains resolute in its determination to return inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance on inflation control through rate increases and vigilance against wage-price spirals, while acknowledging dovish growth and employment concerns as the economy slows."
+  }
+}

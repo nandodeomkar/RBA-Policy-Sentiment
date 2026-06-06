@@ -1,0 +1,33 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "will not increase the cash rate target until progress is being made towards full employment",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "confident that inflation will be sustainably within the 2–3 per cent target band",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "it is likely that smaller and less frequent purchases of government bonds will be required",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The Bank will do what is necessary to achieve the 3-year yield target",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      }
+    ],
+    "rationale": "The statement signals a dovish stance overall, with explicit forward guidance against rate increases until employment improves and inflation targets are met, while acknowledging some potential tapering of bond purchases as conditions improve."
+  }
+}

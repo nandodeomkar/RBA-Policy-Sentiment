@@ -1,0 +1,57 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "the recovery is still expected to be uneven and drawn out",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "A further rise in the unemployment rate is still expected",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The extended period of high unemployment and excess capacity is expected to result in subdued…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "inflation is forecast to be 1 per cent in 2021 and 1½ per cent in…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Board views addressing the high rate of unemployment as an important national priority",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "the Board will not increase the cash rate until actual inflation is sustainably within the…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "the Board is not expecting to increase the cash rate for at least 3 years",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.95
+      },
+      {
+        "phrase": "The Board is prepared to do more if necessary",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      }
+    ],
+    "rationale": "The statement signals a dovish stance across all three dimensions, with the strongest signals on inflation (forward guidance of no rate increases for 3+ years) and employment (prioritizing unemployment reduction), reflecting accommodation in response to subdued inflation and high unemployment."
+  }
+}

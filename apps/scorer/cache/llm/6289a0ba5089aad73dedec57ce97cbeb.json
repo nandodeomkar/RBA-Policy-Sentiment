@@ -1,0 +1,87 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "inflation still some way above the midpoint of the 2–3 per cent target range",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Broader data indicate continuing excess demand in the economy",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "elevated domestic cost pressures, for both labour and non-labour inputs",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Conditions in the labour market eased further over the past month but remain tighter than…",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Wages growth appears to have peaked but is still above the level that can be…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "output growth has been subdued, and consumption per capita has been declining",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "risks to the upside remain",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The persistence of services price inflation is a key uncertainty",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "growth in unit labour costs has eased, it remains high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "there is a risk that household consumption picks up more slowly than expected, resulting in…",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Inflation is easing but has been doing so more slowly than previously expected and it…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "remain vigilant to upside risks to inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The Board remains resolute in its determination to return inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance by emphasizing persistent inflation above target, excess demand, elevated cost pressures, and upside risks, while acknowledging growth weakness and mixed data, resulting in a hold with vigilant monitoring."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "decided to increase the cash rate target by 25 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "it picked up materially in the second half of 2025",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "some of the increase in inflation reflects greater capacity pressures",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflation is likely to remain above target for some time",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Growth in private demand has strengthened substantially more than expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Activity and prices in the housing market are also continuing to pick up",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "labour market conditions remain a little tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The unemployment rate has been a little lower than expected",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "broader measures of wages growth continue to be strong",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "growth in unit labour costs remains high",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflationary pressures picked up materially in the second half of 2025",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "private demand is growing more quickly than expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "capacity pressures are greater than previously assessed",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "it was appropriate to increase the cash rate target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      }
+    ],
+    "rationale": "The statement signals a hawkish policy stance across inflation, growth, and employment dimensions, with the RBA raising rates due to material pickup in inflation, stronger-than-expected demand growth, and tight labour market conditions."
+  }
+}

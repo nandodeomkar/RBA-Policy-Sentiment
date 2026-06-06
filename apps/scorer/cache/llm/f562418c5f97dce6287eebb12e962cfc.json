@@ -1,0 +1,75 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "Inflation continued to ease in the December quarter",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "inflation remains high at 4.1 per cent",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Services price inflation remains high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "continuing excess demand in the economy",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Higher interest rates are working to establish a more sustainable balance",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "conditions in the labour market continue to ease gradually",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "they remain tighter than is consistent with sustained full employment",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "the Board remains highly attentive to inflation risks",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "a further increase in interest rates cannot be ruled out",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "inflation remains high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Returning inflation to target within a reasonable timeframe remains the Boards highest priority",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance on inflation control, emphasizing persistent inflation risks and explicitly noting that further rate increases cannot be ruled out, while acknowledging some easing in goods prices and gradual labour market softening."
+  }
+}

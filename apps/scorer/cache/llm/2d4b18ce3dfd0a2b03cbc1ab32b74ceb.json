@@ -1,0 +1,75 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "inflation has picked up more recently",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "signs of a more broadly based pick-up in inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "will bear close monitoring",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "Growth in private demand has strengthened",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Activity and prices in the housing market are also continuing to pick up",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "labour market conditions remain a little tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "the pick-up in momentum has been stronger than anticipated",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "likely to add to capacity pressures",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "risks to inflation have tilted to the upside",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "further modest easing is expected",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "it was appropriate to remain cautious",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance by emphasizing upside inflation risks, capacity pressures, and tight labour markets, while maintaining the cash rate unchanged and adopting a cautious, data-dependent approach."
+  }
+}

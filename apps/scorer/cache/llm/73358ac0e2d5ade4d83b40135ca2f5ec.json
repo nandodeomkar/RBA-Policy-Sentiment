@@ -1,0 +1,45 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "The economic recovery in Australia is stronger than earlier expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Progress in reducing unemployment has been faster than expected",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflation and wage pressures are subdued",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "a pick-up in inflation and wages growth is expected, it is likely to be only…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "It will not increase the cash rate until actual inflation is sustainably within the 2…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "This is unlikely to be until 2024 at the earliest",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.85
+      }
+    ],
+    "rationale": "The RBA signals a dovish stance by emphasizing subdued inflation and wage pressures, expecting only gradual pick-up, and committing not to raise rates until 2024 at earliest, despite acknowledging stronger-than-expected growth and employment progress."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "maintain the current policy settings",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "sharp rise in unemployment is occurring",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "significant easing in monetary policies",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "scaled back the size and frequency of bond purchases",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "prepared to scale-up these purchases again",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "will do whatever is necessary",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "output falls by around 10 per cent",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "unemployment rate peaks at around 10 per cent",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "inflation remains below 2 per cent over the next few years",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "expected to turn negative temporarily in the June quarter",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "will not increase the cash rate target until progress is being made towards full employment",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "confident that inflation will be sustainably within the 2–3 per cent target band",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      }
+    ],
+    "rationale": "The statement signals a dovish stance overall, maintaining accommodative policy settings while acknowledging severe economic contraction and elevated unemployment, with inflation expected to remain subdued."
+  }
+}

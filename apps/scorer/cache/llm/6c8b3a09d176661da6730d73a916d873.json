@@ -1,0 +1,105 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "decided to increase the cash rate target by 25 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "Inflation picked up materially in the second half of 2025",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "greater capacity pressures",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "sharply higher fuel and related commodity prices, which are already adding to inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "Short-term measures of inflation expectations have also risen",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "underlying inflation peaking higher than was expected in February",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "demand growth slows and capacity pressures ease in response to higher interest rates",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "plausible scenarios where inflation is higher and activity lower than envisaged",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "further upward pressure on global energy prices",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "growth to be lower in Australias major trading partners and also in Australia",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "Higher fuel prices are adding to inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "second-round effects on prices for goods and services more broadly",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "high inflation recorded around the start of 2026, reflecting capacity pressures",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "inflation is likely to remain above target for some time",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "risks remain tilted to the upside, including to inflation expectations",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "appropriate to increase the cash rate target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      }
+    ],
+    "rationale": "The RBA statement signals a hawkish stance dominated by inflation concerns, with multiple references to elevated and rising inflation pressures, capacity constraints, and upside risks to inflation expectations, justifying the 25 basis point rate increase."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "committed to returning inflation to the 2–3 per cent range",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "further increases are likely to be required over the period ahead",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "inflation in Australia is too high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "the labour market is very tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "unemployment rate is around the lowest rate in almost 50 years",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "Wages growth is continuing to pick up",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Boards priority is to return inflation to the 2–3 per cent range",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "The Board expects to increase interest rates further over the period ahead",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "Board remains resolute in its determination to return inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      }
+    ],
+    "rationale": "The statement signals a hawkish stance across inflation and employment dimensions, with repeated commitments to further rate increases and strong language about returning inflation to target despite tight labour market conditions."
+  }
+}

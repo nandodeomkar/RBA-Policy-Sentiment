@@ -1,0 +1,69 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "economy is expected to bounce back relatively quickly",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "many firms are now hiring, which will boost employment",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "unemployment rate to trend lower over the next couple of years",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Inflation has picked up, but in underlying terms is still low",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "A further, but only gradual, pick-up in underlying inflation is expected",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "Wages growth is expected to pick up gradually as the labour market tightens",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The decision to discontinue the yield target reflects the improvement in the economy",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "earlier-than-expected progress towards the inflation target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The Board will not increase the cash rate until actual inflation is sustainably within the…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Board is prepared to be patient",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      }
+    ],
+    "rationale": "The statement signals a gradual transition toward tightening by discontinuing yield targeting and acknowledging progress on inflation and employment, while maintaining dovish guidance through patient forward guidance and low underlying inflation concerns."
+  }
+}

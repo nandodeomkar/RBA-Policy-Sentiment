@@ -1,0 +1,69 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "inflation has picked up",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "materially higher than expected at the time of the August Statement",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "Headline inflation rose sharply to 3.2 per cent over the year",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "underlying inflation rising above 3 per cent in coming quarters",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "labour market conditions remain a little tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "growth in unit labour costs remains high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "pick-up in private demand continues to exceed expectations, this could increase the demand for labour,…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "some inflationary pressure may remain in the economy",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "recent evidence of more persistent inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "appropriate to remain cautious",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance by emphasizing persistent and higher-than-expected inflation, tight labour market conditions, and elevated unit labour costs, justifying a pause in rate cuts despite recent easing."
+  }
+}

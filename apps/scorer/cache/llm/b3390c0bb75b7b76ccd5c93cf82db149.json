@@ -1,0 +1,69 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "The economic recovery in Australia has been stronger than was earlier expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "GDP is expected to decline in the September quarter",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "it is still expected to grow strongly again next year",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "the labour market has recovered faster than expected",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "the unemployment rate declining further to 4.9 per cent in June",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "there are reports of labour shortages in parts of the economy",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The CPI inflation rate spiked to 3.8 per cent for the year to the June…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "a pick-up in both wages growth and underlying inflation is expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The Board will not increase the cash rate until actual inflation is sustainably within the…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "this condition will not be met before 2024",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The statement signals a dovish stance overall, with the Board committing to maintain accommodative conditions and explicitly stating no rate increases until 2024, despite acknowledging stronger-than-expected recovery and labour market tightness."
+  }
+}

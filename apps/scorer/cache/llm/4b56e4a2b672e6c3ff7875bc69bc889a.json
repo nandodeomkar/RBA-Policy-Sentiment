@@ -1,0 +1,81 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "increase the cash rate target by 50 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "Inflation in Australia has increased significantly",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "it is higher than earlier expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Inflation is expected to increase further",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Today's increase in interest rates will assist with the return of inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Australian economy is resilient, growing by 0.8 per cent",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Employment has grown significantly",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "unemployment rate is 3.9 per cent, which is the lowest rate in almost 50 years",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "a further decline in unemployment and underemployment is expected",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "a lift in wages growth from the low rates of recent years",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The Board expects to take further steps in the process of normalising monetary conditions",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Board is committed to doing what is necessary to ensure that inflation returns to…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      }
+    ],
+    "rationale": "The RBA statement signals a hawkish stance dominated by inflation concerns, with strong language about rising inflation, tight labour markets, and wage pressures justifying a 50bp rate increase and signalling further tightening ahead."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "a priority for the Reserve Bank is to support jobs, incomes and businesses",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The Board will not increase the cash rate target until progress is being made towards…",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "it is confident that inflation will be sustainably within the 2–3 per cent target band",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "A reduction in the cash rate target to 0.25 per cent",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "will help to lower funding costs across the economy and support the provision of credit",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The statement signals a dovish monetary policy stance focused on supporting employment and economic growth during the coronavirus crisis, with a forward guidance commitment to keep rates low until full employment progress and inflation confidence are achieved."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "inflationary pressures are easing a little more quickly than expected",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflation is moving sustainably towards the midpoint of the 2–3 per cent target range",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "labour market may be somewhat tighter than previously thought",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "central forecast for underlying inflation has been revised up a little over 2026",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "Board remains cautious on prospects for further policy easing",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Growth in output has been weak",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "labour market conditions remain tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "growth in unit labour costs remains high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "disinflation might be occurring a little more quickly than earlier expected",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "if monetary policy is eased too much too soon, disinflation could stall",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The RBA signals a cautious easing stance, acknowledging disinflation progress while remaining concerned about labour market tightness, upside inflation risks, and the dangers of premature policy relaxation."
+  }
+}

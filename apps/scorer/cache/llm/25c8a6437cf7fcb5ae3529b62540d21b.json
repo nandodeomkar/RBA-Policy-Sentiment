@@ -1,0 +1,57 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "inflation is still some way above the midpoint of the 2–3 per cent target range",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "our current forecasts do not see inflation returning sustainably to target until 2026",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "underlying inflation has been above the midpoint of the target for 11 consecutive quarters",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "growth has been weak",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "labour market conditions remain tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "policy is currently restrictive and working broadly as anticipated",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "underlying inflation is more indicative of inflation momentum, and it remains too high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Policy will need to be sufficiently restrictive until the Board is confident that inflation is…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance by emphasizing persistent above-target inflation, weak growth, and the need for continued restrictive policy, while acknowledging some labour market softening."
+  }
+}

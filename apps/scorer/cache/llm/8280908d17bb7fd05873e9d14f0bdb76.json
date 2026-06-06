@@ -1,0 +1,63 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "continuing monetary support that the economy needs",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "economic recovery in Australia is stronger than earlier expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "labour market has continued to recover faster than expected",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "inflation and wage outcomes remain subdued",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "pick-up in inflation and wages growth is expected, it is likely to be only gradual…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "remain some distance from the inflation and employment objectives",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "stronger-than-expected economic recovery and the improved outlook",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "will not increase the cash rate until actual inflation is sustainably within the 2 to…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "this condition will not be met before 2024",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The statement signals a dovish overall stance, emphasizing subdued inflation and wages despite strong recovery, with explicit forward guidance that rates will remain low until inflation sustainably reaches target, expected not before 2024."
+  }
+}

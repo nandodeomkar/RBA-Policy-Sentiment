@@ -1,0 +1,69 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "committed to doing what it can to support the creation of jobs",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "recent economic data have been a bit better than expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.4
+      },
+      {
+        "phrase": "recovery is still expected to be bumpy and drawn out",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "positive GDP growth is now expected in the September quarter",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "unemployment rate is expected to remain high",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "subdued increases in wages and prices over coming years",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Board views addressing the high rate of unemployment as an important national priority",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "will not increase the cash rate until actual inflation is sustainably within the 2 to…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "Board is not expecting to increase the cash rate for at least three years",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "Board is prepared to do more if necessary",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      }
+    ],
+    "rationale": "The RBA signals a dovish stance focused on supporting employment and managing low inflation expectations, with explicit forward guidance ruling out rate increases for at least three years."
+  }
+}

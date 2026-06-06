@@ -1,0 +1,75 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "increase the cash rate target by 25 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "begin withdrawing some of the extraordinary monetary support",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "inflation has picked up more quickly, and to a higher level, than was expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "wages growth is picking up",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "appropriate to start the process of normalising monetary conditions",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "unemployment rate declining over recent months to 4 per cent",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "Inflation has picked up significantly and by more than expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "inflation pressures have broadened",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "wages growth has been picking up",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "some withdrawal of the extraordinary monetary support provided through the pandemic is appropriate",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "This will require a further lift in interest rates over the period ahead",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance through rate increases, withdrawal of pandemic support, and explicit acknowledgment of inflation exceeding expectations and wages growth acceleration, indicating commitment to further tightening."
+  }
+}

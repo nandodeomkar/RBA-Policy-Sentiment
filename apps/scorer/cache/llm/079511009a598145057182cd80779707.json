@@ -1,0 +1,81 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "increase the cash rate target by 25 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "Inflation in Australia is too high, at 6.9 per cent",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "A further increase in inflation is expected over the months ahead",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "inflation forecast to peak at around 8 per cent",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "Economic growth is expected to moderate over the year ahead",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The labour market remains very tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "Wages growth is continuing to pick up",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "a further pick-up is expected due to the tight labour market",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "This has been necessary to ensure that the current period of high inflation is only…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Boards priority is to re-establish low inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "The Board expects to increase interest rates further over the period ahead",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "The Board remains resolute in its determination to return inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance focused primarily on combating high inflation through rate increases, while acknowledging growth moderation and labour market tightness as secondary concerns."
+  }
+}

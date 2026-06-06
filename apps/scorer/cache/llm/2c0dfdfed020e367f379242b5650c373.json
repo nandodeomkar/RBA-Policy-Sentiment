@@ -1,0 +1,69 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "progress in bringing inflation back to the target range of 2 to 3 per cent…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Underlying inflation was higher than expected at the time of the August forecasts",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "the risk of inflation remaining higher for longer had risen",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "an increase in interest rates was therefore warranted",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "inflation is continuing to moderate, driven by the goods sector",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Conditions in the labour market also continued to ease gradually",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "Higher interest rates are working to establish a more sustainable balance between aggregate supply and…",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "Holding the cash rate steady at this meeting will allow time to assess the impact",
+        "dimension": "inflation",
+        "polarity": "neutral",
+        "intensity": 0.3
+      },
+      {
+        "phrase": "Returning inflation to target within a reasonable timeframe remains the Boards priority",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Whether further tightening of monetary policy is required to ensure that inflation returns to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance focused on inflation control, having recently raised rates and signalling readiness for further tightening if needed, while acknowledging some moderation in inflation and easing labour market conditions."
+  }
+}

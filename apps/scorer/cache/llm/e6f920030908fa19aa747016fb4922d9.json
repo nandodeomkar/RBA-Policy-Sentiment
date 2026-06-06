@@ -1,0 +1,63 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "decided to lower the cash rate by 25 basis points",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "to support the economy as it responds to the global coronavirus outbreak",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "global growth in the first half of 2020 will be lower than earlier expected",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Inflation remains low almost everywhere",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "GDP growth in the March quarter is likely to be noticeably weaker than earlier expected",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "A gradual lift in wages growth would be a welcome development and is needed for…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "expected to delay progress in Australia towards full employment and the inflation target",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "appropriate to ease monetary policy further to provide additional support to employment",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "prepared to ease monetary policy further to support the Australian economy",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.9
+      }
+    ],
+    "rationale": "The statement signals a dovish stance dominated by growth and employment concerns driven by coronavirus uncertainty, with limited hawkish signals on inflation requiring future wage growth."
+  }
+}

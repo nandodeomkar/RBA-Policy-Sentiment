@@ -1,0 +1,93 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "inflation continues to moderate, but is declining more slowly than expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "services inflation, which remains high and is moderating only gradually",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "continuing excess demand in the economy, coupled with strong domestic cost pressures",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Conditions in the labour market have eased over the past year, but remain tighter than…",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Wages growth appears to have peaked but is still above the level that can be…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "output growth has been subdued, reflecting weak household consumption growth",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "The persistence of services inflation is a key uncertainty",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Growth in unit labour costs also remains very high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "household consumption growth has been particularly weak",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.65
+      },
+      {
+        "phrase": "there is a risk that household consumption picks up more slowly than expected, resulting in…",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Returning inflation to target within a reasonable timeframe remains the Boards highest priority",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "inflation is easing, it is doing so more slowly than previously expected and it remains…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "will remain vigilant to upside risks",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The Board remains resolute in its determination to return inflation to target",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance on inflation (slow moderation, services persistence, wage pressures, excess demand) balanced against dovish growth concerns (weak consumption, subdued output), while maintaining a hold on rates pending further data."
+  }
+}

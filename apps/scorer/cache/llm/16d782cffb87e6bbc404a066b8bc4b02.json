@@ -1,0 +1,33 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "The target will remain in place until progress is being made towards the goals for…",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The Board will not increase the cash rate target until progress is being made towards…",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "it is confident that inflation will be sustainably within the 2–3 per cent target band",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "This accommodative approach will be maintained as long as it is required",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The statement signals a dovish stance focused on supporting employment and growth through maintained accommodation, with rate increases conditional on employment progress and inflation confidence."
+  }
+}

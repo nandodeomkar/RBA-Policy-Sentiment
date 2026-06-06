@@ -1,0 +1,69 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "higher interest rates have been working to bring aggregate demand and supply closer towards balance",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "underlying inflation is still some way from the 2.5 per cent midpoint of the inflation…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "inflation returning sustainably to the midpoint of the target until 2026",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "aggregate demand remains above the economys supply capacity",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Growth in output has been weak",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "labour market conditions remain tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "policy is currently restrictive and working broadly as anticipated",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "risk that any pick-up is slower than expected, resulting in continued subdued output growth",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "underlying inflation is more indicative of inflation momentum, and it remains too high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Policy will need to be sufficiently restrictive until the Board is confident that inflation is…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance on inflation, emphasizing that underlying inflation remains elevated and policy must stay restrictive, while acknowledging growth weakness and labour market easing as offsetting dovish considerations."
+  }
+}

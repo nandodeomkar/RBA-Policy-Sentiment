@@ -1,0 +1,51 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "GDP is expected to decline materially in the September quarter",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "the unemployment rate will move higher over coming months",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "wage and price pressures remain subdued",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "Very accommodative financial conditions will continue to support the recovery",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "extend the bond purchases at $4 billion a week until at least February 2022",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "It will not increase the cash rate until actual inflation is sustainably within the 2…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "this condition will not be met before 2024",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The statement signals a dovish stance throughout, emphasizing economic weakness from Delta, subdued inflation pressures, and a commitment to maintaining accommodative conditions with no rate increases until 2024."
+  }
+}

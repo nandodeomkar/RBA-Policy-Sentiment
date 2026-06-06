@@ -1,0 +1,69 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "Inflation has fallen substantially since the peak in 2022",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "underlying inflation to continue to moderate to around the midpoint",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "they were, at the margin, slightly stronger than expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.4
+      },
+      {
+        "phrase": "wait for a little more information to confirm that inflation remains on track",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "labour market conditions remain tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "availability of labour is still a constraint for a range of employers",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "growth in unit labour costs remains high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "domestic demand has been picking up over the past six months",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "risks to inflation have become more balanced",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "the labour market remains strong",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      }
+    ],
+    "rationale": "The RBA signals a cautious holding pattern, acknowledging inflation progress and balanced risks while remaining vigilant about labour market tightness and slightly-stronger-than-expected inflation data."
+  }
+}

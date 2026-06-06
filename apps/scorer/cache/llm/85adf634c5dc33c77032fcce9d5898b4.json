@@ -1,0 +1,39 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "wage and price pressures are subdued and are expected to remain so for some years",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "unemployment is still too high",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "underlying inflation is expected to remain below 2 per cent over the next few years",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Board will not increase the cash rate until actual inflation is sustainably within the…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "The Board does not expect these conditions to be met until 2024 at the earliest",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The statement maintains an accommodative stance, emphasizing subdued inflation pressures, elevated unemployment, and a commitment to keep rates low until 2024, with no near-term tightening expected."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "inflation remains below 2 per cent over the next couple of years",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflation is expected to average between 1 and 1½ per cent over the next couple…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "the unemployment rate rises to around 10 per cent later in 2020",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "the unemployment rate is expected to decline gradually to around 7 per cent",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The Board will not increase the cash rate target until progress is being made towards…",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "it is confident that inflation will be sustainably within the 2–3 per cent target band",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      }
+    ],
+    "rationale": "The statement signals a dovish stance dominated by concerns about weak inflation and elevated unemployment, with the Board committing to maintain accommodative policy until employment recovers and inflation sustainably reaches target."
+  }
+}

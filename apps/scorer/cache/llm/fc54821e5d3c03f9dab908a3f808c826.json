@@ -1,0 +1,63 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "Inflation has fallen substantially since the peak in 2022",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "underlying inflation continues to ease in line with the most recent forecasts",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "the Board needs to be confident that this progress will continue",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "It is therefore cautious about the outlook",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "a range of indicators suggest that labour market conditions remain tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Wage pressures have eased a little more than expected",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "growth in unit labour costs remains high",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The Boards assessment is that monetary policy remains restrictive",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "the Board is cautious about the outlook",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      }
+    ],
+    "rationale": "The RBA signals a cautious, data-dependent stance with hawkish concern about inflation persistence and tight labour markets, offset by dovish acknowledgment of easing inflation and wage pressures, justifying the unchanged rate decision."
+  }
+}

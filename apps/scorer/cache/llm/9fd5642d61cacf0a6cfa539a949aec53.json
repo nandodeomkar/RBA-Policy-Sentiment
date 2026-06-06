@@ -1,0 +1,87 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "The outlook for the global economy remains reasonable.",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.3
+      },
+      {
+        "phrase": "Global growth is expected to be a little stronger this year and next",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.4
+      },
+      {
+        "phrase": "inflation remains low almost everywhere",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "The central scenario is for the Australian economy to grow by around 2¾ per cent…",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.4
+      },
+      {
+        "phrase": "In the short term, the bushfires and the coronavirus outbreak will temporarily weigh on domestic…",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "consumption has been quite weak",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "A further gradual lift in wages growth would be a welcome development and is needed…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Inflation remains low and stable.",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "CPI inflation was 1.8 per cent",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The easing of monetary policy last year is supporting employment and income growth in Australia",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "Progress is expected towards the inflation target and towards full employment, but that progress is…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "an extended period of low interest rates will be required in Australia to reach full…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "It remains prepared to ease monetary policy further if needed to support sustainable growth",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      }
+    ],
+    "rationale": "The RBA signals a patient, accommodative stance, holding rates steady while acknowledging subdued inflation and gradual progress toward targets, with readiness to ease further if needed."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "inflation pressures remain subdued in most parts of the Australian economy",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "A pick-up in inflation and wages growth is expected, but it is likely to be…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The economic recovery in Australia has been stronger than expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "strong growth in employment, with the unemployment rate falling further to 5.6 per cent",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "It will not increase the cash rate until actual inflation is sustainably within the 2…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "This is unlikely to be until 2024 at the earliest",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "The Board places a high priority on a return to full employment",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      }
+    ],
+    "rationale": "The RBA signals a dovish stance by emphasizing subdued inflation pressures, gradual wage growth expectations, and a commitment to maintain supportive conditions until 2024, despite acknowledging stronger-than-expected economic recovery and employment gains."
+  }
+}

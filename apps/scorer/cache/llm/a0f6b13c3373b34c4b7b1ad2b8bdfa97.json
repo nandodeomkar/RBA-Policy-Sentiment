@@ -1,0 +1,75 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "increase the cash rate target by 25 basis points",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "at 7 per cent is still too high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "This further increase in interest rates is to provide greater confidence that inflation will return…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.85
+      },
+      {
+        "phrase": "upside risks to the inflation outlook have increased",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.75
+      },
+      {
+        "phrase": "services price inflation is still very high and is proving to be very persistent",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Unit labour costs are also rising briskly",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Growth in the Australian economy has slowed",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "conditions in the labour market have eased",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "employment growth has moderated",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "the path to achieving a soft landing remains a narrow one",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Some further tightening of monetary policy may be required",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.65
+      }
+    ],
+    "rationale": "The RBA signals a hawkish stance focused on controlling persistent inflation despite economic slowdown, with multiple references to inflation remaining too high and upside risks, balanced against acknowledgment of moderating growth and easing labour market conditions."
+  }
+}

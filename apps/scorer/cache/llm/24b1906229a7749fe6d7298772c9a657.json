@@ -1,0 +1,51 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "GDP is expected to have declined materially in the September quarter",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "This setback to the economic expansion in Australia is expected to be only temporary",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "Hours worked declined by nearly 4 per cent in August",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "inflation is running at around 1¾ per cent",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "wages are increasing at just 1.7 per cent",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "It will not increase the cash rate until actual inflation is sustainably within the 2…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "this condition will not be met before 2024",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      }
+    ],
+    "rationale": "The statement emphasizes economic weakness from Delta lockdowns, subdued inflation and wage growth well below target, and commits to maintaining low rates until 2024, all signaling a dovish stance focused on supporting recovery and employment."
+  }
+}

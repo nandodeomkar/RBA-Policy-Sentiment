@@ -1,0 +1,93 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "Inflation has fallen substantially since the peak in 2022",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "inflation continues to ease",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "annual trimmed mean inflation was below 3 per cent for the first time since 2021",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "headline inflation, at 2.4 per cent, remained within the target band",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "underlying inflation is now expected to be around the midpoint of the 2–3 per cent…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "weaker outlook for growth, employment and inflation in Australia",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "weaker outlook for growth, employment and inflation in Australia",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "labour market conditions remain tight",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Employment is continuing to grow",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "growth in unit labour costs remains high",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "risks to inflation have become more balanced",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "upside risks appear to have diminished",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "an easing in monetary policy at this meeting was appropriate",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "this move will make monetary policy somewhat less restrictive",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      }
+    ],
+    "rationale": "The RBA signals a dovish stance by emphasizing falling inflation, balanced risks, and the appropriateness of easing policy, while acknowledging persistent labour market tightness and high unit labour cost growth as offsetting hawkish considerations."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "unemployment and underemployment are likely to remain high for an extended period",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Wage and inflation pressures remain very subdued",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Both fiscal and monetary support will be required for some time",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "will maintain highly accommodative policy settings as long as is required",
+        "dimension": "growth",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "will not increase the cash rate target until progress is being made towards full employment",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "it is confident that inflation will be sustainably within the 2–3 per cent target band",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "continues to consider how additional monetary easing could support jobs",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      }
+    ],
+    "rationale": "The statement signals a dovish stance dominated by concerns about high unemployment and subdued inflation, with explicit commitment to maintain accommodative settings and consider further easing, conditional only on progress toward full employment and inflation targets."
+  }
+}

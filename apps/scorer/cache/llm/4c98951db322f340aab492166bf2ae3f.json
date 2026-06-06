@@ -1,0 +1,57 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "Inflation has picked up more quickly than the RBA had expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "central forecast is for underlying inflation to increase further in coming quarters",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The resilience of the economy is evident in the labour market",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "unemployment rate at a 14-year low of 4.2 per cent",
+        "dimension": "employment",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "A further pick-up in wages growth and broader measures of labour costs is expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "The Board will not increase the cash rate until actual inflation is sustainably within the…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "it is too early to conclude that it is sustainably within the target range",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "The Board is prepared to be patient as it monitors how the various factors affecting…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      }
+    ],
+    "rationale": "The statement signals a dovish hold, acknowledging inflation pressures but emphasizing patience and conditioning rate increases on sustained inflation within target, while noting uncertainties about persistence."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "engine_version": "engine-2026.06-d8acadec",
+  "components": {
+    "lexicon": "lex-v1:2da502e9",
+    "llm": "claude-haiku-4-5-20251001:llm-p1:agg-v1",
+    "reconcile": "reconcile-v1"
+  }
+}

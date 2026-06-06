@@ -1,0 +1,45 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "the worst of the global economic contraction has now passed",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Conditions have, however, stabilised recently",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "the downturn has been less severe than earlier expected",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "There has also been a pick-up in retail spending",
+        "dimension": "growth",
+        "polarity": "hawkish",
+        "intensity": 0.5
+      },
+      {
+        "phrase": "The Board will not increase the cash rate target until progress is being made towards…",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.9
+      },
+      {
+        "phrase": "inflation will be sustainably within the 2–3 per cent target band",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.7
+      }
+    ],
+    "rationale": "The statement signals a dovish hold, maintaining accommodative policy while noting some economic stabilization but emphasizing that rate increases require progress on employment and inflation targets."
+  }
+}

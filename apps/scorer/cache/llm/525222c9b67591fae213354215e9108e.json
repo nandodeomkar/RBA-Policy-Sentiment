@@ -1,0 +1,63 @@
+{
+  "model_id": "claude-haiku-4-5-20251001",
+  "prompt_version": "llm-p1",
+  "payload": {
+    "classifications": [
+      {
+        "phrase": "Inflation has increased sharply in many parts of the world",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "rising prices are putting pressure on household budgets",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "unemployment rate falling further to 4 per cent in February",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "point to continuing strong growth in employment over the months ahead",
+        "dimension": "employment",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "a further pick-up in aggregate wages growth and broader measures of labour costs is in…",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "Higher prices for petrol and other commodities will result in a further lift in inflation",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.8
+      },
+      {
+        "phrase": "Financial conditions in Australia continue to be highly accommodative",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      },
+      {
+        "phrase": "Inflation has picked up and a further increase is expected",
+        "dimension": "inflation",
+        "polarity": "hawkish",
+        "intensity": 0.7
+      },
+      {
+        "phrase": "growth in labour costs has been below rates that are likely to be consistent with…",
+        "dimension": "inflation",
+        "polarity": "dovish",
+        "intensity": 0.6
+      }
+    ],
+    "rationale": "The statement signals a hawkish tilt on inflation due to sharp increases globally and domestically, wage pressures from tight labour markets, and expected further price rises, but remains dovish on employment given strong labour market conditions and accommodative financial conditions."
+  }
+}
