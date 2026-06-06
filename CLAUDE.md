@@ -4,9 +4,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository status
 
-**Pre-implementation.** This repo currently contains only the planning documents for *RBA Policy Sentiment* under [docs/prd/rba-policy-sentiment/](docs/prd/rba-policy-sentiment/). There is **no application code, no build tooling, and no git history yet** — so there are no build/lint/test commands to run. The stack is decided (see below) but nothing has been scaffolded. The first real implementation work is Milestone 0 in [TASKS.md](docs/prd/rba-policy-sentiment/TASKS.md).
+**Milestone 0 — in progress** (scaffolding complete). The Python batch scorer exists under [apps/scorer/](apps/scorer/); the Next.js front end (`apps/web`) is Milestone 1 and not yet created. The engineering design and the dependency-ordered build plan live under [docs/superpowers/](docs/superpowers/) — work the plan top to bottom.
 
-When you scaffold the apps, add the concrete build/test/lint commands to this file.
+## Commands
+
+The scorer is a `uv`-managed Python package under `apps/scorer/`. Run these **from that directory**:
+
+```powershell
+uv sync                       # install core + dev deps (no PyTorch)
+uv sync --extra transformer   # add PyTorch + FOMC-RoBERTa (heavy; plan step 16 only)
+uv run rba-scorer --help      # subcommands: ingest | score | benchmark | export
+uv run pytest                 # full test suite — no network, no model downloads
+uv run pytest -m integration  # opt-in live-model / API tests
+uv run ruff check .           # lint
+uv run ruff format .          # format
+```
+
+Run a single test: `uv run pytest tests/test_cli.py::test_requires_a_subcommand`.
+
+The scorer writes its output to the repo-root `data/` directory — the JSON/CSV contract the web app will consume.
 
 ## The planning docs (source of truth)
 

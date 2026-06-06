@@ -1,0 +1,4 @@
+# Committed cache of STRUCTURED LLM responses (scores + short evidence phrases +
+# rationale only — never full statement text). Committing it lets anyone reproduce
+# every score without an API key (NFR-002). The raw-HTML cache (.cache/raw/) is, by
+# contrast, gitignored because it contains full statement text (NFR-011).

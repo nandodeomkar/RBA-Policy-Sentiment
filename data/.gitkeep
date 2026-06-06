@@ -1,0 +1,2 @@
+# Published pipeline output — the contract consumed by the M1 web app.
+# decisions.json, scores.json, engine_version.json are written here by `rba-scorer`.

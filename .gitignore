@@ -2,6 +2,8 @@
 .env
 .env.*
 *.env
+# ...but keep the committed template that documents required vars:
+!.env.example
 
 # --- Python ---
 __pycache__/
