@@ -12,13 +12,12 @@ from __future__ import annotations
 
 import hashlib
 import json
-import re
 from dataclasses import dataclass
 from pathlib import Path
 
 from rba_scorer.score.base import DIMENSIONS, ComponentResult, EvidencePhrase, Polarity
+from rba_scorer.score.segment import split_sentences
 
-_SENTENCE_RE = re.compile(r"[^.!?]+[.!?]?")
 _DEFAULT_NEGATORS: tuple[str, ...] = ("not", "no longer", "without", "neither", "nor")
 _NEG_WINDOW_WORDS = 4  # how many words before a term to scan for a negator
 # Clause boundaries: a negator before one of these doesn't reach across it
@@ -71,10 +70,6 @@ def load_lexicon(path: Path) -> Lexicon:
     return Lexicon(entries=tuple(entries), negators=negators, version=version)
 
 
-def _split_sentences(text: str) -> list[str]:
-    return [s.strip() for s in _SENTENCE_RE.findall(text) if s.strip()]
-
-
 def _flip(polarity: Polarity) -> Polarity:
     return "dovish" if polarity == "hawkish" else "hawkish"
 
@@ -108,7 +103,7 @@ def score_text(text: str, lexicon: Lexicon) -> ComponentResult:
     evidence: list[EvidencePhrase] = []
     seen: set[tuple[str, str, str]] = set()
 
-    for sentence in _split_sentences(text):
+    for sentence in split_sentences(text):
         low = sentence.lower()
         for entry in lexicon.entries:
             if entry.term not in low:

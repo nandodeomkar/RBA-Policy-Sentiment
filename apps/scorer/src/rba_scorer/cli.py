@@ -6,8 +6,8 @@ Subcommands (built out across implementation-plan Phases B–E):
     benchmark   Evaluate scores against the labelled benchmark (the M0 gate)
     export      Write the published CSV from scores.json
 
-`ingest` (Phase B) and `benchmark` (Phase C) are implemented; `score` and
-`export` are still scaffolding stubs (Phases D–E) that log a notice and exit 0.
+`ingest` (Phase B), `benchmark` (Phase C), and `score` (Phase D) are implemented;
+`export` is still a scaffolding stub (Phase E) that logs a notice and exits 0.
 """
 
 from __future__ import annotations
@@ -34,7 +34,20 @@ def cmd_ingest(args: argparse.Namespace) -> int:
 
 
 def cmd_score(args: argparse.Namespace) -> int:
-    return _not_implemented("score")
+    from rba_scorer.score.llm import LLMUnavailableError
+    from rba_scorer.score.runner import NoDecisionsError, ScoringError, run_score
+    from rba_scorer.score.transformer import TransformerUnavailableError
+
+    try:
+        scores = run_score(force=args.force, use_transformer=not args.without_transformer)
+    except (NoDecisionsError, ScoringError) as exc:
+        logger.error("%s", exc)
+        return 1
+    except (LLMUnavailableError, TransformerUnavailableError) as exc:
+        logger.error("%s", exc)
+        return 1
+    logger.info("scored %d decisions -> data/scores.json", len(scores))
+    return 0
 
 
 def cmd_benchmark(args: argparse.Namespace) -> int:
@@ -98,6 +111,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--force",
         action="store_true",
         help="Re-score even if the engine_version is unchanged.",
+    )
+    p_score.add_argument(
+        "--without-transformer",
+        action="store_true",
+        help="Run lexicon+LLM only — skip the heavy FOMC-RoBERTa step (plan step 15).",
     )
     p_score.set_defaults(func=cmd_score)
 

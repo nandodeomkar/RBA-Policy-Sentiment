@@ -15,18 +15,18 @@ acceptance criteria pass.
 ## Milestone 0 — Data + engine (foundation, hard gate)
 *Exit criteria (PRD §11): post-2020 statements ingested; reconciled ensemble built; scores meet the §3 accuracy guardrail on the benchmark.*
 
-> **Status — 2026-06-06 (`8488f65`):** Phases A–C shipped. Ingestion, cash-rate data, and the benchmark harness/rubric are done; the **ensemble scorer (FR-002) and the accuracy-gate validation remain** (Phases D–E). Legend: `[x]` done · ◐ partial · `[ ]` not started.
+> **Status — 2026-06-06:** Phases A–D shipped. Ingestion, cash-rate data, benchmark harness/rubric, and the **reconciled ensemble scorer (FR-002)** are built; the **lexicon+LLM** configuration is **live over all 64 decisions** — full FR-011 breakdown, deterministic re-runs, licensing-clean, reproducible LLM cache. Remaining for the M0 gate: wire the **transformer** into the live ensemble (code done, run deferred) and **owner labels → accuracy-gate validation** (Phase E). Legend: `[x]` done · ◐ partial · `[ ]` not started.
 
 - [x] **Build the decision-ingestion pipeline** — implements FR-001 · DoD: PRD §8 — ✅ *Phase B: 64 post-2020 decisions, stable IDs, no full text, idempotent re-runs; parser tests green.*
   - <!-- expand at implementation time: fetch/parse RBA decision releases from 2020+, capture date/title/source URL/outcome/cash-rate target, persist only short evidence quotes (never full text), idempotent re-runs -->
 - [x] **Ingest the RBA cash-rate target series** — supports FR-004 · DoD: PRD §10 (data dependency) — ✅ *Phase B: cash-rate table parsed and joined to each decision (target + hold/hike/cut outcome).*
-- [ ] **Build the reconciled hybrid ensemble scorer** — implements FR-002, NFR-002 · DoD: PRD §8, §9 — *Not started (Phase D); fully specified in the M0 design §6. **The keystone of M0** — unblocks NFR-002/004/006 and the FR-011 data.*
+- [ ] **Build the reconciled hybrid ensemble scorer** — implements FR-002, NFR-002 · DoD: PRD §8, §9 — ◐ *Partial (Phase D): LLM + transformer + lexicon components, reconciliation, confidence, evidence merge, and composite `engine_version`/compute-once all built and tested. **Lexicon+LLM live over 64 decisions** — full FR-011 breakdown, byte-identical re-runs (NFR-002), committed reproducible LLM cache. Remaining: wire the transformer into the live ensemble (step 16, deferred).*
   - <!-- LLM + transformer + lexicon each score independently; reconcile to net + inflation/growth/employment sub-scores; emit per-component results, confidence (from disagreement), evidence-phrase spans, pinned engine version; compute-once-and-persist, pin/cache LLM calls -->
 - [ ] **Source or build the validation benchmark** — supports NFR-004 (Q-006) · DoD: PRD §9 — ◐ *Partial (Phase C): `RUBRIC.md` + 64-row `labels.csv` template + tested split/metrics/gate harness built. Remaining: owner fills the labels; quick published-label scan.*
   - <!-- prefer published/academic labels; fallback = self-label a small held-out set -->
 - [ ] **Validate accuracy against the benchmark** — implements NFR-004 · DoD: PRD §9 — *Blocked on FR-002 scores + owner labels (Phase E). The hard gate: no public launch until within-one-bucket ≥85% passes.*
   - <!-- must reach ≥85% agreement / ≥0.8 rank correlation before any public launch -->
-- [ ] **Wire score provenance** — implements NFR-006 · DoD: PRD §9 (every score links to its rba.gov.au source) — ◐ *Partial: `source_url` captured per decision (Phase B); score-level link lands with FR-002 scores.*
+- [x] **Wire score provenance** — implements NFR-006 · DoD: PRD §9 (every score links to its rba.gov.au source) — ✅ *Every one of the 64 scores carries its canonical `rba.gov.au` `source_url` (verified: 0 without provenance).*
 
 ## Milestone 1 — Public MVP
 *Exit criteria (PRD §11): chart + full-record table live with backfilled data; statement detail with the full granular breakdown; explainer; methodology page; CSV; NFR-001/002/003/004/006 met.*
