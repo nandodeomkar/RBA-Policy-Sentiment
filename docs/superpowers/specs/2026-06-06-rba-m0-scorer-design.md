@@ -108,7 +108,7 @@ Flat, committed JSON — no database. ~40-50 records makes a DB pure overhead; J
   "decision_id": "2024-05-07",
   "net": 0.25,
   "sub_scores": { "inflation": 0.50, "growth": -0.10, "employment": 0.20 },
-  "confidence": 0.78,
+  "confidence": 0.88,
   "components": {
     "lexicon":     { "net": 0.30, "sub_scores": {"inflation":0.5,"growth":-0.2,"employment":0.1}, "matched_terms": ["upside risks to inflation"], "version": "lex-v1:<hash>" },
     "llm":         { "net": 0.20, "sub_scores": {"inflation":0.5,"growth":0.0,"employment":0.3}, "rationale": "…", "model_id": "claude-haiku-4-5-…" },
