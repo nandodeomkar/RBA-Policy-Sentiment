@@ -86,7 +86,7 @@ RBA/
 
 ## 4. Data model & storage
 
-Flat, committed JSON — no database. ~40-50 records makes a DB pure overhead; JSON is diffable, free, reproducible, and directly servable by the static site.
+Flat, committed JSON — no database. ~64 records (the 2020→2026 backfill) makes a DB pure overhead; JSON is diffable, free, reproducible, and directly servable by the static site.
 
 **Score scale.** Net ∈ **[−1, +1]**: −1 = maximally dovish, 0 = neutral, +1 = maximally hawkish. Sub-scores use the same range. Owner's 5-point labels map to {−1, −0.5, 0, +0.5, +1}.
 
@@ -131,16 +131,16 @@ Flat, committed JSON — no database. ~40-50 records makes a DB pure overhead; J
 ## 5. Ingestion pipeline (FR-001)
 
 **Sources.**
-- **Decisions** — the RBA monetary-policy decisions index (`rba.gov.au/monetary-policy/int-rate-decisions/`) enumerates decisions; each links to its media release, fetched for statement text + outcome.
-- **Cash rate target** — RBA's machine-readable cash-rate-target series, parsed for `cash_rate_target` at each decision date (also seeds the M2 overlay).
+- **Decision releases** — the decisions index (`rba.gov.au/monetary-policy/int-rate-decisions/`) shows the current year and links to per-year sub-pages, each listing that year's decision releases. A release page supplies only the announcement `date` (`dc.date` meta), `title` (`dcterms.title` meta), and canonical `source_url`. **No rate or outcome is scraped from the statement prose** — RBA wording varies too much across years (2020-21 COVID phrasing especially: "maintain the targets of 10 basis points for the cash rate", "decided to:").
+- **Cash rate target series (the rate spine)** — the `/statistics/cash-rate/` page renders one authoritative HTML table of every decision back to 1990 (effective date, change in % points, new target). This is the source of truth for `cash_rate_target` **and** the decision `outcome`.
 
-**Flow:** `fetch → cache raw → parse → validate → upsert`.
-- **Raw cache (`apps/scorer/.cache/raw/`, gitignored).** Every fetched page is snapshotted locally. Avoids re-hitting RBA on re-runs, makes the parser testable against saved pages, and — critically — keeps full statement HTML/text **local and uncommitted** so the repository never carries full text (NFR-011).
-- **Parse → `decision`.** Extract `date`, `title`, `source_url`, `outcome` (hold/hike/cut + bps), `cash_rate_target`. Full text lives in memory only long enough to be scored; only decision metadata and (post-scoring) short evidence phrases are persisted.
-- **Cross-validation.** The parsed outcome (hold/hike/cut) is cross-checked against the change in the cash-rate-target series; a mismatch is an error, not a silent write.
-- **Idempotent upsert.** Keyed by date-slug `id`; re-runs update in place, never duplicate. Writes are **atomic** (write-temp-then-rename) so a mid-run failure cannot corrupt the existing dataset.
+**Join.** RBA changes take effect the business day *after* the meeting, so a decision announced on `D` maps to the table row effective ~`D+1`. We read the target as the step-function value a week after `D` (robust to long weekends; decisions are ~6 weeks apart so it never bleeds into the next), and derive `outcome` (hold/hike/cut + bps) from the inter-decision target movement. This is authoritative and dissolves the COVID-era prose problem — e.g. the −15 bps Nov-2020 cut to 0.10% and the dual March-2020 emergency cuts parse correctly. *(This supersedes the earlier draft plan of parsing the target from statement text and cross-checking against the series.)*
 
-**Robustness (R-003).** The RBA moved to the Monetary Policy Board (2025) and statement formats drift. The parser validates that each expected field was actually extracted and **fails loudly with the offending URL** rather than writing nulls — a format change surfaces as a clear error on the next run.
+**Flow:** `fetch → cache raw → parse meta + series → join → write`.
+- **Raw cache (`apps/scorer/.cache/raw/`, gitignored).** Every fetched page is snapshotted locally — avoids re-hitting RBA, makes parsers testable against saved pages, and keeps full statement HTML **local and uncommitted** so the repo never carries full text (NFR-011).
+- **Idempotent write.** Decisions are regenerated and written sorted by date via atomic temp-then-rename, so a re-run yields a byte-identical file and a mid-run failure cannot corrupt good data.
+
+**Robustness (R-003).** Non-decision releases the index may link are skipped via the title guard; a page that should be a decision but is missing its `date`/`title` **fails loud with the URL**. Every decision is target-joined to the official series; a decision with no known target raises rather than writing a null. (The 2020→2026 backfill produces 64 decisions with zero action/target inconsistencies.)
 
 ---
 

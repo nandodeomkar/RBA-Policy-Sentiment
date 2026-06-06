@@ -26,7 +26,11 @@ def _not_implemented(name: str) -> int:
 
 
 def cmd_ingest(args: argparse.Namespace) -> int:
-    return _not_implemented("ingest")
+    from rba_scorer.ingest.pipeline import run_ingest
+
+    decisions = run_ingest(since_year=int(args.since[:4]), force=args.force)
+    logger.info("ingested %d decisions -> data/decisions.json", len(decisions))
+    return 0
 
 
 def cmd_score(args: argparse.Namespace) -> int:
@@ -54,6 +58,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--since",
         default="2020-01-01",
         help="Earliest decision date to ingest (YYYY-MM-DD).",
+    )
+    p_ingest.add_argument(
+        "--force",
+        action="store_true",
+        help="Bypass the raw-page cache and re-fetch from rba.gov.au.",
     )
     p_ingest.set_defaults(func=cmd_ingest)
 

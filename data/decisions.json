@@ -1,0 +1,706 @@
+[
+  {
+    "id": "2020-02-04",
+    "date": "2020-02-04",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-01.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.75
+  },
+  {
+    "id": "2020-03-03",
+    "date": "2020-03-03",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-06.html",
+    "outcome": {
+      "action": "cut",
+      "change_bps": -25
+    },
+    "cash_rate_target": 0.5
+  },
+  {
+    "id": "2020-03-19",
+    "date": "2020-03-19",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-08.html",
+    "outcome": {
+      "action": "cut",
+      "change_bps": -25
+    },
+    "cash_rate_target": 0.25
+  },
+  {
+    "id": "2020-04-07",
+    "date": "2020-04-07",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-11.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.25
+  },
+  {
+    "id": "2020-05-05",
+    "date": "2020-05-05",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-13.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.25
+  },
+  {
+    "id": "2020-06-02",
+    "date": "2020-06-02",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-15.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.25
+  },
+  {
+    "id": "2020-07-07",
+    "date": "2020-07-07",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-17.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.25
+  },
+  {
+    "id": "2020-08-04",
+    "date": "2020-08-04",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-18.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.25
+  },
+  {
+    "id": "2020-09-01",
+    "date": "2020-09-01",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-20.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.25
+  },
+  {
+    "id": "2020-10-06",
+    "date": "2020-10-06",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-24.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.25
+  },
+  {
+    "id": "2020-11-03",
+    "date": "2020-11-03",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-28.html",
+    "outcome": {
+      "action": "cut",
+      "change_bps": -15
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2020-12-01",
+    "date": "2020-12-01",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-32.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-02-02",
+    "date": "2021-02-02",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-01.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-03-02",
+    "date": "2021-03-02",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-03.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-04-06",
+    "date": "2021-04-06",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-04.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-05-04",
+    "date": "2021-05-04",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-06.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-06-01",
+    "date": "2021-06-01",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-09.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-07-06",
+    "date": "2021-07-06",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-13.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-08-03",
+    "date": "2021-08-03",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-14.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-09-07",
+    "date": "2021-09-07",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-19.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-10-05",
+    "date": "2021-10-05",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-22.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-11-02",
+    "date": "2021-11-02",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-24.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2021-12-07",
+    "date": "2021-12-07",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-29.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2022-02-01",
+    "date": "2022-02-01",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-02.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2022-03-01",
+    "date": "2022-03-01",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-05.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2022-04-05",
+    "date": "2022-04-05",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-11.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 0.1
+  },
+  {
+    "id": "2022-05-03",
+    "date": "2022-05-03",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-12.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 0.35
+  },
+  {
+    "id": "2022-06-07",
+    "date": "2022-06-07",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-14.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 50
+    },
+    "cash_rate_target": 0.85
+  },
+  {
+    "id": "2022-07-05",
+    "date": "2022-07-05",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-20.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 50
+    },
+    "cash_rate_target": 1.35
+  },
+  {
+    "id": "2022-08-02",
+    "date": "2022-08-02",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-21.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 50
+    },
+    "cash_rate_target": 1.85
+  },
+  {
+    "id": "2022-09-06",
+    "date": "2022-09-06",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-28.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 50
+    },
+    "cash_rate_target": 2.35
+  },
+  {
+    "id": "2022-10-04",
+    "date": "2022-10-04",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-33.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 2.6
+  },
+  {
+    "id": "2022-11-01",
+    "date": "2022-11-01",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-36.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 2.85
+  },
+  {
+    "id": "2022-12-06",
+    "date": "2022-12-06",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-41.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 3.1
+  },
+  {
+    "id": "2023-02-07",
+    "date": "2023-02-07",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-04.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 3.35
+  },
+  {
+    "id": "2023-03-07",
+    "date": "2023-03-07",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-07.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 3.6
+  },
+  {
+    "id": "2023-04-04",
+    "date": "2023-04-04",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-08.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 3.6
+  },
+  {
+    "id": "2023-05-02",
+    "date": "2023-05-02",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-10.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 3.85
+  },
+  {
+    "id": "2023-06-06",
+    "date": "2023-06-06",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-13.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 4.1
+  },
+  {
+    "id": "2023-07-04",
+    "date": "2023-07-04",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-16.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.1
+  },
+  {
+    "id": "2023-08-01",
+    "date": "2023-08-01",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-19.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.1
+  },
+  {
+    "id": "2023-09-05",
+    "date": "2023-09-05",
+    "title": "Statement by Philip Lowe, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-23.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.1
+  },
+  {
+    "id": "2023-10-03",
+    "date": "2023-10-03",
+    "title": "Statement by Michele Bullock, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-25.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.1
+  },
+  {
+    "id": "2023-11-07",
+    "date": "2023-11-07",
+    "title": "Statement by Michele Bullock, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-30.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2023-12-05",
+    "date": "2023-12-05",
+    "title": "Statement by Michele Bullock, Governor: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-35.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2024-02-06",
+    "date": "2024-02-06",
+    "title": "Statement by the Reserve Bank Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-01.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2024-03-19",
+    "date": "2024-03-19",
+    "title": "Statement by the Reserve Bank Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-05.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2024-05-07",
+    "date": "2024-05-07",
+    "title": "Statement by the Reserve Bank Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-08.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2024-06-18",
+    "date": "2024-06-18",
+    "title": "Statement by the Reserve Bank Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-12.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2024-08-06",
+    "date": "2024-08-06",
+    "title": "Statement by the Reserve Bank Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-15.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2024-09-24",
+    "date": "2024-09-24",
+    "title": "Statement by the Reserve Bank Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-18.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2024-11-05",
+    "date": "2024-11-05",
+    "title": "Statement by the Reserve Bank Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-24.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2024-12-10",
+    "date": "2024-12-10",
+    "title": "Statement by the Reserve Bank Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-27.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.35
+  },
+  {
+    "id": "2025-02-18",
+    "date": "2025-02-18",
+    "title": "Statement by the Reserve Bank Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-03.html",
+    "outcome": {
+      "action": "cut",
+      "change_bps": -25
+    },
+    "cash_rate_target": 4.1
+  },
+  {
+    "id": "2025-04-01",
+    "date": "2025-04-01",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-10.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 4.1
+  },
+  {
+    "id": "2025-05-20",
+    "date": "2025-05-20",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-13.html",
+    "outcome": {
+      "action": "cut",
+      "change_bps": -25
+    },
+    "cash_rate_target": 3.85
+  },
+  {
+    "id": "2025-07-08",
+    "date": "2025-07-08",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-17.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 3.85
+  },
+  {
+    "id": "2025-08-12",
+    "date": "2025-08-12",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-22.html",
+    "outcome": {
+      "action": "cut",
+      "change_bps": -25
+    },
+    "cash_rate_target": 3.6
+  },
+  {
+    "id": "2025-09-30",
+    "date": "2025-09-30",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-27.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 3.6
+  },
+  {
+    "id": "2025-11-04",
+    "date": "2025-11-04",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-31.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 3.6
+  },
+  {
+    "id": "2025-12-09",
+    "date": "2025-12-09",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-33.html",
+    "outcome": {
+      "action": "hold",
+      "change_bps": 0
+    },
+    "cash_rate_target": 3.6
+  },
+  {
+    "id": "2026-02-03",
+    "date": "2026-02-03",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2026/mr-26-03.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 3.85
+  },
+  {
+    "id": "2026-03-17",
+    "date": "2026-03-17",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2026/mr-26-08.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 4.1
+  },
+  {
+    "id": "2026-05-05",
+    "date": "2026-05-05",
+    "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+    "source_url": "https://www.rba.gov.au/media-releases/2026/mr-26-12.html",
+    "outcome": {
+      "action": "hike",
+      "change_bps": 25
+    },
+    "cash_rate_target": 4.35
+  }
+]
