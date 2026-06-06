@@ -1,0 +1,37 @@
+# --- Secrets / config ---
+.env
+.env.*
+*.env
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# --- RBA scorer: raw fetched pages (full text — never committed; licensing NFR-011) ---
+apps/scorer/.cache/raw/
+
+# Note: apps/scorer/cache/llm/ (structured LLM responses, no full text) IS committed
+# on purpose — it makes every score reproducible without an API key (NFR-002).
+
+# --- Node / Next.js (M1, present for forward-compatibility) ---
+node_modules/
+.next/
+out/
+.vercel/
+
+# --- Claude Code local settings ---
+.claude/settings.local.json
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
