@@ -6,8 +6,8 @@ Subcommands (built out across implementation-plan Phases B–E):
     benchmark   Evaluate scores against the labelled benchmark (the M0 gate)
     export      Write the published CSV from scores.json
 
-Phase A: subcommands are wired but not yet implemented — each logs a notice
-and exits 0 so the scaffold is runnable end to end.
+`ingest` (Phase B) and `benchmark` (Phase C) are implemented; `score` and
+`export` are still scaffolding stubs (Phases D–E) that log a notice and exit 0.
 """
 
 from __future__ import annotations
@@ -38,7 +38,34 @@ def cmd_score(args: argparse.Namespace) -> int:
 
 
 def cmd_benchmark(args: argparse.Namespace) -> int:
-    return _not_implemented("benchmark")
+    from rba_scorer.benchmark.runner import NoScoresError, run_benchmark
+
+    try:
+        report = run_benchmark()
+    except NoScoresError as exc:
+        logger.error("%s", exc)
+        return 1
+
+    gate = report["gate"]
+    if gate["n_test"] == 0:
+        logger.warning(
+            "benchmark report written, but no labelled+scored test decisions yet "
+            "(labelled=%d, scored=%d) — nothing to gate.",
+            report["split"]["n_labelled"],
+            report["split"]["n_scored"],
+        )
+        return 0
+
+    logger.info(
+        "benchmark gate: %s — within-one-bucket %.1f%% on n=%d test (threshold %.0f%%); "
+        "Spearman %.3f -> data/benchmark/benchmark_report.md",
+        "PASS" if gate["passed"] else "FAIL",
+        gate["within_one_bucket"] * 100,
+        gate["n_test"],
+        gate["threshold"] * 100,
+        gate["spearman"],
+    )
+    return 0 if gate["passed"] else 1
 
 
 def cmd_export(args: argparse.Namespace) -> int:

@@ -5,9 +5,10 @@ import pytest
 from rba_scorer.cli import build_parser, main
 
 
-@pytest.mark.parametrize("command", ["score", "benchmark", "export"])
+@pytest.mark.parametrize("command", ["score", "export"])
 def test_stub_subcommand_runs(command: str) -> None:
-    # Still-stubbed commands return 0 without side effects.
+    # Still-stubbed commands (Phases D–E) return 0 without side effects.
+    # `benchmark` is implemented (Phase C) and is covered in test_benchmark.py.
     assert main([command]) == 0
 
 
