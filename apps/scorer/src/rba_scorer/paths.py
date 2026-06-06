@@ -26,6 +26,10 @@ RUBRIC_PATH = BENCHMARK_DIR / "RUBRIC.md"
 BENCHMARK_REPORT_JSON_PATH = BENCHMARK_DIR / "benchmark_report.json"
 BENCHMARK_REPORT_MD_PATH = BENCHMARK_DIR / "benchmark_report.md"
 
+# Versioned scorer inputs (committed source, distinct from the published data/).
+LEXICON_DIR = SCORER_ROOT / "data" / "lexicon"
+LEXICON_PATH = LEXICON_DIR / "lexicon.json"
+
 # Caches (opposite git policies — see .gitignore and the design doc §10).
 RAW_CACHE_DIR = SCORER_ROOT / ".cache" / "raw"  # gitignored: holds full page text
 LLM_CACHE_DIR = SCORER_ROOT / "cache" / "llm"  # committed: structured responses only
