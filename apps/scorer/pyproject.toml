@@ -51,3 +51,14 @@ addopts = "-q"
 markers = [
     "integration: hits live models/APIs or downloads weights (deselected by default)",
 ]
+
+# CPU-only PyTorch from the official PyTorch index (design §3: CPU is fine for this
+# batch job). Uses a different download host than PyPI's file CDN and avoids the
+# heavy CUDA wheels.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
