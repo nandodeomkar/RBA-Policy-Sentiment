@@ -56,6 +56,7 @@ Dependency-ordered. Each step lists its **done** condition. 🧑 marks a **human
     - *Done:* determinism test passes (score twice → identical); cache stores no full text; agreement recorded.
 16. **Transformer scorer** — FOMC-RoBERTa (pinned revision), per-sentence → net only, behind an interface mocked in unit tests. 🧑 *first run downloads the model / needs `torch`.* → **measure dev agreement (full ensemble).**
     - *Done:* mock-based unit tests pass; one marked integration test runs the real model; agreement recorded.
+    - *2026-06-07 — superseded by the [pluggable-model design](../specs/2026-06-07-rba-pluggable-transformer-models-design.md):* FOMC-RoBERTa became gated, so the slot now runs the non-gated interim **fed-stance** model (model-agnostic adapter + registry). Mock + live integration tests pass; all 64 re-scored. Dev-agreement measurement stays deferred with the accuracy gate (NFR-004, owner labels).
 17. **Reconciliation** — equal-weight net blend, sub-scores from dimension-aware pair, confidence = 1 − normalized disagreement, evidence merge/dedupe.
     - *Done:* unit tests for blend, confidence, and evidence merge on synthetic component outputs.
 18. **Engine version + compute-once** — composite `engine_version`; skip re-scoring unless version changes or `--force`; write `data/engine_version.json`.

@@ -1,13 +1,13 @@
 {
   "2020-02-04": {
     "decision_id": "2020-02-04",
-    "net": -0.042308,
+    "net": -0.103623,
     "sub_scores": {
       "inflation": 0.008333,
       "growth": -0.058333,
       "employment": -0.25
     },
-    "confidence": 0.957692,
+    "confidence": 0.90666,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -96,15 +96,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a patient, accommodative stance, holding rates steady while acknowledging subdued inflation and gradual progress toward targets, with readiness to ease further if needed."
+      },
+      "transformer": {
+        "net": -0.2262538439270271,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 46
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.042308
+      "disagreement": 0.09334
     },
     "evidence_phrases": [
       {
@@ -212,19 +221,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-01.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:56:07Z"
   },
   "2020-03-03": {
     "decision_id": "2020-03-03",
-    "net": -0.316667,
+    "net": -0.27297,
     "sub_scores": {
       "inflation": 0.0,
       "growth": -0.41,
       "employment": -0.4
     },
-    "confidence": 0.683333,
+    "confidence": 0.73416,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -293,15 +302,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance dominated by growth and employment concerns driven by coronavirus uncertainty, with limited hawkish signals on inflation requiring future wage growth."
+      },
+      "transformer": {
+        "net": -0.18557580278388092,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 35
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.316667
+      "disagreement": 0.26584
     },
     "evidence_phrases": [
       {
@@ -377,19 +395,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-06.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:56:27Z"
   },
   "2020-03-19": {
     "decision_id": "2020-03-19",
-    "net": -0.27,
+    "net": -0.223147,
     "sub_scores": {
       "inflation": 0.3,
       "growth": -0.425,
       "employment": -0.4
     },
-    "confidence": 0.73,
+    "confidence": 0.769804,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -438,15 +456,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish monetary policy stance focused on supporting employment and economic growth during the coronavirus crisis, with a forward guidance commitment to keep rates low until full employment progress and inflation confidence are achieved."
+      },
+      "transformer": {
+        "net": -0.12944085758341395,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 46
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.27
+      "disagreement": 0.230196
     },
     "evidence_phrases": [
       {
@@ -490,19 +517,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-08.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:56:35Z"
   },
   "2020-04-07": {
     "decision_id": "2020-04-07",
-    "net": -0.2125,
+    "net": -0.184555,
     "sub_scores": {
       "inflation": -0.35,
       "growth": -0.025,
       "employment": -0.45
     },
-    "confidence": 0.7875,
+    "confidence": 0.822051,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -546,15 +573,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance overall, with explicit forward guidance against rate increases until employment improves and inflation targets are met, while acknowledging some potential tapering of bond purchases as conditions improve."
+      },
+      "transformer": {
+        "net": -0.12866570082876613,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 34
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.2125
+      "disagreement": 0.177949
     },
     "evidence_phrases": [
       {
@@ -590,19 +626,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-11.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:56:45Z"
   },
   "2020-05-05": {
     "decision_id": "2020-05-05",
-    "net": -0.258333,
+    "net": -0.243012,
     "sub_scores": {
       "inflation": -0.133333,
       "growth": -0.25,
       "employment": -0.4
     },
-    "confidence": 0.741667,
+    "confidence": 0.787962,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -686,15 +722,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance overall, maintaining accommodative policy settings while acknowledging severe economic contraction and elevated unemployment, with inflation expected to remain subdued."
+      },
+      "transformer": {
+        "net": -0.21236862146818056,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 41
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.258333
+      "disagreement": 0.212038
     },
     "evidence_phrases": [
       {
@@ -794,19 +839,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-13.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:56:53Z"
   },
   "2020-06-02": {
     "decision_id": "2020-06-02",
-    "net": -0.225,
+    "net": -0.23794,
     "sub_scores": {
       "inflation": 0.3,
       "growth": -0.4,
       "employment": -0.4
     },
-    "confidence": 0.775,
+    "confidence": 0.815379,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -850,15 +895,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance focused on supporting employment and growth through maintained accommodation, with rate increases conditional on employment progress and inflation confidence."
+      },
+      "transformer": {
+        "net": -0.26382045447826385,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 33
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.225
+      "disagreement": 0.184621
     },
     "evidence_phrases": [
       {
@@ -894,19 +948,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-15.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:57:03Z"
   },
   "2020-07-07": {
     "decision_id": "2020-07-07",
-    "net": 0.05,
+    "net": -0.05492,
     "sub_scores": {
       "inflation": -0.35,
       "growth": 0.275,
       "employment": -0.45
     },
-    "confidence": 0.95,
+    "confidence": 0.846107,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -960,15 +1014,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish hold, maintaining accommodative policy while noting some economic stabilization but emphasizing that rate increases require progress on employment and inflation targets."
+      },
+      "transformer": {
+        "net": -0.2647597275142159,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 35
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.05
+      "disagreement": 0.153893
     },
     "evidence_phrases": [
       {
@@ -1020,19 +1083,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-17.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:57:11Z"
   },
   "2020-08-04": {
     "decision_id": "2020-08-04",
-    "net": -0.275,
+    "net": -0.250068,
     "sub_scores": {
       "inflation": -0.166667,
       "growth": 0.0,
       "employment": -0.383333
     },
-    "confidence": 0.725,
+    "confidence": 0.772712,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -1086,15 +1149,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance dominated by concerns about weak inflation and elevated unemployment, with the Board committing to maintain accommodative policy until employment recovers and inflation sustainably reaches target."
+      },
+      "transformer": {
+        "net": -0.20020397984363297,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 47
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.275
+      "disagreement": 0.227288
     },
     "evidence_phrases": [
       {
@@ -1146,19 +1218,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-18.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:57:19Z"
   },
   "2020-09-01": {
     "decision_id": "2020-09-01",
-    "net": -0.757143,
+    "net": -0.588114,
     "sub_scores": {
       "inflation": -0.15,
       "growth": -0.875,
       "employment": -0.45
     },
-    "confidence": 0.757143,
+    "confidence": 0.689417,
     "components": {
       "lexicon": {
         "net": -1.0,
@@ -1226,15 +1298,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance overall, maintaining accommodative policy to support employment and growth while inflation remains subdued, with a forward guidance commitment not to raise rates until employment recovers and inflation reaches target."
+      },
+      "transformer": {
+        "net": -0.25005512299637,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 45
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.242857
+      "disagreement": 0.310583
     },
     "evidence_phrases": [
       {
@@ -1302,19 +1383,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-20.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:57:30Z"
   },
   "2020-10-06": {
     "decision_id": "2020-10-06",
-    "net": -0.278571,
+    "net": -0.266989,
     "sub_scores": {
       "inflation": -0.025,
       "growth": -0.375,
       "employment": -0.383333
     },
-    "confidence": 0.721429,
+    "confidence": 0.771958,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -1373,15 +1454,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance dominated by concerns about high unemployment and subdued inflation, with explicit commitment to maintain accommodative settings and consider further easing, conditional only on progress toward full employment and inflation targets."
+      },
+      "transformer": {
+        "net": -0.24382535892685778,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 38
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.278571
+      "disagreement": 0.228042
     },
     "evidence_phrases": [
       {
@@ -1441,19 +1531,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-24.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:57:39Z"
   },
   "2020-11-03": {
     "decision_id": "2020-11-03",
-    "net": 0.255,
+    "net": 0.130607,
     "sub_scores": {
       "inflation": -0.416667,
       "growth": 0.066667,
       "employment": 0.15
     },
-    "confidence": 0.255,
+    "confidence": 0.366783,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -1536,15 +1626,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a dovish stance focused on supporting employment and managing low inflation expectations, with explicit forward guidance ruling out rate increases for at least three years."
+      },
+      "transformer": {
+        "net": -0.11817831631847903,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 38
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.745
+      "disagreement": 0.633217
     },
     "evidence_phrases": [
       {
@@ -1636,19 +1735,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-28.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:57:46Z"
   },
   "2020-12-01": {
     "decision_id": "2020-12-01",
-    "net": 0.121875,
+    "net": 0.048179,
     "sub_scores": {
       "inflation": -0.43125,
       "growth": -0.3,
       "employment": 0.15
     },
-    "confidence": 0.121875,
+    "confidence": 0.275479,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -1721,15 +1820,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance across all three dimensions, with the strongest signals on inflation (forward guidance of no rate increases for 3+ years) and employment (prioritizing unemployment reduction), reflecting accommodation in response to subdued inflation and high unemployment."
+      },
+      "transformer": {
+        "net": -0.09921278656484225,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 39
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.878125
+      "disagreement": 0.724521
     },
     "evidence_phrases": [
       {
@@ -1805,19 +1913,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-32.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:57:54Z"
   },
   "2021-02-02": {
     "decision_id": "2021-02-02",
-    "net": -0.355556,
+    "net": -0.278358,
     "sub_scores": {
       "inflation": -0.35,
       "growth": -0.4,
       "employment": -0.325
     },
-    "confidence": 0.644444,
+    "confidence": 0.689841,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -1886,15 +1994,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA maintains accommodative policy settings with no rate increases expected until 2024, citing subdued inflation and wage pressures despite strong near-term growth and employment improvements."
+      },
+      "transformer": {
+        "net": -0.12396240907959467,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 43
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.355556
+      "disagreement": 0.310159
     },
     "evidence_phrases": [
       {
@@ -1970,19 +2087,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-01.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:58:01Z"
   },
   "2021-03-02": {
     "decision_id": "2021-03-02",
-    "net": 0.125,
+    "net": 0.066638,
     "sub_scores": {
       "inflation": -0.416667,
       "growth": -0.3,
       "employment": 0.15
     },
-    "confidence": 0.125,
+    "confidence": 0.280814,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -2045,15 +2162,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA maintains an accommodative stance, emphasizing subdued inflation pressures, spare capacity in the labour market, and commitment to keeping rates low until 2024 at the earliest, signaling a dovish bias across inflation, growth, and employment dimensions."
+      },
+      "transformer": {
+        "net": -0.05008456453161184,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 43
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.875
+      "disagreement": 0.719186
     },
     "evidence_phrases": [
       {
@@ -2113,19 +2239,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-03.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:58:10Z"
   },
   "2021-04-06": {
     "decision_id": "2021-04-06",
-    "net": 0.12,
+    "net": 0.069941,
     "sub_scores": {
       "inflation": -0.4,
       "growth": 0.5,
       "employment": -0.35
     },
-    "confidence": 0.12,
+    "confidence": 0.278004,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -2189,15 +2315,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement maintains an accommodative stance, emphasizing subdued inflation pressures, elevated unemployment, and a commitment to keep rates low until 2024, with no near-term tightening expected."
+      },
+      "transformer": {
+        "net": -0.03017671040554599,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 41
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.88
+      "disagreement": 0.721996
     },
     "evidence_phrases": [
       {
@@ -2257,19 +2392,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-04.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:58:19Z"
   },
   "2021-05-04": {
     "decision_id": "2021-05-04",
-    "net": 0.314286,
+    "net": 0.218359,
     "sub_scores": {
       "inflation": -0.4,
       "growth": 0.8,
       "employment": 0.0
     },
-    "confidence": 0.314286,
+    "confidence": 0.423916,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -2337,15 +2472,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a dovish stance by emphasizing subdued inflation pressures, gradual wage growth expectations, and a commitment to maintain supportive conditions until 2024, despite acknowledging stronger-than-expected economic recovery and employment gains."
+      },
+      "transformer": {
+        "net": 0.026505413073066034,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 38
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.685714
+      "disagreement": 0.576084
     },
     "evidence_phrases": [
       {
@@ -2413,19 +2557,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-06.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:58:27Z"
   },
   "2021-06-01": {
     "decision_id": "2021-06-01",
-    "net": 0.3375,
+    "net": 0.217522,
     "sub_scores": {
       "inflation": -0.40625,
       "growth": 0.8,
       "employment": 0.85
     },
-    "confidence": 0.3375,
+    "confidence": 0.433084,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -2500,15 +2644,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a dovish stance by emphasizing subdued inflation and wage pressures, expecting only gradual pick-up, and committing not to raise rates until 2024 at earliest, despite acknowledging stronger-than-expected growth and employment progress."
+      },
+      "transformer": {
+        "net": -0.02243407065860736,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 39
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.6625
+      "disagreement": 0.566916
     },
     "evidence_phrases": [
       {
@@ -2584,19 +2737,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-09.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:58:35Z"
   },
   "2021-07-06": {
     "decision_id": "2021-07-06",
-    "net": 0.355556,
+    "net": 0.259452,
     "sub_scores": {
       "inflation": -0.37,
       "growth": 0.583333,
       "employment": 0.8
     },
-    "confidence": 0.355556,
+    "confidence": 0.456544,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -2680,15 +2833,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish overall stance, emphasizing subdued inflation and wages despite strong recovery, with explicit forward guidance that rates will remain low until inflation sustainably reaches target, expected not before 2024."
+      },
+      "transformer": {
+        "net": 0.06724570005347855,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 38
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.644444
+      "disagreement": 0.543456
     },
     "evidence_phrases": [
       {
@@ -2780,19 +2942,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-13.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:58:42Z"
   },
   "2021-08-03": {
     "decision_id": "2021-08-03",
-    "net": 0.6,
+    "net": 0.3909,
     "sub_scores": {
       "inflation": -0.05,
       "growth": 0.583333,
       "employment": 0.816667
     },
-    "confidence": 0.6,
+    "confidence": 0.559418,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -2881,15 +3043,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance overall, with the Board committing to maintain accommodative conditions and explicitly stating no rate increases until 2024, despite acknowledging stronger-than-expected recovery and labour market tightness."
+      },
+      "transformer": {
+        "net": -0.027300854037339624,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 37
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.4
+      "disagreement": 0.440582
     },
     "evidence_phrases": [
       {
@@ -2989,19 +3160,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-14.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:58:50Z"
   },
   "2021-09-07": {
     "decision_id": "2021-09-07",
-    "net": -0.403571,
+    "net": -0.314347,
     "sub_scores": {
       "inflation": -0.408333,
       "growth": -0.4,
       "employment": -0.4
     },
-    "confidence": 0.596429,
+    "confidence": 0.647152,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -3060,15 +3231,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish stance throughout, emphasizing economic weakness from Delta, subdued inflation pressures, and a commitment to maintaining accommodative conditions with no rate increases until 2024."
+      },
+      "transformer": {
+        "net": -0.1358981296194322,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 33
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.403571
+      "disagreement": 0.352848
     },
     "evidence_phrases": [
       {
@@ -3128,19 +3308,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-19.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:58:57Z"
   },
   "2021-10-05": {
     "decision_id": "2021-10-05",
-    "net": -0.342857,
+    "net": -0.283492,
     "sub_scores": {
       "inflation": -0.375,
       "growth": -0.3,
       "employment": -0.3
     },
-    "confidence": 0.657143,
+    "confidence": 0.70774,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -3199,15 +3379,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement emphasizes economic weakness from Delta lockdowns, subdued inflation and wage growth well below target, and commits to maintaining low rates until 2024, all signaling a dovish stance focused on supporting recovery and employment."
+      },
+      "transformer": {
+        "net": -0.16476225621741394,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 29
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.342857
+      "disagreement": 0.29226
     },
     "evidence_phrases": [
       {
@@ -3267,19 +3456,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-22.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:59:04Z"
   },
   "2021-11-02": {
     "decision_id": "2021-11-02",
-    "net": -0.13,
+    "net": -0.088707,
     "sub_scores": {
       "inflation": -0.19,
       "growth": 0.025,
       "employment": -0.133333
     },
-    "confidence": 0.87,
+    "confidence": 0.878852,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -3353,15 +3542,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a gradual transition toward tightening by discontinuing yield targeting and acknowledging progress on inflation and employment, while maintaining dovish guidance through patient forward guidance and low underlying inflation concerns."
+      },
+      "transformer": {
+        "net": -0.006121294497436768,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 37
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.13
+      "disagreement": 0.121148
     },
     "evidence_phrases": [
       {
@@ -3445,19 +3643,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-24.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:59:09Z"
   },
   "2021-12-07": {
     "decision_id": "2021-12-07",
-    "net": 0.083333,
+    "net": 0.044134,
     "sub_scores": {
       "inflation": 0.05,
       "growth": -0.3,
       "employment": 0.325
     },
-    "confidence": 0.916667,
+    "confidence": 0.912234,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -3511,15 +3709,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish hold with conditional hawkishness: acknowledging inflation and labour market tightening but committing to patience and no rate rises until inflation sustainably reaches target, reflecting accommodation despite emerging price pressures."
+      },
+      "transformer": {
+        "net": -0.03426578413585529,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 34
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.083333
+      "disagreement": 0.087766
     },
     "evidence_phrases": [
       {
@@ -3571,19 +3778,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-29.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:59:16Z"
   },
   "2022-02-01": {
     "decision_id": "2022-02-01",
-    "net": 0.115625,
+    "net": 0.051618,
     "sub_scores": {
       "inflation": 0.045,
       "growth": 0.025,
       "employment": 0.3375
     },
-    "confidence": 0.884375,
+    "confidence": 0.869208,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -3687,15 +3894,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a gradual tightening bias by ending QE while maintaining dovish forward guidance, acknowledging faster inflation than expected but emphasizing patience pending sustained inflation within target and modest wage growth."
+      },
+      "transformer": {
+        "net": -0.07639664216616819,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 43
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.115625
+      "disagreement": 0.130792
     },
     "evidence_phrases": [
       {
@@ -3827,19 +4043,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-02.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:59:24Z"
   },
   "2022-03-01": {
     "decision_id": "2022-03-01",
-    "net": 0.56875,
+    "net": 0.358184,
     "sub_scores": {
       "inflation": -0.016667,
       "growth": 0.5,
       "employment": 0.325
     },
-    "confidence": 0.56875,
+    "confidence": 0.538848,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -3912,15 +4128,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a dovish hold, acknowledging inflation pressures but emphasizing patience and conditioning rate increases on sustained inflation within target, while noting uncertainties about persistence."
+      },
+      "transformer": {
+        "net": -0.06294892377087048,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 35
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.43125
+      "disagreement": 0.461152
     },
     "evidence_phrases": [
       {
@@ -3996,19 +4221,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-05.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:59:35Z"
   },
   "2022-04-05": {
     "decision_id": "2022-04-05",
-    "net": 0.555556,
+    "net": 0.392438,
     "sub_scores": {
       "inflation": 0.164286,
       "growth": 0.5,
       "employment": -0.325
     },
-    "confidence": 0.555556,
+    "confidence": 0.569998,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -4086,15 +4311,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a hawkish tilt on inflation due to sharp increases globally and domestically, wage pressures from tight labour markets, and expected further price rises, but remains dovish on employment given strong labour market conditions and accommodative financial conditions."
+      },
+      "transformer": {
+        "net": 0.06620213112739079,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 34
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.444444
+      "disagreement": 0.430002
     },
     "evidence_phrases": [
       {
@@ -4178,19 +4412,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-11.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:59:43Z"
   },
   "2022-05-03": {
     "decision_id": "2022-05-03",
-    "net": 0.893182,
+    "net": 0.645996,
     "sub_scores": {
       "inflation": 0.4125,
       "growth": 0.0,
       "employment": 0.841667
     },
-    "confidence": 0.893182,
+    "confidence": 0.63971,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -4278,15 +4512,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance through rate increases, withdrawal of pandemic support, and explicit acknowledgment of inflation exceeding expectations and wages growth acceleration, indicating commitment to further tightening."
+      },
+      "transformer": {
+        "net": 0.15162361652041093,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 39
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.106818
+      "disagreement": 0.36029
     },
     "evidence_phrases": [
       {
@@ -4386,19 +4629,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-12.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T16:59:51Z"
   },
   "2022-06-07": {
     "decision_id": "2022-06-07",
-    "net": 0.779167,
+    "net": 0.576789,
     "sub_scores": {
       "inflation": 0.4,
       "growth": -0.3,
       "employment": 0.65
     },
-    "confidence": 0.779167,
+    "confidence": 0.661732,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -4491,15 +4734,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA statement signals a hawkish stance dominated by inflation concerns, with strong language about rising inflation, tight labour markets, and wage pressures justifying a 50bp rate increase and signalling further tightening ahead."
+      },
+      "transformer": {
+        "net": 0.1720329967733377,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 39
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.220833
+      "disagreement": 0.338268
     },
     "evidence_phrases": [
       {
@@ -4607,19 +4859,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-14.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:00:00Z"
   },
   "2022-07-05": {
     "decision_id": "2022-07-05",
-    "net": 0.885,
+    "net": 0.618225,
     "sub_scores": {
       "inflation": 0.3875,
       "growth": 0.5,
       "employment": 0.875
     },
-    "confidence": 0.885,
+    "confidence": 0.611214,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -4714,15 +4966,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA statement signals a hawkish stance across inflation and employment dimensions, with a 50bp rate increase and forward guidance indicating further tightening ahead to combat high inflation and an exceptionally tight labour market."
+      },
+      "transformer": {
+        "net": 0.08467451242828056,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 38
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.115
+      "disagreement": 0.388786
     },
     "evidence_phrases": [
       {
@@ -4830,19 +5091,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-20.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:00:09Z"
   },
   "2022-08-02": {
     "decision_id": "2022-08-02",
-    "net": 0.613636,
+    "net": 0.435572,
     "sub_scores": {
       "inflation": -0.133333,
       "growth": 0.5,
       "employment": 0.85
     },
-    "confidence": 0.886364,
+    "confidence": 0.731629,
     "components": {
       "lexicon": {
         "net": 0.5,
@@ -4948,15 +5209,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA statement signals a hawkish stance dominated by inflation concerns, with multiple references to elevated inflation, tight labour markets, wage pressures, and a commitment to further rate increases to restore price stability."
+      },
+      "transformer": {
+        "net": 0.07944248538724212,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 43
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.113636
+      "disagreement": 0.268371
     },
     "evidence_phrases": [
       {
@@ -5080,19 +5350,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-21.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:00:18Z"
   },
   "2022-09-06": {
     "decision_id": "2022-09-06",
-    "net": 0.526667,
+    "net": 0.379827,
     "sub_scores": {
       "inflation": -0.136364,
       "growth": 0.225,
       "employment": 0.85
     },
-    "confidence": 0.973333,
+    "confidence": 0.791199,
     "components": {
       "lexicon": {
         "net": 0.5,
@@ -5212,15 +5482,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance focused on combating elevated inflation through rate increases, while acknowledging growth and employment strength but noting future moderation."
+      },
+      "transformer": {
+        "net": 0.0861478415191979,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 37
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.026667
+      "disagreement": 0.208801
     },
     "evidence_phrases": [
       {
@@ -5368,19 +5647,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-28.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:00:28Z"
   },
   "2022-10-04": {
     "decision_id": "2022-10-04",
-    "net": 0.897222,
+    "net": 0.599756,
     "sub_scores": {
       "inflation": 0.407143,
       "growth": 0.0,
       "employment": 0.8625
     },
-    "confidence": 0.897222,
+    "confidence": 0.571031,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -5458,15 +5737,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a hawkish stance across inflation and employment dimensions, with repeated commitments to further rate increases and strong language about returning inflation to target despite tight labour market conditions."
+      },
+      "transformer": {
+        "net": 0.004824222201799474,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 41
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.102778
+      "disagreement": 0.428969
     },
     "evidence_phrases": [
       {
@@ -5550,19 +5838,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-33.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:00:36Z"
   },
   "2022-11-01": {
     "decision_id": "2022-11-01",
-    "net": 0.3375,
+    "net": 0.246586,
     "sub_scores": {
       "inflation": 0.415625,
       "growth": -0.85,
       "employment": 0.9
     },
-    "confidence": 0.6625,
+    "confidence": 0.695914,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -5651,15 +5939,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance focused primarily on inflation control, with explicit rate increases, acknowledgment of elevated inflation expectations, and commitment to further tightening despite growth moderation and labour market tightness."
+      },
+      "transformer": {
+        "net": 0.06475782440975308,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 44
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.3375
+      "disagreement": 0.304086
     },
     "evidence_phrases": [
       {
@@ -5759,19 +6056,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-36.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:00:46Z"
   },
   "2022-12-06": {
     "decision_id": "2022-12-06",
-    "net": 0.85,
+    "net": 0.571988,
     "sub_scores": {
       "inflation": 0.425,
       "growth": -0.3,
       "employment": 0.866667
     },
-    "confidence": 0.85,
+    "confidence": 0.588198,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -5864,15 +6161,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance focused primarily on combating high inflation through rate increases, while acknowledging growth moderation and labour market tightness as secondary concerns."
+      },
+      "transformer": {
+        "net": 0.015964132292490257,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 38
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.15
+      "disagreement": 0.411802
     },
     "evidence_phrases": [
       {
@@ -5980,19 +6286,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-41.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:00:56Z"
   },
   "2023-02-07": {
     "decision_id": "2023-02-07",
-    "net": 0.836364,
+    "net": 0.552604,
     "sub_scores": {
       "inflation": 0.405556,
       "growth": -0.3,
       "employment": 0.85
     },
-    "confidence": 0.836364,
+    "confidence": 0.577046,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -6086,15 +6392,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance focused primarily on inflation control, with multiple references to high inflation, wage pressures, and commitment to further rate increases, while acknowledging growth and employment risks."
+      },
+      "transformer": {
+        "net": -0.014915101154339175,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 43
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.163636
+      "disagreement": 0.422954
     },
     "evidence_phrases": [
       {
@@ -6202,19 +6517,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-04.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:01:05Z"
   },
   "2023-03-07": {
     "decision_id": "2023-03-07",
-    "net": 0.35,
+    "net": 0.215792,
     "sub_scores": {
       "inflation": 0.225,
       "growth": -0.325,
       "employment": 0.525
     },
-    "confidence": 0.85,
+    "confidence": 0.774115,
     "components": {
       "lexicon": {
         "net": 0.5,
@@ -6325,15 +6640,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance on inflation control through rate increases and vigilance against wage-price spirals, while acknowledging dovish growth and employment concerns as the economy slows."
+      },
+      "transformer": {
+        "net": -0.05262533922990163,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 45
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.15
+      "disagreement": 0.225885
     },
     "evidence_phrases": [
       {
@@ -6465,19 +6789,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-07.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:01:15Z"
   },
   "2023-04-04": {
     "decision_id": "2023-04-04",
-    "net": 0.51,
+    "net": 0.333221,
     "sub_scores": {
       "inflation": 0.157143,
       "growth": -0.35,
       "employment": 0.2
     },
-    "confidence": 0.51,
+    "confidence": 0.528229,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -6566,15 +6890,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a hawkish medium-term stance on inflation control despite a dovish near-term hold, with acknowledgment of growth and employment softening but emphasis on the need for potential further tightening to combat inflation risks."
+      },
+      "transformer": {
+        "net": -0.020336137244068995,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 41
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.49
+      "disagreement": 0.471771
     },
     "evidence_phrases": [
       {
@@ -6674,19 +7007,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-08.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:01:25Z"
   },
   "2023-05-02": {
     "decision_id": "2023-05-02",
-    "net": 0.379167,
+    "net": 0.246094,
     "sub_scores": {
       "inflation": 0.389286,
       "growth": -0.816667,
       "employment": 0.8875
     },
-    "confidence": 0.954167,
+    "confidence": 0.808122,
     "components": {
       "lexicon": {
         "net": 0.3333333333333333,
@@ -6791,15 +7124,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance on inflation control through rate increases and warnings about persistent price pressures, while acknowledging dovish growth concerns regarding below-trend economic expansion and household consumption weakness."
+      },
+      "transformer": {
+        "net": -0.02005084180938346,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 35
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.045833
+      "disagreement": 0.191878
     },
     "evidence_phrases": [
       {
@@ -6923,19 +7265,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-10.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:01:35Z"
   },
   "2023-06-06": {
     "decision_id": "2023-06-06",
-    "net": 0.697727,
+    "net": 0.515678,
     "sub_scores": {
       "inflation": 0.389286,
       "growth": 0.025,
       "employment": 0.2
     },
-    "confidence": 0.697727,
+    "confidence": 0.643354,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -7029,15 +7371,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance focused on controlling persistent inflation despite economic slowdown, with multiple references to inflation remaining too high and upside risks, balanced against acknowledgment of moderating growth and easing labour market conditions."
+      },
+      "transformer": {
+        "net": 0.15157851707772352,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 32
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.302273
+      "disagreement": 0.356646
     },
     "evidence_phrases": [
       {
@@ -7145,19 +7496,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-13.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:01:44Z"
   },
   "2023-07-04": {
     "decision_id": "2023-07-04",
-    "net": 0.615625,
+    "net": 0.421735,
     "sub_scores": {
       "inflation": 0.375,
       "growth": -0.325,
       "employment": 0.2
     },
-    "confidence": 0.615625,
+    "confidence": 0.583248,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -7236,15 +7587,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance on inflation control while acknowledging growth and employment softening, maintaining a hold to assess impacts while reserving the option for further tightening."
+      },
+      "transformer": {
+        "net": 0.033956119004869834,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 32
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.384375
+      "disagreement": 0.416752
     },
     "evidence_phrases": [
       {
@@ -7328,19 +7688,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-16.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:01:52Z"
   },
   "2023-08-01": {
     "decision_id": "2023-08-01",
-    "net": 0.416667,
+    "net": 0.285963,
     "sub_scores": {
       "inflation": 0.36,
       "growth": -0.85,
       "employment": 0.8
     },
-    "confidence": 0.916667,
+    "confidence": 0.803031,
     "components": {
       "lexicon": {
         "net": 0.3333333333333333,
@@ -7420,15 +7780,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish bias toward inflation control while acknowledging growth weakness, with language indicating potential future rate increases despite current pause."
+      },
+      "transformer": {
+        "net": 0.024554868379758822,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 37
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.083333
+      "disagreement": 0.196969
     },
     "evidence_phrases": [
       {
@@ -7512,19 +7881,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-19.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:01:59Z"
   },
   "2023-09-05": {
     "decision_id": "2023-09-05",
-    "net": -0.0125,
+    "net": -0.009659,
     "sub_scores": {
       "inflation": -0.175,
       "growth": -0.8,
       "employment": 0.75
     },
-    "confidence": 0.5125,
+    "confidence": 0.601938,
     "components": {
       "lexicon": {
         "net": -0.5,
@@ -7615,15 +7984,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance on inflation control while acknowledging growth weakness, maintaining a hold but signalling potential future tightening if inflation does not return to target as forecast."
+      },
+      "transformer": {
+        "net": -0.003976617354367461,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 35
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.4875
+      "disagreement": 0.398062
     },
     "evidence_phrases": [
       {
@@ -7723,19 +8101,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-23.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:02:08Z"
   },
   "2023-10-03": {
     "decision_id": "2023-10-03",
-    "net": -0.066667,
+    "net": -0.054283,
     "sub_scores": {
       "inflation": -0.1625,
       "growth": -0.775,
       "employment": 0.525
     },
-    "confidence": 0.566667,
+    "confidence": 0.645752,
     "components": {
       "lexicon": {
         "net": -0.5,
@@ -7846,15 +8224,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance on inflation control while acknowledging dovish growth and employment concerns, maintaining a hold while reserving the option for further tightening if inflation does not return to target as expected."
+      },
+      "transformer": {
+        "net": -0.029515791923872062,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 35
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.433333
+      "disagreement": 0.354248
     },
     "evidence_phrases": [
       {
@@ -7986,19 +8373,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-25.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:02:17Z"
   },
   "2023-11-07": {
     "decision_id": "2023-11-07",
-    "net": 0.185714,
+    "net": 0.141435,
     "sub_scores": {
       "inflation": 0.4,
       "growth": -0.816667,
       "employment": 0.475
     },
-    "confidence": 0.814286,
+    "confidence": 0.835943,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -8107,15 +8494,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance dominated by inflation concerns, with a 25bp rate increase justified by persistent inflation above target and upside surprises, partially offset by dovish signals regarding below-trend growth and labour market easing."
+      },
+      "transformer": {
+        "net": 0.052875581593252716,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 40
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.185714
+      "disagreement": 0.164057
     },
     "evidence_phrases": [
       {
@@ -8247,19 +8643,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-30.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:02:25Z"
   },
   "2023-12-05": {
     "decision_id": "2023-12-05",
-    "net": 0.227778,
+    "net": 0.164554,
     "sub_scores": {
       "inflation": 0.282143,
       "growth": -0.175,
       "employment": 0.25
     },
-    "confidence": 0.772222,
+    "confidence": 0.793644,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -8343,15 +8739,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance focused on inflation control, having recently raised rates and signalling readiness for further tightening if needed, while acknowledging some moderation in inflation and easing labour market conditions."
+      },
+      "transformer": {
+        "net": 0.03810614373327957,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 36
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.227778
+      "disagreement": 0.206356
     },
     "evidence_phrases": [
       {
@@ -8443,19 +8848,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-35.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:02:35Z"
   },
   "2024-02-06": {
     "decision_id": "2024-02-06",
-    "net": 0.731818,
+    "net": 0.423465,
     "sub_scores": {
       "inflation": 0.257143,
       "growth": 0.35,
       "employment": 0.525
     },
-    "confidence": 0.731818,
+    "confidence": 0.512033,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -8543,15 +8948,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance on inflation control, emphasizing persistent inflation risks and explicitly noting that further rate increases cannot be ruled out, while acknowledging some easing in goods prices and gradual labour market softening."
+      },
+      "transformer": {
+        "net": -0.19324238998267582,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 34
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.268182
+      "disagreement": 0.487967
     },
     "evidence_phrases": [
       {
@@ -8651,19 +9065,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-01.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:02:44Z"
   },
   "2024-03-19": {
     "decision_id": "2024-03-19",
-    "net": 0.076316,
+    "net": -0.001795,
     "sub_scores": {
       "inflation": 0.146154,
       "growth": -0.583333,
       "employment": 0.433333
     },
-    "confidence": 0.923684,
+    "confidence": 0.873172,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -8809,15 +9223,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance by emphasizing persistent inflation concerns, excess demand, and strong cost pressures, while maintaining the cash rate unchanged and reserving the option for future tightening."
+      },
+      "transformer": {
+        "net": -0.158017644754205,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 39
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.076316
+      "disagreement": 0.126828
     },
     "evidence_phrases": [
       {
@@ -8998,19 +9421,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-05.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:02:52Z"
   },
   "2024-05-07": {
     "decision_id": "2024-05-07",
-    "net": 0.716071,
+    "net": 0.469346,
     "sub_scores": {
       "inflation": 0.3675,
       "growth": -0.333333,
       "employment": 0.85
     },
-    "confidence": 0.716071,
+    "confidence": 0.581084,
     "components": {
       "lexicon": {
         "net": 1.0,
@@ -9113,15 +9536,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance on inflation (slow moderation, services persistence, wage pressures, excess demand) balanced against dovish growth concerns (weak consumption, subdued output), while maintaining a hold on rates pending further data."
+      },
+      "transformer": {
+        "net": -0.02410601568949777,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 43
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.283929
+      "disagreement": 0.418916
     },
     "evidence_phrases": [
       {
@@ -9245,19 +9677,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-08.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:03:01Z"
   },
   "2024-06-18": {
     "decision_id": "2024-06-18",
-    "net": 0.234615,
+    "net": 0.145986,
     "sub_scores": {
       "inflation": 0.335,
       "growth": -0.3,
       "employment": 0.3
     },
-    "confidence": 0.765385,
+    "confidence": 0.771075,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -9361,15 +9793,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance by emphasizing persistent inflation above target, excess demand, elevated cost pressures, and upside risks, while acknowledging growth weakness and mixed data, resulting in a hold with vigilant monitoring."
+      },
+      "transformer": {
+        "net": -0.03127239470410606,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 46
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.234615
+      "disagreement": 0.228925
     },
     "evidence_phrases": [
       {
@@ -9493,19 +9934,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-12.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:03:11Z"
   },
   "2024-08-06": {
     "decision_id": "2024-08-06",
-    "net": 0.277273,
+    "net": 0.158284,
     "sub_scores": {
       "inflation": 0.475,
       "growth": -0.35,
       "employment": -0.35
     },
-    "confidence": 0.922727,
+    "confidence": 0.820286,
     "components": {
       "lexicon": {
         "net": 0.2,
@@ -9605,15 +10046,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a hawkish stance on inflation due to persistent above-target readings and upside risks, while acknowledging dovish concerns about weak growth and rising unemployment, but ultimately prioritizing inflation control through restrictive policy."
+      },
+      "transformer": {
+        "net": -0.079692881897484,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 38
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.077273
+      "disagreement": 0.179714
     },
     "evidence_phrases": [
       {
@@ -9729,19 +10179,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-15.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:03:22Z"
   },
   "2024-09-24": {
     "decision_id": "2024-09-24",
-    "net": 0.460417,
+    "net": 0.266962,
     "sub_scores": {
       "inflation": 0.391667,
       "growth": -0.3,
       "employment": 0.8
     },
-    "confidence": 0.872917,
+    "confidence": 0.707398,
     "components": {
       "lexicon": {
         "net": 0.3333333333333333,
@@ -9826,15 +10276,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance by emphasizing persistent above-target inflation, weak growth, and the need for continued restrictive policy, while acknowledging some labour market softening."
+      },
+      "transformer": {
+        "net": -0.11994643298288186,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 45
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.127083
+      "disagreement": 0.292602
     },
     "evidence_phrases": [
       {
@@ -9926,19 +10385,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-18.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:03:33Z"
   },
   "2024-11-05": {
     "decision_id": "2024-11-05",
-    "net": 0.22,
+    "net": 0.123111,
     "sub_scores": {
       "inflation": 0.183333,
       "growth": -0.275,
       "employment": 0.8
     },
-    "confidence": 0.78,
+    "confidence": 0.774076,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -10039,15 +10498,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance on inflation, emphasizing that underlying inflation remains elevated and policy must stay restrictive, while acknowledging growth weakness and labour market easing as offsetting dovish considerations."
+      },
+      "transformer": {
+        "net": -0.07066843812079991,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 51
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.22
+      "disagreement": 0.225924
     },
     "evidence_phrases": [
       {
@@ -10163,19 +10631,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-24.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:03:44Z"
   },
   "2024-12-10": {
     "decision_id": "2024-12-10",
-    "net": 0.034615,
+    "net": -0.011206,
     "sub_scores": {
       "inflation": -0.076667,
       "growth": -0.375,
       "employment": 0.8
     },
-    "confidence": 0.965385,
+    "confidence": 0.929303,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -10291,15 +10759,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance on inflation (still elevated, risks remain) balanced against dovish growth concerns (weak output), while maintaining an unchanged policy rate and emphasizing data-dependent decisions."
+      },
+      "transformer": {
+        "net": -0.10284959636628628,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 45
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.034615
+      "disagreement": 0.070697
     },
     "evidence_phrases": [
       {
@@ -10439,19 +10916,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-27.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:03:57Z"
   },
   "2025-02-18": {
     "decision_id": "2025-02-18",
-    "net": -0.016429,
+    "net": -0.063077,
     "sub_scores": {
       "inflation": -0.214286,
       "growth": -0.85,
       "employment": 0.825
     },
-    "confidence": 0.873571,
+    "confidence": 0.877492,
     "components": {
       "lexicon": {
         "net": -0.14285714285714285,
@@ -10558,15 +11035,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a cautious easing stance, acknowledging disinflation progress while remaining concerned about labour market tightness, upside inflation risks, and the dangers of premature policy relaxation."
+      },
+      "transformer": {
+        "net": -0.1563739109163483,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 39
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.126429
+      "disagreement": 0.122508
     },
     "evidence_phrases": [
       {
@@ -10690,19 +11176,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-03.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:04:08Z"
   },
   "2025-04-01": {
     "decision_id": "2025-04-01",
-    "net": 0.094444,
+    "net": 0.019541,
     "sub_scores": {
       "inflation": -0.425,
       "growth": 0.0,
       "employment": 0.633333
     },
-    "confidence": 0.905556,
+    "confidence": 0.868975,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -10786,15 +11272,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a cautious, data-dependent stance with hawkish concern about inflation persistence and tight labour markets, offset by dovish acknowledgment of easing inflation and wage pressures, justifying the unchanged rate decision."
+      },
+      "transformer": {
+        "net": -0.13026695369797595,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 34
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.094444
+      "disagreement": 0.131025
     },
     "evidence_phrases": [
       {
@@ -10886,19 +11381,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-10.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:04:18Z"
   },
   "2025-05-20": {
     "decision_id": "2025-05-20",
-    "net": -0.714286,
+    "net": -0.534097,
     "sub_scores": {
       "inflation": -0.785,
       "growth": -0.85,
       "employment": 0.066667
     },
-    "confidence": 0.714286,
+    "confidence": 0.654518,
     "components": {
       "lexicon": {
         "net": -1.0,
@@ -11007,15 +11502,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a dovish stance by emphasizing falling inflation, balanced risks, and the appropriateness of easing policy, while acknowledging persistent labour market tightness and high unit labour cost growth as offsetting hawkish considerations."
+      },
+      "transformer": {
+        "net": -0.1737201761506084,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 36
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.285714
+      "disagreement": 0.345482
     },
     "evidence_phrases": [
       {
@@ -11147,19 +11651,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-13.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:04:26Z"
   },
   "2025-07-08": {
     "decision_id": "2025-07-08",
-    "net": -0.46,
+    "net": -0.337767,
     "sub_scores": {
       "inflation": -0.533333,
       "growth": -0.75,
       "employment": 0.283333
     },
-    "confidence": 0.46,
+    "confidence": 0.526416,
     "components": {
       "lexicon": {
         "net": -1.0,
@@ -11248,15 +11752,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a cautious holding pattern, acknowledging inflation progress and balanced risks while remaining vigilant about labour market tightness and slightly-stronger-than-expected inflation data."
+      },
+      "transformer": {
+        "net": -0.09330236596158809,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 36
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.54
+      "disagreement": 0.473584
     },
     "evidence_phrases": [
       {
@@ -11356,19 +11869,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-17.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:04:36Z"
   },
   "2025-08-12": {
     "decision_id": "2025-08-12",
-    "net": -0.668182,
+    "net": -0.500334,
     "sub_scores": {
       "inflation": -0.685714,
       "growth": -0.2,
       "employment": -0.116667
     },
-    "confidence": 0.668182,
+    "confidence": 0.639794,
     "components": {
       "lexicon": {
         "net": -1.0,
@@ -11456,15 +11969,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a dovish stance through rate cuts and declining inflation expectations, but tempers this with caution about uncertainties and tight labour market conditions."
+      },
+      "transformer": {
+        "net": -0.16463772308182073,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 37
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.331818
+      "disagreement": 0.360206
     },
     "evidence_phrases": [
       {
@@ -11564,19 +12086,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-22.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:04:45Z"
   },
   "2025-09-30": {
     "decision_id": "2025-09-30",
-    "net": -0.368182,
+    "net": -0.269909,
     "sub_scores": {
       "inflation": -0.4125,
       "growth": 0.25,
       "employment": 0.25
     },
-    "confidence": 0.368182,
+    "confidence": 0.46573,
     "components": {
       "lexicon": {
         "net": -1.0,
@@ -11664,15 +12186,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a cautious hold stance, balancing dovish inflation progress against hawkish concerns about persistent inflation, strong demand, and tight labour markets."
+      },
+      "transformer": {
+        "net": -0.07336192171917194,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 36
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.631818
+      "disagreement": 0.53427
     },
     "evidence_phrases": [
       {
@@ -11772,19 +12303,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-27.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:04:54Z"
   },
   "2025-11-04": {
     "decision_id": "2025-11-04",
-    "net": 0.3475,
+    "net": 0.226268,
     "sub_scores": {
       "inflation": 0.352778,
       "growth": 0.0,
       "employment": 0.3
     },
-    "confidence": 0.6525,
+    "confidence": 0.66849,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -11873,15 +12404,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance by emphasizing persistent and higher-than-expected inflation, tight labour market conditions, and elevated unit labour costs, justifying a pause in rate cuts despite recent easing."
+      },
+      "transformer": {
+        "net": -0.016197125655081537,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 45
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.3475
+      "disagreement": 0.33151
     },
     "evidence_phrases": [
       {
@@ -11981,19 +12521,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-31.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:05:03Z"
   },
   "2025-12-09": {
     "decision_id": "2025-12-09",
-    "net": -0.236364,
+    "net": -0.125657,
     "sub_scores": {
       "inflation": -0.175,
       "growth": 0.316667,
       "employment": 0.0
     },
-    "confidence": 0.236364,
+    "confidence": 0.357137,
     "components": {
       "lexicon": {
         "net": -1.0,
@@ -12081,15 +12621,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance by emphasizing upside inflation risks, capacity pressures, and tight labour markets, while maintaining the cash rate unchanged and adopting a cautious, data-dependent approach."
+      },
+      "transformer": {
+        "net": 0.09575739008342397,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 29
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.763636
+      "disagreement": 0.642863
     },
     "evidence_phrases": [
       {
@@ -12189,19 +12738,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-33.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:05:14Z"
   },
   "2026-02-03": {
     "decision_id": "2026-02-03",
-    "net": -0.139286,
+    "net": -0.017469,
     "sub_scores": {
       "inflation": -0.1,
       "growth": 0.3375,
       "employment": 0.325
     },
-    "confidence": 0.139286,
+    "confidence": 0.276422,
     "components": {
       "lexicon": {
         "net": -1.0,
@@ -12304,15 +12853,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The statement signals a hawkish policy stance across inflation, growth, and employment dimensions, with the RBA raising rates due to material pickup in inflation, stronger-than-expected demand growth, and tight labour market conditions."
+      },
+      "transformer": {
+        "net": 0.22616368069968842,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 27
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.860714
+      "disagreement": 0.723578
     },
     "evidence_phrases": [
       {
@@ -12436,19 +12994,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2026/mr-26-03.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:05:22Z"
   },
   "2026-03-17": {
     "decision_id": "2026-03-17",
-    "net": -0.19375,
+    "net": -0.053143,
     "sub_scores": {
       "inflation": -0.179167,
       "growth": 0.3,
       "employment": 0.25
     },
-    "confidence": 0.19375,
+    "confidence": 0.312323,
     "components": {
       "lexicon": {
         "net": -1.0,
@@ -12561,15 +13119,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA signals a hawkish stance through rate increases driven by material inflation risks, capacity pressures, tight labour market conditions, and upside risks to inflation expectations."
+      },
+      "transformer": {
+        "net": 0.22807075393696627,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 36
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.80625
+      "disagreement": 0.687677
     },
     "evidence_phrases": [
       {
@@ -12709,19 +13276,19 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2026/mr-26-08.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:05:29Z"
   },
   "2026-05-05": {
     "decision_id": "2026-05-05",
-    "net": 0.309375,
+    "net": 0.277342,
     "sub_scores": {
       "inflation": 0.398214,
       "growth": -0.3125,
       "employment": 0.0
     },
-    "confidence": 0.690625,
+    "confidence": 0.743366,
     "components": {
       "lexicon": {
         "net": 0.0,
@@ -12825,15 +13392,24 @@
         ],
         "model_id": "claude-haiku-4-5-20251001",
         "rationale": "The RBA statement signals a hawkish stance dominated by inflation concerns, with multiple references to elevated and rising inflation pressures, capacity constraints, and upside risks to inflation expectations, justifying the 25 basis point rate increase."
+      },
+      "transformer": {
+        "net": 0.2132750256888328,
+        "version": "fed-stance:7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "model_name": "fed-stance",
+        "model_id": "gtfintechlab/model_federal_reserve_system_stance_label",
+        "model_revision": "7695c0aebcd1a85ee23ff41df6a57b024e20f82b",
+        "n_sentences": 31
       }
     },
     "reconciliation": {
       "method": "equal_weight_mean",
       "weights": {
-        "lexicon": 0.5,
-        "llm": 0.5
+        "lexicon": 0.333,
+        "llm": 0.333,
+        "transformer": 0.334
       },
-      "disagreement": 0.309375
+      "disagreement": 0.256634
     },
     "evidence_phrases": [
       {
@@ -12965,8 +13541,8 @@
         ]
       }
     ],
-    "engine_version": "engine-2026.06-d8acadec",
+    "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2026/mr-26-12.html",
-    "scored_at": "2026-06-06T12:46:07Z"
+    "scored_at": "2026-06-07T17:05:37Z"
   }
 }
