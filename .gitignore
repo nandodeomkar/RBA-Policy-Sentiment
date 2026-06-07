@@ -37,3 +37,6 @@ out/
 Thumbs.db
 .idea/
 .vscode/
+
+# --- graphify: generated knowledge-graph output (regenerate with /graphify) ---
+graphify-out/
