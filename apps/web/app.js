@@ -41,8 +41,7 @@
     renderHero(latest);
     setEngineVersion(latest.score.engine_version);
 
-    // Phase D: window.RBARecord.init(rows) — chart, table, detail panel, filters.
-    if (window.RBARecord) window.RBARecord.init(rows);
+    initRecord(rows);
 
     C.revealOnLoad();
   }
@@ -130,6 +129,67 @@
         + '<a class="accent" href="https://www.rba.gov.au/monetary-policy/int-rate-decisions/">RBA’s monetary policy decisions page</a>.</p>';
     }
     document.documentElement.setAttribute("data-revealed", "1");
+  }
+
+  // ---- record section: chart + table + detail + filters ----
+  function initRecord(rows) {
+    var tbody = byId("record-tbody");
+    var detailSection = byId("detail-section");
+    var detailEl = byId("detail");
+
+    var byIdMap = {};
+    rows.forEach(function (r) { byIdMap[r.decision.id] = r; });
+
+    var chart = C.buildStanceChart("chart", rows, { onSelect: openDetail });
+    window.__rbaChart = chart;
+
+    function applyFilter(year, types) {
+      return rows.filter(function (r) {
+        return (year === "all" || C.yearOf(r.decision.date) === year) && types[r.decision.outcome.action];
+      });
+    }
+    C.setupFilters({
+      yearSel: byId("filter-year"),
+      checks: Array.prototype.slice.call(document.querySelectorAll('input[name="type"]')),
+      resetBtn: byId("filter-reset"),
+      statusEl: byId("filter-status"),
+      rows: rows,
+      onApply: function (year, types) {
+        var filtered = applyFilter(year, types);
+        var n = C.renderRecordTable(tbody, filtered);
+        chart.update(year, types);
+        return n;
+      }
+    });
+
+    // delegated row selection (click + keyboard)
+    tbody.addEventListener("click", function (e) {
+      if (e.target.closest("[data-noselect]")) return;
+      var tr = e.target.closest("tr[data-id]");
+      if (tr) openDetail(tr.getAttribute("data-id"));
+    });
+    tbody.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      var tr = e.target.closest("tr[data-id]");
+      if (tr) { e.preventDefault(); openDetail(tr.getAttribute("data-id")); }
+    });
+
+    function openDetail(id) {
+      var r = byIdMap[id];
+      if (!r) return;
+      C.renderDetail(detailEl, r);
+      detailSection.hidden = false;
+      if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+      detailSection.scrollIntoView({ behavior: C.prefersReducedMotion() ? "auto" : "smooth", block: "start" });
+    }
+
+    // deep link on load + on hash change
+    function fromHash() {
+      var id = decodeURIComponent(location.hash.replace(/^#/, ""));
+      if (id && byIdMap[id]) openDetail(id);
+    }
+    fromHash();
+    window.addEventListener("hashchange", fromHash);
   }
 
   function byId(id) { return document.getElementById(id); }

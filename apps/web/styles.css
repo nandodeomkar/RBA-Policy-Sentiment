@@ -226,3 +226,14 @@ td a:hover{ text-decoration:underline; text-underline-offset:3px; }
 .evi-chip .pol{ font-weight:600; }
 .evi-chip .dim{ color:var(--muted); }
 .detail-foot{ margin-top:18px; font-size:.8rem; color:var(--muted); }
+.detail-reconciled{ margin-top:6px; }
+.stance-tag{ font-size:.7rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin-left:8px; white-space:nowrap; }
+.scale.mini{ display:block; height:8px; margin-top:8px; max-width:260px; }
+.num.big{ font-size:2rem; font-weight:600; }
+.subs-inline{ display:flex; flex-wrap:wrap; gap:8px 18px; margin:6px 0 0; }
+.subs-inline .num{ font-weight:600; }
+.sub-inline .sub-name{ text-transform:capitalize; color:var(--ink-2); }
+.muted-line{ color:var(--muted); font-size:.88rem; line-height:1.55; margin:8px 0 0; }
+.muted-line code{ font-size:.85em; background:var(--surface); padding:1px 6px; border-radius:5px; margin:0 1px; }
+.evi-list{ margin-top:6px; }
+tbody tr[role="button"]{ cursor:pointer; }
