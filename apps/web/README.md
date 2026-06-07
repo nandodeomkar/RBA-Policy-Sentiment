@@ -29,7 +29,7 @@ python -m http.server 8080     # then open http://localhost:8080
 ## Tests
 
 ```
-node --test tests/             # unit tests for the pure helpers in core.js
+node --test                    # unit tests for the pure helpers in core.js (run from apps/web)
 ```
 
 ## Deploy (Vercel, free tier)
