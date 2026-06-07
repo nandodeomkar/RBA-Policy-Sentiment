@@ -174,3 +174,55 @@ td a:hover{ text-decoration:underline; text-underline-offset:3px; }
 .fine{ font-size:.84rem; color:var(--muted); }
 
 @media (prefers-reduced-motion:reduce){ *{ animation-duration:.001ms!important; transition-duration:.001ms!important; } }
+
+/* ============================================================
+   Sentiment components (M1) — added on top of the inherited
+   RBA-Tracker token system. Direction is encoded by position +
+   signed value + label, never by colour alone.
+   ============================================================ */
+.skip-link{ position:absolute; left:-9999px; top:0; background:var(--accent); color:#fff; padding:10px 16px; border-radius:0 0 8px 0; z-index:50; font-weight:600; }
+.skip-link:focus{ left:0; }
+
+.hero-statement .accent{ color:var(--accent); }
+
+/* net stance display */
+.stance-art .eyebrow{ margin-bottom:18px; }
+.stance-display{ display:flex; align-items:baseline; gap:18px; flex-wrap:wrap; }
+.stance-display .num{ font-size:clamp(3.2rem,11vw,5.6rem); font-weight:600; line-height:.85; letter-spacing:-.04em; }
+.stance-label{ font-size:1rem; font-weight:600; letter-spacing:.01em; color:var(--ink-2); }
+.scale{ position:relative; height:8px; margin-top:28px; max-width:340px; border-radius:999px; background:linear-gradient(90deg,var(--hair),var(--grid),var(--hair)); }
+.scale::before{ content:""; position:absolute; left:50%; top:-4px; bottom:-4px; width:1px; background:var(--muted); opacity:.55; }
+.scale-marker{ position:absolute; top:50%; width:16px; height:16px; border-radius:50%; background:var(--accent); border:2px solid var(--bg); transform:translate(-50%,-50%); box-shadow:0 1px 5px rgba(0,0,0,.22); }
+.scale-ends{ display:flex; justify-content:space-between; max-width:340px; margin-top:11px; font-size:.76rem; color:var(--muted); }
+
+/* sub-scores */
+.subs{ display:flex; flex-direction:column; gap:15px; }
+.subs .eyebrow{ margin-bottom:4px; }
+.sub-row{ display:grid; grid-template-columns:6em 1fr 3.4em; align-items:center; gap:14px; }
+.sub-name{ font-size:.9rem; color:var(--ink-2); text-transform:capitalize; }
+.sub-bar{ position:relative; height:7px; border-radius:999px; background:var(--grid); }
+.sub-bar::before{ content:""; position:absolute; left:50%; top:-3px; bottom:-3px; width:1px; background:var(--muted); opacity:.55; }
+.sub-fill{ position:absolute; top:0; height:100%; background:var(--accent); border-radius:999px; }
+.sub-val{ text-align:right; font-size:.9rem; font-weight:600; font-variant-numeric:tabular-nums; }
+
+/* chips + evidence */
+.hero-meta{ display:flex; flex-wrap:wrap; gap:14px 22px; margin-top:34px; }
+.chip{ display:inline-flex; align-items:center; gap:9px; font-size:.92rem; color:var(--ink-2); font-weight:500; }
+.chip .glyph{ font-size:.8em; color:var(--accent); }
+.chip .dot{ width:11px; height:11px; border-radius:50%; background:var(--muted); }
+.chip .dot.conf-high{ background:var(--accent); }
+.chip .dot.conf-low{ background:transparent; border:1.5px solid var(--muted); }
+.evidence-quote{ margin:30px 0 0; padding-left:18px; border-left:2px solid var(--hair); font-size:1.1rem; line-height:1.5; color:var(--ink-2); font-style:italic; max-width:60ch; }
+
+/* detail panel (Phase D fills content) */
+#detail-section[hidden]{ display:none; }
+.detail-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 18px; margin-bottom:22px; }
+.detail-grid{ display:grid; gap:16px; grid-template-columns:1fr; }
+@media(min-width:760px){ .detail-grid{ grid-template-columns:repeat(2,1fr); } }
+.component-card{ border:1px solid var(--hair); border-radius:12px; padding:18px 20px; }
+.component-card h4{ margin:0 0 10px; font-size:.95rem; }
+.component-card .ver{ font-size:.74rem; color:var(--muted); font-weight:400; }
+.evi-chip{ display:inline-block; border:1px solid var(--hair); border-radius:999px; padding:5px 12px; margin:6px 6px 0 0; font-size:.84rem; color:var(--ink-2); }
+.evi-chip .pol{ font-weight:600; }
+.evi-chip .dim{ color:var(--muted); }
+.detail-foot{ margin-top:18px; font-size:.8rem; color:var(--muted); }

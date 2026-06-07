@@ -36,7 +36,79 @@
 </header>
 
 <main id="main">
-  <!-- Phase C builds the "Latest decision" hero; Phase D the stance chart, detail panel and full-record table. -->
+  <section class="hero wrap" aria-labelledby="hero-h" id="hero">
+    <p class="eyebrow" id="hero-eyebrow" data-fade="1">Latest decision</p>
+    <h1 class="hero-statement" id="hero-h" data-fade="2"></h1>
+
+    <div class="hero-figure" data-fade="3">
+      <div class="stance-art">
+        <p class="eyebrow">Net stance</p>
+        <div class="stance-display"><span class="num" id="stance-num">—</span><span class="stance-label" id="stance-label"></span></div>
+        <div class="scale" id="stance-scale"></div>
+        <p class="scale-ends"><span>Dovish −1</span><span>0</span><span>+1 Hawkish</span></p>
+      </div>
+      <div class="subs" id="hero-subs">
+        <p class="eyebrow">Sub-scores</p>
+      </div>
+    </div>
+
+    <p class="hero-meta" data-fade="4">
+      <span class="chip" id="hero-outcome"></span>
+      <span class="chip" id="hero-conf"></span>
+    </p>
+    <blockquote class="evidence-quote" id="hero-quote" data-fade="5"></blockquote>
+    <a class="read" id="hero-read" href="#" rel="noopener" data-fade="5">Read the RBA statement <span class="ar">→</span></a>
+  </section>
+
+  <div class="wrap"><hr class="hr"></div>
+
+  <section class="section wrap" aria-labelledby="chart-h">
+    <div class="section-head">
+      <p class="eyebrow">The record</p>
+      <h2 id="chart-h">The tone of every decision since 2020</h2>
+      <p>The line traces net stance — dovish below zero, hawkish above — across each decision. Marker shapes show whether the cash rate was cut, held or hiked.</p>
+    </div>
+
+    <form class="filters" id="filters" aria-label="Filter the record">
+      <div class="filter-field">
+        <label class="eyebrow" for="filter-year">Year</label>
+        <select id="filter-year" name="year"><option value="all">All years</option></select>
+      </div>
+      <fieldset class="filter-field">
+        <legend class="eyebrow" style="margin-right:2px">Outcome</legend>
+        <div class="types-row">
+          <label class="check"><input type="checkbox" name="type" value="cut" checked> <span class="glyph">▼</span> Cut</label>
+          <label class="check"><input type="checkbox" name="type" value="hold" checked> <span class="glyph">●</span> Hold</label>
+          <label class="check"><input type="checkbox" name="type" value="hike" checked> <span class="glyph">▲</span> Hike</label>
+        </div>
+      </fieldset>
+      <button type="button" id="filter-reset" class="btn-reset">Reset</button>
+      <p id="filter-status" class="filter-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <figure style="margin:0">
+      <div id="chart" class="chart" role="img" aria-label="Line chart of RBA decision net stance over time with markers for each decision's rate outcome."></div>
+      <figcaption>Net dovish↔hawkish stance per decision since 2020. The full, screen-reader-friendly record is in the table below.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section wrap" id="detail-section" aria-labelledby="detail-h" hidden>
+    <div class="section-head"><p class="eyebrow">Breakdown</p><h2 id="detail-h" style="font-size:1.5rem">How this score was built</h2></div>
+    <div id="detail"></div>
+  </section>
+
+  <section class="section record wrap" aria-labelledby="tbl-h">
+    <div class="section-head"><p class="eyebrow">Every decision</p><h2 id="tbl-h" style="font-size:1.5rem">The full record</h2></div>
+    <div style="overflow-x:auto" tabindex="0" role="region" aria-label="Decision record table (scrollable)">
+      <table>
+        <thead><tr>
+          <th scope="col">Meeting</th><th scope="col">Outcome</th><th scope="col">Change</th>
+          <th scope="col">Cash rate</th><th scope="col">Net stance</th><th scope="col">Confidence</th><th scope="col">Source</th>
+        </tr></thead>
+        <tbody id="record-tbody"></tbody>
+      </table>
+    </div>
+  </section>
 </main>
 
 <footer class="foot" id="about">
