@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology — RBA Policy Sentiment</title>
+  <meta name="description" content="How RBA Policy Sentiment scores the hawkish↔dovish tone of RBA decision statements: the corpus, the lexicon + LLM + transformer ensemble, the reconciliation and confidence signal, the score scales, reproducibility, and known limitations.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f3ee">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://rba-policy-sentiment.vercel.app/methodology.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="RBA Policy Sentiment">
+  <meta property="og:title" content="Methodology — RBA Policy Sentiment">
+  <meta property="og:description" content="Exactly how each stance score is built — corpus, ensemble, reconciliation, scales, and known limitations.">
+  <meta property="og:url" content="https://rba-policy-sentiment.vercel.app/methodology.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="./"><span class="mark"></span>RBA Policy Sentiment <span class="sub">· methodology</span></a>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light or dark theme"><span class="ring"></span><span id="theme-label">Dark</span></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head wrap">
+    <p class="eyebrow">Methodology</p>
+    <h1>How these scores are built</h1>
+    <p class="lead">Every score on this site comes from an offline batch job — never live, never hand-tuned per decision. This page documents what goes in, how the tone is measured, and where it can be wrong. Transparency is the point: a score you can't inspect isn't one you should trust.</p>
+  </section>
+
+  <div class="wrap"><hr class="hr"></div>
+
+  <section class="section wrap">
+    <div class="prose">
+      <h2>The corpus</h2>
+      <p>We score the RBA's <strong>monetary policy decision media releases</strong> only — the short statement published with each cash-rate decision. Not the meeting minutes, not the Statement on Monetary Policy, not speeches; and the Reserve Bank of Australia only, no other central banks.</p>
+      <p>The current dataset is <strong id="corpus-count">64</strong> decisions, spanning <strong id="corpus-range">February 2020 – May 2026</strong> (<span id="corpus-tally">42 holds, 16 hikes, 6 cuts</span>).</p>
+      <p>We never store or republish the full statement text. We keep only short <em>evidence phrases</em> and link every score to the original release on <a href="https://www.rba.gov.au/monetary-policy/int-rate-decisions/" rel="noopener">rba.gov.au</a>.</p>
+    </div>
+  </section>
+
+  <section class="section tight wrap">
+    <div class="prose">
+      <h2>The ensemble</h2>
+      <p>Three independent methods score each statement, then a reconciliation step combines them. They're deliberately different, so the amount they disagree is itself informative.</p>
+      <ul class="comp-list">
+        <li>
+          <strong>Lexicon</strong>
+          <p class="desc">A transparent finance / hawkish–dovish term list. Fully deterministic and inspectable — the same words always score the same way, with no model in the loop.</p>
+        </li>
+        <li>
+          <strong>LLM</strong>
+          <p class="desc">A large-language-model sentence classifier (currently Claude Haiku). Its calls are pinned and cached, so re-scoring the same text returns byte-identical results.</p>
+        </li>
+        <li>
+          <strong>Transformer</strong>
+          <p class="desc">A fine-tuned finance sentiment model. This slot currently runs an <strong>interim model trained on US Federal Reserve communications</strong> as a stand-in; an RBA-specific model is the planned replacement (see <a href="#limitations">limitations</a>).</p>
+        </li>
+      </ul>
+      <p>Each component returns its own net score and inflation / growth / employment sub-scores; you can see all three side by side in the breakdown panel under any decision on the <a href="./">home page</a>.</p>
+    </div>
+  </section>
+
+  <section class="section tight wrap">
+    <div class="prose">
+      <h2>Reconciliation &amp; confidence</h2>
+      <p>The three results are combined into the published net score. The current method is <strong id="reconcile-method">an equal-weight mean of the three components</strong>.</p>
+      <p>Where the methods <em>disagree</em>, the published <strong>confidence</strong> falls — so confidence measures how much the methods agreed, not how sure any single one of them is. Low confidence is shown prominently in the breakdown, never hidden; it's the product's honesty signal.</p>
+    </div>
+  </section>
+
+  <section class="section tight wrap">
+    <div class="prose">
+      <h2>The score scales</h2>
+      <p>Net stance runs on a fixed, symmetric <strong>−1 … +1</strong> scale — dovish below zero, hawkish above, zero broadly neutral. The axis is never truncated or rescaled to dramatise a result. The inflation, growth and employment sub-scores use the same scale, so they're directly comparable.</p>
+      <p>For plain-language labels, net scores fall into these buckets:</p>
+      <table class="scale-table">
+        <thead><tr><th scope="col">Net score</th><th scope="col">Label</th></tr></thead>
+        <tbody>
+          <tr><td>≤ −0.60</td><td>Strongly dovish</td></tr>
+          <tr><td>−0.60 to −0.15</td><td>Dovish</td></tr>
+          <tr><td>−0.15 to +0.15</td><td>Broadly neutral</td></tr>
+          <tr><td>+0.15 to +0.60</td><td>Hawkish</td></tr>
+          <tr><td>≥ +0.60</td><td>Strongly hawkish</td></tr>
+        </tbody>
+      </table>
+      <p>Confidence is labelled <strong>high</strong> (≥ 0.80), <strong>moderate</strong> (0.50–0.80) or <strong>low</strong> (&lt; 0.50). These thresholds are a documented judgement call — they're chosen, not derived — and live in one place in the code so they can be tuned without restructuring anything.</p>
+    </div>
+  </section>
+
+  <section class="section tight wrap">
+    <div class="prose">
+      <h2>Reproducibility &amp; provenance</h2>
+      <p>Each score is <strong>computed once and persisted</strong>; the LLM calls are pinned and cached, so re-running the same text under the same engine version is byte-identical. Every score records the engine version that produced it, and every score links to its canonical rba.gov.au release.</p>
+      <div class="callout">
+        <p>This site is currently serving engine <span class="fingerprint js-engine">engine-2026.06-57c7cd6e</span>. Component versions:</p>
+        <ul class="comp-list" id="components" style="margin-top:12px">
+          <li><strong>lexicon</strong><span class="ver">lex-v1</span></li>
+          <li><strong>llm</strong><span class="ver">claude-haiku</span></li>
+          <li><strong>transformer</strong><span class="ver">fed-stance (interim)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight wrap" id="limitations">
+    <div class="prose">
+      <h2>Known limitations</h2>
+      <ul class="bullets">
+        <li><strong>Interim transformer.</strong> The transformer slot currently runs a model trained on US Federal Reserve text, not RBA statements. How well that transfers to Australian language is not yet validated; the component may be down-weighted or replaced.</li>
+        <li><strong>Accuracy not yet independently validated.</strong> The scores have not yet passed the project's accuracy benchmark (≥ 85% agreement with an expert-labelled set). Until they do, treat the series as <strong>indicative and pre-launch</strong> — scores may change as the engine improves.</li>
+        <li><strong>Thresholds are judgement calls.</strong> The dovish / neutral / hawkish cut-offs above are chosen, not derived from data.</li>
+        <li><strong>Scope is narrow by design.</strong> Decision media releases only — no minutes, Statement on Monetary Policy, or speeches; no attribution of tone to individual board members; and no forecasting of future decisions.</li>
+        <li><strong>Not financial advice.</strong> This is general information about the RBA's published words, produced by an independent project that is not affiliated with the RBA.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section tight wrap">
+    <div class="prose">
+      <h2>Get the data</h2>
+      <p>The full scored dataset is downloadable as <a href="data/scores.csv" download="rba-policy-sentiment-scores.csv">CSV</a> — one row per decision, with date, outcome, net stance, the inflation / growth / employment sub-scores, confidence, engine version and source URL. For reproducibility, cite the engine version shown above.</p>
+      <p class="page-foot-link"><a href="./">← Back to the latest decision</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <section>
+        <h3>What these scores mean</h3>
+        <p>Each decision statement is scored on a <strong>dovish ↔ hawkish</strong> scale (−1 to +1), with separate inflation, growth and employment sub-scores. A <em>confidence</em> signal reflects how much the scoring methods agree.</p>
+        <p class="fine">This is general information, <strong>not financial advice</strong>.</p>
+      </section>
+      <section>
+        <h3>How it's built</h3>
+        <p>An offline batch job scores each statement with a reconciled ensemble and publishes the result with its full breakdown. Engine <span id="engine-version">—</span>.</p>
+        <p class="fine">Scores are computed once and reproducible from the pinned engine version.</p>
+      </section>
+      <section>
+        <h3>Sources</h3>
+        <ul class="sources-list">
+          <li><a href="https://www.rba.gov.au/monetary-policy/int-rate-decisions/" rel="noopener">RBA — Monetary policy decisions</a></li>
+          <li><a href="https://www.rba.gov.au/statistics/cash-rate/" rel="noopener">RBA — Cash rate target history</a></li>
+        </ul>
+        <p class="fine" style="margin-top:16px">Every figure links to its RBA source. An independent project — not an official RBA product.</p>
+      </section>
+    </div>
+  </div>
+</footer>
+
+<script src="core.js"></script>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script src="methodology.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

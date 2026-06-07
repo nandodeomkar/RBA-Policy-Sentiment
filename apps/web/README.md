@@ -8,7 +8,10 @@ The site reads `data/decisions.json` + `data/scores.json`. These are **generated
 
 ```
 node scripts/sync-data.mjs    # copies repo-root data/{decisions,scores}.json -> apps/web/data/
+                              # and derives data/scores.csv (the FR-008 download)
 ```
+
+The published **`data/scores.csv`** (one row per decision) is precomputed by this same step — the column logic lives in `core.js` (`buildScoresCsv`), so it stays unit-tested and identical to what the methodology page documents.
 
 No Node? PowerShell equivalent:
 
@@ -43,9 +46,11 @@ node --test                    # unit tests for the pure helpers in core.js (run
 
 ## QA checklist (run before shipping)
 
-- [ ] Light + dark themes legible (AA contrast)
-- [ ] ~375px mobile: hero, chart, table usable
-- [ ] Full keyboard pass: skip link, theme toggle, filters, table rows, detail panel
+- [ ] Light + dark themes legible (AA contrast) — home **and** `methodology.html`
+- [ ] ~375px mobile: hero, explainer cards, chart, table usable
+- [ ] Full keyboard pass: skip link, theme toggle, filters, table rows, detail panel, CSV download
 - [ ] No-JS: the `<noscript>` message points to the RBA
 - [ ] Data missing / fetch fails: graceful message links to the RBA
 - [ ] Deep link `#<decision-id>` opens that decision's breakdown
+- [ ] **Download CSV** returns a well-formed file (header + one row per decision)
+- [ ] **Methodology page** loads; corpus size, engine + component versions fill from live data

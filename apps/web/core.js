@@ -112,6 +112,45 @@
       + bucket.label.toLowerCase() + lean + " while it " + did + " to " + rate + ".";
   }
 
+  // ---------- CSV export (pure, FR-008) ----------
+  // The published dataset contract: one row per scored decision. Columns cover
+  // FR-008 (date, outcome, net + sub-scores, confidence, engine version, source URL)
+  // plus the rate context. Values are emitted at full precision for citation; the
+  // file is precomputed at sync time (scripts/sync-data.mjs) and served statically.
+  var CSV_COLUMNS = ["date", "outcome", "change_bps", "cash_rate_target",
+    "net", "inflation", "growth", "employment", "confidence", "engine_version", "source_url"];
+
+  // RFC-4180 field quoting: wrap in quotes only when the value contains a comma,
+  // quote, CR or LF; double any embedded quotes.
+  function csvField(v) {
+    var s = v == null ? "" : String(v);
+    return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }
+  // Plain decimal string (no scientific notation, no forced trailing zeros); "" for non-finite.
+  function csvNum(x) { var n = Number(x); return isFinite(n) ? String(n) : ""; }
+
+  // rows: [{decision, score}] (e.g. from joinDecisions) → an RFC-4180 CSV string (CRLF, header first).
+  function buildScoresCsv(rows) {
+    var lines = [CSV_COLUMNS.join(",")];
+    (rows || []).forEach(function (r) {
+      var d = (r && r.decision) || {}, s = (r && r.score) || {}, o = d.outcome || {}, sub = s.sub_scores || {};
+      lines.push([
+        csvField(d.date),
+        csvField(o.action),
+        csvField(csvNum(o.change_bps)),
+        csvField(csvNum(d.cash_rate_target)),
+        csvField(csvNum(s.net)),
+        csvField(csvNum(sub.inflation)),
+        csvField(csvNum(sub.growth)),
+        csvField(csvNum(sub.employment)),
+        csvField(csvNum(s.confidence)),
+        csvField(s.engine_version),
+        csvField(s.source_url || d.source_url)
+      ].join(","));
+    });
+    return lines.join("\r\n") + "\r\n";
+  }
+
   // ---------- browser-only wiring (reused from the tracker) ----------
   function prefersReducedMotion() {
     return typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -373,7 +412,7 @@
     fmtRate: fmtRate, fmtPP: fmtPP, fmtChange: fmtChange, escapeHtml: escapeHtml,
     signed: signed, stanceBucket: stanceBucket, confidenceBucket: confidenceBucket,
     dominantSubDimension: dominantSubDimension, describeOutcome: describeOutcome,
-    joinDecisions: joinDecisions, buildHeadline: buildHeadline,
+    joinDecisions: joinDecisions, buildHeadline: buildHeadline, buildScoresCsv: buildScoresCsv,
     // browser-only
     prefersReducedMotion: prefersReducedMotion, cssVar: cssVar, countUp: countUp,
     initTheme: initTheme, setupFilters: setupFilters, revealOnLoad: revealOnLoad,

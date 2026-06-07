@@ -20,6 +20,12 @@
   var toggleBtn = document.getElementById("theme-toggle");
   if (toggleBtn) toggleBtn.addEventListener("click", themeApi.toggle);
 
+  // CSV download (FR-008) — privacy-friendly event; the link works regardless.
+  var csvLink = document.getElementById("csv-download");
+  if (csvLink) csvLink.addEventListener("click", function () {
+    if (window.va) window.va("event", { name: "csv_download" });
+  });
+
   // ---- load data ----
   Promise.all([
     fetch("data/decisions.json", { cache: "no-cache" }).then(okJson),

@@ -237,3 +237,56 @@ td a:hover{ text-decoration:underline; text-underline-offset:3px; }
 .muted-line code{ font-size:.85em; background:var(--surface); padding:1px 6px; border-radius:5px; margin:0 1px; }
 .evi-list{ margin-top:6px; }
 tbody tr[role="button"]{ cursor:pointer; }
+
+/* ============================================================
+   Slice 2 — explainer (FR-006), CSV download (FR-008) and the
+   methodology page (FR-007). Same inherited token system.
+   ============================================================ */
+.hero-lede{ margin:clamp(20px,3.6vw,28px) 0 0; max-width:56ch; font-size:1.05rem; line-height:1.6; color:var(--ink-2); }
+.hero-lede strong{ color:var(--ink); font-weight:600; }
+
+.explainer .section-head p{ font-size:1.05rem; }
+.explain-grid{ display:grid; gap:18px; grid-template-columns:1fr; margin-top:6px; }
+@media(min-width:660px){ .explain-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(min-width:1000px){ .explain-grid{ grid-template-columns:repeat(4,1fr); } }
+.explain-card{ border:1px solid var(--hair); border-radius:14px; padding:22px 22px 24px; background:var(--surface); }
+.explain-card h3{ margin:0 0 11px; font-size:1.02rem; font-weight:600; display:flex; align-items:center; gap:9px; }
+.explain-card h3 .ed{ font-variant-numeric:tabular-nums; color:var(--accent); font-weight:700; }
+.explain-card p{ margin:0; font-size:.95rem; line-height:1.58; color:var(--ink-2); }
+.explain-card .gly{ color:var(--accent); font-size:.82em; }
+.explain-note{ margin:26px 0 0; font-size:.95rem; line-height:1.62; color:var(--ink-2); max-width:80ch; }
+.explain-note strong{ color:var(--ink); }
+.explain-note .read{ margin:0 0 0 4px; display:inline-flex; }
+
+/* record header + CSV download */
+.record-head{ display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:14px 24px; }
+.record-note{ margin:-14px 0 26px; font-size:.88rem; color:var(--muted); max-width:78ch; line-height:1.55; }
+.record-note a{ font-weight:600; }
+.btn-download{ display:inline-flex; align-items:center; gap:9px; font-size:.86rem; font-weight:600; color:var(--accent); border:1px solid var(--hair); border-radius:999px; padding:10px 18px; transition:border-color .25s, background .25s; white-space:nowrap; }
+.btn-download:hover{ border-color:var(--accent); background:var(--accent-soft); }
+.btn-download .dl-ic{ font-size:1.05em; line-height:1; }
+.accent{ color:var(--accent); }
+
+/* methodology page */
+.page-head{ padding-top:clamp(26px,5vw,56px); padding-bottom:clamp(18px,3vw,30px); }
+.page-head h1{ font-size:clamp(1.9rem,4.4vw,2.9rem); font-weight:500; letter-spacing:-.02em; line-height:1.13; margin:14px 0 0; max-width:20ch; text-wrap:balance; }
+.page-head .lead{ margin:22px 0 0; font-size:1.1rem; line-height:1.6; color:var(--ink-2); max-width:66ch; }
+.prose{ max-width:72ch; }
+.prose h2{ font-size:clamp(1.3rem,2.6vw,1.7rem); font-weight:600; letter-spacing:-.01em; margin:0 0 16px; }
+.prose p{ margin:0 0 16px; color:var(--ink-2); line-height:1.65; }
+.prose strong{ color:var(--ink); }
+.prose a{ color:var(--accent); }
+.prose a:hover{ text-decoration:underline; text-underline-offset:3px; }
+.prose ul.bullets{ margin:0 0 16px; padding-left:20px; list-style:disc; display:grid; gap:10px; }
+.prose ul.bullets li{ color:var(--ink-2); line-height:1.6; }
+.comp-list{ list-style:none; margin:0 0 16px; padding:0; display:grid; gap:14px; }
+.comp-list li{ border:1px solid var(--hair); border-radius:12px; padding:16px 18px; }
+.comp-list li strong{ text-transform:capitalize; }
+.comp-list .ver{ display:block; margin-top:5px; font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; }
+.comp-list .desc{ margin-top:9px; font-size:.93rem; color:var(--ink-2); line-height:1.55; }
+.scale-table th, .scale-table td{ padding:11px 18px 11px 0; }
+.scale-table td:first-child{ font-variant-numeric:tabular-nums; white-space:nowrap; }
+.callout{ border-left:3px solid var(--accent); background:var(--surface); border-radius:0 10px 10px 0; padding:15px 20px; margin:0 0 16px; }
+.callout p{ margin:0; font-size:.95rem; color:var(--ink-2); line-height:1.6; }
+.callout .fingerprint{ font-variant-numeric:tabular-nums; color:var(--ink); font-weight:600; }
+.page-foot-link{ margin-top:8px; }

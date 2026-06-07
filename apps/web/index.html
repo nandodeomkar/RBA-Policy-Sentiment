@@ -39,6 +39,7 @@
   <section class="hero wrap" aria-labelledby="hero-h" id="hero">
     <p class="eyebrow" id="hero-eyebrow" data-fade="1">Latest decision</p>
     <h1 class="hero-statement" id="hero-h" data-fade="2"></h1>
+    <p class="hero-lede" data-fade="2">Read the score as a lean: <strong>dovish</strong> (toward lower interest rates) below zero, <strong>hawkish</strong> (toward higher rates) above — measured from the RBA's own words, not a forecast.</p>
 
     <div class="hero-figure" data-fade="3">
       <div class="stance-art">
@@ -61,6 +62,33 @@
   </section>
 
   <div class="wrap"><hr class="hr"></div>
+
+  <section class="section wrap explainer" id="explainer" aria-labelledby="explain-h">
+    <div class="section-head">
+      <p class="eyebrow">Start here</p>
+      <h2 id="explain-h">Hawkish, dovish — in plain language</h2>
+      <p>A central bank raises interest rates to cool inflation and lowers them to support growth and jobs. The <em>tone</em> of each decision statement hints at which way the RBA is leaning — even in the months it keeps the rate on hold.</p>
+    </div>
+    <div class="explain-grid">
+      <div class="explain-card">
+        <h3>Dovish <span class="ed" aria-hidden="true">−</span></h3>
+        <p>Leaning toward <strong>lower</strong> rates — more concerned about growth and employment than inflation. Sits left of centre, as a negative number.</p>
+      </div>
+      <div class="explain-card">
+        <h3>Hawkish <span class="ed" aria-hidden="true">+</span></h3>
+        <p>Leaning toward <strong>higher</strong> rates — more concerned about getting inflation down. Sits right of centre, as a positive number.</p>
+      </div>
+      <div class="explain-card">
+        <h3>Reading the chart</h3>
+        <p>Each point is one decision. The line is the net tone over time — below the centre is dovish, above is hawkish. Marker shapes show what the Board did: <span class="gly">▼</span> cut, <span class="gly">●</span> hold, <span class="gly">▲</span> hike.</p>
+      </div>
+      <div class="explain-card">
+        <h3>Sub-scores &amp; confidence</h3>
+        <p>Every score splits into inflation, growth and employment tone. A <strong>confidence</strong> signal shows how much the scoring methods agreed — when it's low, we show it rather than hide it.</p>
+      </div>
+    </div>
+    <p class="explain-note">General information about the RBA's published words — <strong>not financial advice</strong>, not a forecast, and an independent project that is <strong>not affiliated with the RBA</strong>. <a class="read" href="methodology.html">Read the full methodology <span class="ar">→</span></a></p>
+  </section>
 
   <section class="section wrap" aria-labelledby="chart-h">
     <div class="section-head">
@@ -98,7 +126,13 @@
   </section>
 
   <section class="section record wrap" aria-labelledby="tbl-h">
-    <div class="section-head"><p class="eyebrow">Every decision</p><h2 id="tbl-h" style="font-size:1.5rem">The full record</h2></div>
+    <div class="section-head record-head">
+      <div><p class="eyebrow">Every decision</p><h2 id="tbl-h" style="font-size:1.5rem">The full record</h2></div>
+      <a class="btn-download" id="csv-download" href="data/scores.csv" download="rba-policy-sentiment-scores.csv">
+        <span class="dl-ic" aria-hidden="true">↓</span> Download CSV
+      </a>
+    </div>
+    <p class="record-note">One row per decision — date, outcome, net stance and the inflation / growth / employment sub-scores, confidence, engine version and the RBA source URL. <a class="accent" href="methodology.html">How these are built →</a></p>
     <div style="overflow-x:auto" tabindex="0" role="region" aria-label="Decision record table (scrollable)">
       <table>
         <thead><tr>
@@ -122,7 +156,7 @@
       <section>
         <h3>How it's built</h3>
         <p>An offline batch job scores each statement with a reconciled ensemble and publishes the result with its full breakdown. Engine <span id="engine-version">—</span>.</p>
-        <p class="fine">Scores are computed once and reproducible from the pinned engine version.</p>
+        <p class="fine">Scores are computed once and reproducible from the pinned engine version. <a class="accent" href="methodology.html">Full methodology →</a></p>
       </section>
       <section>
         <h3>Sources</h3>
