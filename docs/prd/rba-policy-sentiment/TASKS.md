@@ -31,14 +31,16 @@ acceptance criteria pass.
 ## Milestone 1 — Public MVP
 *Exit criteria (PRD §11): chart + full-record table live with backfilled data; statement detail with the full granular breakdown; explainer; methodology page; CSV; NFR-001/002/003/004/006 met.*
 
-- [ ] **Stance-over-time chart** — implements FR-003 · DoD: PRD §8 (renders all points chronologically; loads ≤2.5s p95; honest gaps)
-- [ ] **Statement detail with full granular breakdown** — implements FR-005, FR-011 · DoD: PRD §8
+> **Status — 2026-06-07:** **Slice 1 (home page) built** on `feat/m1-frontend` (vanilla static, mirrors RBA-Tracker) — "Latest decision" hero, stance-over-time chart, full-record table, and the full granular breakdown panel; light/dark; data sync; unit tests. Verified in preview (light/dark, mobile, keyboard, fetch-fail, deep-link). **Remaining (slice 2):** explainer, methodology page, CSV. **Public launch still gated on the M0 accuracy gate (NFR-004).**
+
+- [x] **Stance-over-time chart** — implements FR-003 · DoD: PRD §8 — ✅ *Slice 1: ECharts net-stance line + outcome-shaped markers; all 64 render chronologically (p95 ≤2.5s to confirm on deploy).*
+- [x] **Statement detail with full granular breakdown** — implements FR-005, FR-011 · DoD: PRD §8 — ✅ *Slice 1: per-decision panel — per-component results, reconciliation, confidence, evidence phrases, source link; deep-linkable via `#id`.*
   - <!-- net + sub-scores, per-component (LLM/transformer/lexicon) results, reconciliation, confidence, highlighted evidence phrases, source link -->
 - [ ] **Plain-language explainer + "not financial advice" note** — implements FR-006 · DoD: PRD §8
 - [ ] **Methodology page** — implements FR-007 · DoD: PRD §8 (corpus, each component, reconciliation, score scales, limitations)
 - [ ] **CSV export** — implements FR-008 · DoD: PRD §8 (date, outcome, net + sub-scores, confidence, engine version, source URL)
-- [ ] **Design language + light/dark + accessible table fallback** — implements NFR-005 · DoD: PRD §7, §9 (inherit rba-tracker look; chart has WCAG 2.1 AA table equivalent)
-- [ ] **Instrumentation** — emit privacy-friendly analytics + page-load timing for the §3 metrics/guardrails (PRD §3, §10)
+- [x] **Design language + light/dark + accessible table fallback** — implements NFR-005 · DoD: PRD §7, §9 — ✅ *Slice 1: inherits RBA-Tracker tokens; light/dark; full-record table is the chart's accessible equivalent.*
+- [ ] **Instrumentation** — emit privacy-friendly analytics + page-load timing for the §3 metrics/guardrails (PRD §3, §10) — ◐ *Vercel cookieless analytics snippet wired; confirm events + page-load timing on deploy.*
 - [ ] **Meet performance / cost / licensing / privacy NFRs** — NFR-001, NFR-009, NFR-010, NFR-011 · DoD: PRD §9
 
 ## Milestone 2 — Context + currency

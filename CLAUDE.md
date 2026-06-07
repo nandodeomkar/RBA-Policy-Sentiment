@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository status
 
-**Milestone 0 — in progress** (scaffolding complete). The Python batch scorer exists under [apps/scorer/](apps/scorer/); the Next.js front end (`apps/web`) is Milestone 1 and not yet created. The engineering design and the dependency-ordered build plan live under [docs/superpowers/](docs/superpowers/) — work the plan top to bottom.
+**Milestone 0 — in progress** (scorer built; the accuracy gate is paused while the owner researches engine improvements). **Milestone 1 — home page built** (slice 1): a **static, build-free** front end under [apps/web/](apps/web/) — vanilla HTML/CSS/JS + ECharts mirroring the owner's RBA-Tracker (**not** Next.js; rationale in the [M1 design](docs/superpowers/specs/2026-06-07-rba-m1-frontend-design.md)), on branch `feat/m1-frontend`. The engineering designs and dependency-ordered build plans live under [docs/superpowers/](docs/superpowers/) — work the plan top to bottom.
 
 ## Commands
 
@@ -23,6 +23,18 @@ uv run ruff format .          # format
 Run a single test: `uv run pytest tests/test_cli.py::test_requires_a_subcommand`.
 
 The scorer writes its output to the repo-root `data/` directory — the JSON/CSV contract the web app will consume.
+
+### Web front end (`apps/web`)
+
+Static site — no build, no framework (mirrors the owner's RBA-Tracker). Run **from `apps/web/`**:
+
+```powershell
+node scripts/sync-data.mjs    # copy repo-root data/*.json -> apps/web/data/ (gitignored, generated)
+python -m http.server 8000    # preview over http:// (fetch needs a server, not file://)
+node --test                   # unit tests for core.js pure helpers
+```
+
+Deploy on Vercel (free tier): Root Directory `apps/web`, Build Command `node scripts/sync-data.mjs`, Output `.`.
 
 ## The planning docs (source of truth)
 
@@ -43,7 +55,7 @@ Read these in order; do **not** load the whole PRD up front.
 A two-part, **static-first** system (PRD §7, §10):
 
 - **Python batch scorer** (separate, *manually triggered* — no always-on service). Ingests each RBA monetary-policy **decision media release** (post-2020 backfill + each new one) and scores it with a **reconciled hybrid ensemble**: an LLM sentence classifier, a fine-tuned transformer (FinBERT-style), and a transparent finance/hawkish-dovish lexicon each score independently, then reconcile into one result. Inter-model disagreement becomes the **confidence** signal. Output per statement: a net dovish↔hawkish score **plus inflation / growth / employment sub-scores**, every component's result, the reconciliation, the evidence-phrase spans, and the pinned engine version.
-- **Next.js front end on Vercel** (free tier). Serves **precomputed JSON/CSV** — the heavy lifting is the offline scorer, not the site. Key surfaces: a "Latest decision" hero, a stance-over-time line chart (with cash-rate overlay), a statement detail view exposing the full granular breakdown, a methodology page, CSV export, and a full-record table that also serves as the accessible chart fallback.
+- **Static front end on Vercel** (free tier; vanilla HTML/CSS/JS + ECharts, mirroring the owner's RBA-Tracker). Serves **precomputed JSON/CSV** — the heavy lifting is the offline scorer, not the site. Key surfaces: a "Latest decision" hero, a stance-over-time line chart (with cash-rate overlay), a statement detail view exposing the full granular breakdown, a methodology page, CSV export, and a full-record table that also serves as the accessible chart fallback.
 
 **Core data model:** a `decision` entity (id, date, outcome, cash_rate_target, source_url, short_quote) 1:1 with a `score` (net + inflation/growth/employment sub-scores, per-component LLM/transformer/lexicon results, reconciliation, confidence, evidence-phrase spans, engine_version, scored_at).
 

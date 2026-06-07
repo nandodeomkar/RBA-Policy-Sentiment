@@ -22,8 +22,8 @@
 
   // ---- load data ----
   Promise.all([
-    fetch("data/decisions.json").then(okJson),
-    fetch("data/scores.json").then(okJson)
+    fetch("data/decisions.json", { cache: "no-cache" }).then(okJson),
+    fetch("data/scores.json", { cache: "no-cache" }).then(okJson)
   ]).then(function (res) {
     render(res[0], res[1]);
   }).catch(function (err) {
