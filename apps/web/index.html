@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RBA Policy Sentiment — the hawkish↔dovish tone of RBA decisions over time</title>
+  <meta name="description" content="An independent, transparent score of the hawkish↔dovish tone of the Reserve Bank of Australia's monetary policy decision statements since 2020 — net stance plus inflation, growth and employment sub-scores, with the full breakdown behind every score.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f3ee">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Update the domain once the Vercel project URL is known (see README / DEPLOY). -->
+  <link rel="canonical" href="https://rba-policy-sentiment.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RBA Policy Sentiment">
+  <meta property="og:title" content="RBA Policy Sentiment">
+  <meta property="og:description" content="The hawkish↔dovish tone of the RBA's monetary policy decisions over time. Independent; every figure sourced from the RBA.">
+  <meta property="og:url" content="https://rba-policy-sentiment.vercel.app/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <span class="wordmark" data-fade="1"><span class="mark"></span>RBA Policy Sentiment <span class="sub">· decision tone</span></span>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light or dark theme" data-fade="1"><span class="ring"></span><span id="theme-label">Dark</span></button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Phase C builds the "Latest decision" hero; Phase D the stance chart, detail panel and full-record table. -->
+</main>
+
+<footer class="foot" id="about">
+  <div class="wrap">
+    <div class="foot-grid">
+      <section>
+        <h3>What these scores mean</h3>
+        <p>Each decision statement is scored on a <strong>dovish ↔ hawkish</strong> scale (−1 to +1), with separate inflation, growth and employment sub-scores. A <em>confidence</em> signal reflects how much the scoring methods agree.</p>
+        <p class="fine">This is general information, <strong>not financial advice</strong>.</p>
+      </section>
+      <section>
+        <h3>How it's built</h3>
+        <p>An offline batch job scores each statement with a reconciled ensemble and publishes the result with its full breakdown. Engine <span id="engine-version">—</span>.</p>
+        <p class="fine">Scores are computed once and reproducible from the pinned engine version.</p>
+      </section>
+      <section>
+        <h3>Sources</h3>
+        <ul class="sources-list">
+          <li><a href="https://www.rba.gov.au/monetary-policy/int-rate-decisions/" rel="noopener">RBA — Monetary policy decisions</a></li>
+          <li><a href="https://www.rba.gov.au/statistics/cash-rate/" rel="noopener">RBA — Cash rate target history</a></li>
+        </ul>
+        <p class="fine" style="margin-top:16px">Every figure links to its RBA source. An independent project — not an official RBA product.</p>
+      </section>
+    </div>
+  </div>
+</footer>
+
+<noscript>
+  <div class="wrap" style="padding:24px 0">
+    This site needs JavaScript to render the chart and scores. You can read the decisions on the
+    <a href="https://www.rba.gov.au/monetary-policy/int-rate-decisions/">RBA's monetary policy decisions page</a>.
+  </div>
+</noscript>
+
+<!-- Data is fetched at runtime by app.js; chart library, shared engine, then page wiring. -->
+<script src="vendor/echarts.min.js"></script>
+<script src="core.js"></script>
+<script src="app.js"></script>
+
+<!-- Vercel Web Analytics (privacy-friendly, cookieless). Activates only on Vercel. -->
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
