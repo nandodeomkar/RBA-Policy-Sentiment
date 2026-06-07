@@ -340,7 +340,9 @@
       if (name === "llm" && comp.rationale) extra = '<p class="muted-line">' + escapeHtml(comp.rationale) + "</p>";
       return '<div class="component-card"><h4>' + escapeHtml(name) + ' <span class="ver">' + escapeHtml(comp.version || "") + "</span></h4>"
         + '<p class="num">net ' + signed(comp.net) + "</p>"
-        + '<p class="subs-inline">' + subsInline(comp.sub_scores || { inflation: 0, growth: 0, employment: 0 }) + "</p>"
+        + (comp.sub_scores && Object.keys(comp.sub_scores).length
+            ? '<p class="subs-inline">' + subsInline(comp.sub_scores) + "</p>"
+            : '<p class="muted-line">net only — not dimension-aware</p>')
         + extra + "</div>";
     }).join("");
 
