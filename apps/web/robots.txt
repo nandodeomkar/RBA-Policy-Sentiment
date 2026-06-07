@@ -1,2 +1,5 @@
+# Pre-launch: this site is live for review but deliberately kept out of search
+# engines until the M0 accuracy gate (NFR-004) is validated. At public launch,
+# change "Disallow: /" back to "Allow: /".
 User-agent: *
-Allow: /
+Disallow: /
