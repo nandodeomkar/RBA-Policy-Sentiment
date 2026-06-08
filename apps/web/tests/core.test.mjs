@@ -82,6 +82,21 @@ test("buildHeadline — deterministic, hedged sentence (real latest decision)", 
   assert.match(h, /4\.35%/);
 });
 
+test("cashRateAxisBounds — anchored at 0, headroom above the peak, stable", () => {
+  const rows = [
+    { decision: { cash_rate_target: 0.1 } },
+    { decision: { cash_rate_target: 4.35 } },
+    { decision: { cash_rate_target: 3.6 } },
+  ];
+  assert.deepEqual(C.cashRateAxisBounds(rows), { min: 0, max: 5 }); // ceil(4.35 + 0.5) = 5
+  // single value still gets headroom
+  assert.deepEqual(C.cashRateAxisBounds([{ decision: { cash_rate_target: 0.75 } }]), { min: 0, max: 2 });
+  // empty / missing -> sane default, never NaN
+  assert.deepEqual(C.cashRateAxisBounds([]), { min: 0, max: 5 });
+  assert.deepEqual(C.cashRateAxisBounds(null), { min: 0, max: 5 });
+  assert.deepEqual(C.cashRateAxisBounds([{ decision: {} }]), { min: 0, max: 5 });
+});
+
 test("buildScoresCsv — header, one row per decision, FR-008 columns", () => {
   const rows = [
     { decision: { date: "2020-02-04", source_url: "https://www.rba.gov.au/a", outcome: { action: "hold", change_bps: 0 }, cash_rate_target: 0.75 },

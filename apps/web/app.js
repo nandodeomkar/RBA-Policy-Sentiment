@@ -154,16 +154,18 @@
         return (year === "all" || C.yearOf(r.decision.date) === year) && types[r.decision.outcome.action];
       });
     }
+    var rateCheck = byId("filter-rate");
     C.setupFilters({
       yearSel: byId("filter-year"),
       checks: Array.prototype.slice.call(document.querySelectorAll('input[name="type"]')),
       resetBtn: byId("filter-reset"),
       statusEl: byId("filter-status"),
       rows: rows,
+      rateCheck: rateCheck,
       onApply: function (year, types) {
         var filtered = applyFilter(year, types);
         var n = C.renderRecordTable(tbody, filtered);
-        chart.update(year, types);
+        chart.update(year, types, rateCheck && rateCheck.checked);
         return n;
       }
     });

@@ -112,6 +112,20 @@
       + bucket.label.toLowerCase() + lean + " while it " + did + " to " + rate + ".";
   }
 
+  // ---------- cash-rate axis bounds (pure, FR-004) ----------
+  // Right-hand axis range for the cash-rate overlay. Anchored at 0 (an interest
+  // rate has a natural floor) with a little headroom above the peak so the
+  // stepped line never glues to the top. Computed over ALL rows so the axis
+  // stays stable as Year/Outcome filters change. Empty input -> a sane default.
+  function cashRateAxisBounds(rows) {
+    var vals = (rows || []).map(function (r) {
+      return Number(r && r.decision && r.decision.cash_rate_target);
+    }).filter(function (v) { return isFinite(v); });
+    if (!vals.length) return { min: 0, max: 5 };
+    var hi = Math.max.apply(null, vals);
+    return { min: 0, max: Math.max(1, Math.ceil(hi + 0.5)) };
+  }
+
   // ---------- CSV export (pure, FR-008) ----------
   // The published dataset contract: one row per scored decision. Columns cover
   // FR-008 (date, outcome, net + sub-scores, confidence, engine version, source URL)
@@ -197,7 +211,8 @@
   }
   function setupFilters(opts) {
     var yearSel = opts.yearSel, checks = opts.checks, resetBtn = opts.resetBtn,
-      statusEl = opts.statusEl, onApply = opts.onApply, rows = opts.rows || [];
+      statusEl = opts.statusEl, onApply = opts.onApply, rows = opts.rows || [],
+      rateCheck = opts.rateCheck; // optional view toggle (cash-rate overlay, FR-004)
     var years = [];
     rows.forEach(function (r) { var y = yearOf(r.decision.date); if (years.indexOf(y) < 0) years.push(y); });
     years.sort();
@@ -210,7 +225,11 @@
     }
     yearSel.addEventListener("change", apply);
     checks.forEach(function (cb) { cb.addEventListener("change", apply); });
-    if (resetBtn) resetBtn.addEventListener("click", function () { yearSel.value = "all"; checks.forEach(function (cb) { cb.checked = true; }); apply(); });
+    if (rateCheck) rateCheck.addEventListener("change", apply);
+    if (resetBtn) resetBtn.addEventListener("click", function () {
+      yearSel.value = "all"; checks.forEach(function (cb) { cb.checked = true; });
+      if (rateCheck) rateCheck.checked = false; apply();
+    });
     apply();
   }
   function revealOnLoad() {
@@ -233,13 +252,15 @@
       el.innerHTML = '<p style="padding:18px;opacity:.6">The chart could not load. The full record is in the table below.</p>';
       return { update: function () {}, rebuild: function () {}, resize: function () {} };
     }
-    var chart = null, curYear = "all", curTypes = { cut: true, hold: true, hike: true };
+    var chart = null, curYear = "all", curTypes = { cut: true, hold: true, hike: true }, curRate = false;
+    var rateBounds = cashRateAxisBounds(rows); // stable over all rows, not the filtered window
 
     function theme() {
       return {
         ink: cssVar("--chart-ink", cssVar("--ink", "#222")),
         accent: cssVar("--chart-accent", cssVar("--accent", "#1d4ed8")),
         muted: cssVar("--chart-muted", cssVar("--muted", "#888")),
+        rate: cssVar("--chart-rate", cssVar("--chart-muted", cssVar("--muted", "#999"))),
         line: cssVar("--chart-line", cssVar("--hair", "#ccc")),
         grid: cssVar("--chart-grid", cssVar("--grid", "#eee")),
         bg: cssVar("--bg", "#fff"),
@@ -248,6 +269,13 @@
     }
     function inYear(r) { return curYear === "all" || yearOf(r.decision.date) === curYear; }
     function linePoints() { return rows.filter(inYear).map(function (r) { return [ts(r.decision.date), r.score.net]; }); }
+    // Cash-rate overlay (FR-004): the rate path across every decision in the window —
+    // independent of the Outcome toggles (a continuous series, not outcome-specific).
+    function ratePoints() {
+      return rows.filter(inYear).map(function (r) {
+        return { value: [ts(r.decision.date), r.decision.cash_rate_target], date: r.decision.date };
+      });
+    }
     function markerSeries(action, t) {
       var names = { hike: "Hike", hold: "Hold", cut: "Cut" }, sym = { hike: SYM_UP, hold: "circle", cut: SYM_DOWN };
       return {
@@ -264,6 +292,9 @@
       return [ts(curYear + "-01-01") - 20 * DAY, ts(curYear + "-12-31") + 20 * DAY];
     }
     function tooltip(p) {
+      if (p.seriesName === "Cash rate") {
+        return "<strong>" + formatDate(p.data.date) + "</strong><br>Cash rate target " + fmtRate(p.data.value[1]);
+      }
       var r = p.data && p.data.row; if (!r) return "";
       var d = r.decision, s = r.score, o = describeOutcome(d), b = stanceBucket(s.net), cb = confidenceBucket(s.confidence);
       return "<strong>" + formatDate(d.date) + "</strong><br>"
@@ -296,11 +327,19 @@
           type: "time", axisLine: { lineStyle: { color: t.line } }, axisTick: { lineStyle: { color: t.line } },
           axisLabel: { color: t.muted, fontSize: 11, fontFamily: t.font }, splitLine: { show: false }
         },
-        yAxis: {
-          type: "value", min: -1, max: 1, interval: 0.5,
-          axisLabel: { color: t.muted, fontSize: 11, fontFamily: t.font },
-          axisLine: { show: false }, axisTick: { show: false }, splitLine: { lineStyle: { color: t.grid } }
-        },
+        yAxis: [
+          {
+            type: "value", min: -1, max: 1, interval: 0.5,
+            axisLabel: { color: t.muted, fontSize: 11, fontFamily: t.font },
+            axisLine: { show: false }, axisTick: { show: false }, splitLine: { lineStyle: { color: t.grid } }
+          },
+          {
+            // cash-rate axis (FR-004) — right, %, its own scale so neither line distorts the other.
+            type: "value", position: "right", min: rateBounds.min, max: rateBounds.max, show: curRate,
+            axisLabel: { color: t.muted, fontSize: 11, fontFamily: t.font, formatter: "{value}%" },
+            axisLine: { show: false }, axisTick: { show: false }, splitLine: { show: false }
+          }
+        ],
         series: [
           {
             name: "Net stance", type: "line", data: linePoints(), showSymbol: false, z: 3,
@@ -312,20 +351,32 @@
               data: [{ yAxis: 0 }]
             }
           },
-          markerSeries("hike", t), markerSeries("hold", t), markerSeries("cut", t)
+          markerSeries("hike", t), markerSeries("hold", t), markerSeries("cut", t),
+          {
+            // cash-rate overlay (FR-004) — stepped, clearly secondary, below the stance line.
+            name: "Cash rate", type: "line", yAxisIndex: 1, step: "end", z: 2,
+            data: curRate ? ratePoints() : [],
+            showSymbol: true, symbol: "circle", symbolSize: 5,
+            lineStyle: { color: t.rate, width: 1.5 }, itemStyle: { color: t.rate, opacity: .55 },
+            emphasis: { scale: 1.5 }
+          }
         ]
       });
       chart.off("click");
       chart.on("click", function (p) { if (p.data && p.data.row && cfg.onSelect) cfg.onSelect(p.data.row.decision.id); });
       chart.setOption({ xAxis: { min: yearWindow()[0], max: yearWindow()[1] } });
     }
-    function update(year, types) {
-      curYear = year; curTypes = types;
+    function update(year, types, rate) {
+      curYear = year; curTypes = types; if (rate != null) curRate = !!rate;
       if (!chart) return;
       var t = theme();
       chart.setOption({
         xAxis: { min: yearWindow()[0], max: yearWindow()[1] },
-        series: [{ data: linePoints() }, markerSeries("hike", t), markerSeries("hold", t), markerSeries("cut", t)]
+        yAxis: [{}, { show: curRate }],
+        series: [
+          { data: linePoints() }, markerSeries("hike", t), markerSeries("hold", t), markerSeries("cut", t),
+          { name: "Cash rate", data: curRate ? ratePoints() : [] }
+        ]
       });
     }
     render();
@@ -413,6 +464,7 @@
     signed: signed, stanceBucket: stanceBucket, confidenceBucket: confidenceBucket,
     dominantSubDimension: dominantSubDimension, describeOutcome: describeOutcome,
     joinDecisions: joinDecisions, buildHeadline: buildHeadline, buildScoresCsv: buildScoresCsv,
+    cashRateAxisBounds: cashRateAxisBounds,
     // browser-only
     prefersReducedMotion: prefersReducedMotion, cssVar: cssVar, countUp: countUp,
     initTheme: initTheme, setupFilters: setupFilters, revealOnLoad: revealOnLoad,
