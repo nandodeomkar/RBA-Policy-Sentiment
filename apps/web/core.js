@@ -165,6 +165,59 @@
     return lines.join("\r\n") + "\r\n";
   }
 
+  // ---------- view-state for date zoom + shareable URL (pure, FR-010) ----------
+  // A shareable view = a date window [from,to] (ISO dates or null = full range),
+  // the enabled outcome set, and the cash-rate overlay flag. Encoded into the URL
+  // query so a link restores the exact view; defaults (full range / all outcomes /
+  // rate off) are omitted to keep links clean. Round-trip unit-tested.
+  var OUTCOME_KEYS = ["cut", "hold", "hike"];
+
+  function windowForYear(year) {
+    if (!year || year === "all") return { from: null, to: null };
+    return { from: year + "-01-01", to: year + "-12-31" };
+  }
+  // The single calendar year a window exactly spans, else null (drives Year<->slider sync).
+  function yearForWindow(from, to) {
+    if (!from || !to) return null;
+    var m = /^(\d{4})-01-01$/.exec(from);
+    return m && to === m[1] + "-12-31" ? m[1] : null;
+  }
+
+  function encodeViewState(state) {
+    state = state || {};
+    var params = [];
+    if (state.from && state.to) params.push("from=" + state.from, "to=" + state.to);
+    if (state.out) {
+      var enabled = OUTCOME_KEYS.filter(function (k) { return state.out[k]; });
+      if (enabled.length < OUTCOME_KEYS.length) params.push("out=" + enabled.join(",")); // omit when all on
+    }
+    if (state.rate) params.push("rate=1");
+    return params.length ? "?" + params.join("&") : "";
+  }
+
+  function decodeViewState(search) {
+    var q = {};
+    String(search || "").replace(/^\?/, "").split("&").forEach(function (kv) {
+      if (!kv) return;
+      var i = kv.indexOf("=");
+      q[i < 0 ? kv : kv.slice(0, i)] = i < 0 ? "" : decodeURIComponent(kv.slice(i + 1));
+    });
+    var out = {};
+    if (q.out != null) {
+      var set = q.out.split(",");
+      OUTCOME_KEYS.forEach(function (k) { out[k] = set.indexOf(k) >= 0; });
+    } else {
+      OUTCOME_KEYS.forEach(function (k) { out[k] = true; }); // absent -> all on
+    }
+    var d = /^\d{4}-\d{2}-\d{2}$/;
+    return {
+      from: d.test(q.from || "") ? q.from : null,
+      to: d.test(q.to || "") ? q.to : null,
+      out: out,
+      rate: q.rate === "1"
+    };
+  }
+
   // ---------- browser-only wiring (reused from the tracker) ----------
   function prefersReducedMotion() {
     return typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -209,28 +262,26 @@
       }
     };
   }
+  // Wire the filter controls. The Year select is a shortcut that sets the date
+  // window; the canonical window lives in the caller (app.js), which also owns the
+  // table + status + URL. Granular callbacks let the caller tell apart "year
+  // chosen" / "outcome or overlay toggled" / "reset" (FR-010).
   function setupFilters(opts) {
-    var yearSel = opts.yearSel, checks = opts.checks, resetBtn = opts.resetBtn,
-      statusEl = opts.statusEl, onApply = opts.onApply, rows = opts.rows || [],
-      rateCheck = opts.rateCheck; // optional view toggle (cash-rate overlay, FR-004)
+    var yearSel = opts.yearSel, checks = opts.checks, rateCheck = opts.rateCheck,
+      resetBtn = opts.resetBtn, rows = opts.rows || [],
+      onYear = opts.onYear, onToggle = opts.onToggle, onReset = opts.onReset;
     var years = [];
     rows.forEach(function (r) { var y = yearOf(r.decision.date); if (years.indexOf(y) < 0) years.push(y); });
     years.sort();
     years.forEach(function (y) { var o = document.createElement("option"); o.value = y; o.textContent = y; yearSel.appendChild(o); });
-    function currentTypes() { var t = {}; checks.forEach(function (cb) { t[cb.value] = cb.checked; }); return t; }
-    function apply() {
-      var year = yearSel.value, types = currentTypes();
-      var shown = onApply(year, types);
-      if (statusEl) statusEl.textContent = "Showing " + shown + " of " + rows.length + " decisions" + (year === "all" ? "" : " in " + year) + ".";
-    }
-    yearSel.addEventListener("change", apply);
-    checks.forEach(function (cb) { cb.addEventListener("change", apply); });
-    if (rateCheck) rateCheck.addEventListener("change", apply);
+    if (yearSel) yearSel.addEventListener("change", function () { if (onYear) onYear(yearSel.value); });
+    checks.forEach(function (cb) { cb.addEventListener("change", function () { if (onToggle) onToggle(); }); });
+    if (rateCheck) rateCheck.addEventListener("change", function () { if (onToggle) onToggle(); });
     if (resetBtn) resetBtn.addEventListener("click", function () {
       yearSel.value = "all"; checks.forEach(function (cb) { cb.checked = true; });
-      if (rateCheck) rateCheck.checked = false; apply();
+      if (rateCheck) rateCheck.checked = false;
+      if (onReset) onReset();
     });
-    apply();
   }
   function revealOnLoad() {
     var done = false;
@@ -250,10 +301,16 @@
     if (!el) return null;
     if (typeof echarts === "undefined") {
       el.innerHTML = '<p style="padding:18px;opacity:.6">The chart could not load. The full record is in the table below.</p>';
-      return { update: function () {}, rebuild: function () {}, resize: function () {} };
+      return { setView: function () {}, rebuild: function () {}, resize: function () {} };
     }
-    var chart = null, curYear = "all", curTypes = { cut: true, hold: true, hike: true }, curRate = false;
+    var chart = null, curTypes = { cut: true, hold: true, hike: true }, curRate = false;
+    var curWin = { from: null, to: null }; // canonical date window (FR-010); null = full range
     var rateBounds = cashRateAxisBounds(rows); // stable over all rows, not the filtered window
+    // Full time extent (padded) — the dataZoom slider windows within this.
+    var tsAll = rows.map(function (r) { return ts(r.decision.date); });
+    var axisMin = (tsAll.length ? Math.min.apply(null, tsAll) : 0) - 20 * DAY;
+    var axisMax = (tsAll.length ? Math.max.apply(null, tsAll) : 0) + 20 * DAY;
+    var suppressZoom = false; // guard against the programmatic dataZoom echo
 
     function theme() {
       return {
@@ -267,12 +324,12 @@
         font: cssVar("--font", "sans-serif")
       };
     }
-    function inYear(r) { return curYear === "all" || yearOf(r.decision.date) === curYear; }
-    function linePoints() { return rows.filter(inYear).map(function (r) { return [ts(r.decision.date), r.score.net]; }); }
-    // Cash-rate overlay (FR-004): the rate path across every decision in the window —
+    // All points always render; the dataZoom slider (FR-010) clips the visible window.
+    function linePoints() { return rows.map(function (r) { return [ts(r.decision.date), r.score.net]; }); }
+    // Cash-rate overlay (FR-004): the rate path across every decision —
     // independent of the Outcome toggles (a continuous series, not outcome-specific).
     function ratePoints() {
-      return rows.filter(inYear).map(function (r) {
+      return rows.map(function (r) {
         return { value: [ts(r.decision.date), r.decision.cash_rate_target], date: r.decision.date };
       });
     }
@@ -283,13 +340,26 @@
         symbolSize: action === "hold" ? 11 : 13, z: 10,
         itemStyle: { color: t.accent, borderColor: t.bg, borderWidth: 1.5 },
         emphasis: { scale: 1.4 },
-        data: rows.filter(function (r) { return r.decision.outcome.action === action && inYear(r) && curTypes[action]; })
+        data: rows.filter(function (r) { return r.decision.outcome.action === action && curTypes[action]; })
           .map(function (r) { return { value: [ts(r.decision.date), r.score.net], row: r }; })
       };
     }
-    function yearWindow() {
-      if (curYear === "all") return [null, null];
-      return [ts(curYear + "-01-01") - 20 * DAY, ts(curYear + "-12-31") + 20 * DAY];
+    function pad2(n) { return (n < 10 ? "0" : "") + n; }
+    function isoOf(t) { var d = new Date(t); return d.getFullYear() + "-" + pad2(d.getMonth() + 1) + "-" + pad2(d.getDate()); }
+    function clampPct(p) { return Math.max(0, Math.min(100, p)); }
+    // Move the slider to a date window (null,null = full range). Guarded so the
+    // resulting dataZoom event isn't mistaken for a user drag (no echo).
+    function applyWindow(from, to) {
+      if (!chart) return;
+      var s = 0, e = 100;
+      if (from && to) {
+        var span = axisMax - axisMin || 1;
+        s = clampPct((ts(from) - axisMin) / span * 100);
+        e = clampPct((ts(to) - axisMin) / span * 100);
+      }
+      suppressZoom = true;
+      chart.dispatchAction({ type: "dataZoom", dataZoomIndex: 0, start: s, end: e });
+      setTimeout(function () { suppressZoom = false; }, 0);
     }
     function tooltip(p) {
       if (p.seriesName === "Cash rate") {
@@ -310,7 +380,7 @@
       chart.setOption({
         animation: anim, animationDuration: anim ? 1100 : 0, animationEasing: "cubicOut",
         textStyle: { fontFamily: t.font, color: t.ink },
-        grid: { left: 4, right: 16, top: 38, bottom: 4, containLabel: true },
+        grid: { left: 4, right: 16, top: 38, bottom: 46, containLabel: true },
         legend: {
           top: 4, selectedMode: false, itemGap: 16, icon: "roundRect",
           textStyle: { color: t.muted, fontSize: 11, fontFamily: t.font },
@@ -324,9 +394,22 @@
           formatter: tooltip
         },
         xAxis: {
-          type: "time", axisLine: { lineStyle: { color: t.line } }, axisTick: { lineStyle: { color: t.line } },
+          type: "time", min: axisMin, max: axisMax,
+          axisLine: { lineStyle: { color: t.line } }, axisTick: { lineStyle: { color: t.line } },
           axisLabel: { color: t.muted, fontSize: 11, fontFamily: t.font }, splitLine: { show: false }
         },
+        dataZoom: [{
+          // date zoom + the basis for the shareable window (FR-010). Keyboard users
+          // window via the Year select; the table is the accessible truth view.
+          type: "slider", xAxisIndex: 0, start: 0, end: 100, height: 20, bottom: 8, brushSelect: false,
+          borderColor: t.line, fillerColor: "rgba(128,128,128,0.16)",
+          dataBackground: { lineStyle: { color: t.line, opacity: 0.5 }, areaStyle: { color: t.grid, opacity: 0.4 } },
+          selectedDataBackground: { lineStyle: { color: t.muted }, areaStyle: { color: t.grid } },
+          handleStyle: { color: t.bg, borderColor: t.muted },
+          moveHandleStyle: { color: t.muted, opacity: 0.6 },
+          emphasis: { handleStyle: { borderColor: t.accent } },
+          textStyle: { color: t.muted, fontSize: 10, fontFamily: t.font }
+        }],
         yAxis: [
           {
             type: "value", min: -1, max: 1, interval: 0.5,
@@ -364,25 +447,39 @@
       });
       chart.off("click");
       chart.on("click", function (p) { if (p.data && p.data.row && cfg.onSelect) cfg.onSelect(p.data.row.decision.id); });
-      chart.setOption({ xAxis: { min: yearWindow()[0], max: yearWindow()[1] } });
+      chart.off("dataZoom");
+      chart.on("dataZoom", function () {
+        if (suppressZoom) return; // programmatic move — not a user change
+        var dz = chart.getOption().dataZoom[0];
+        var span = axisMax - axisMin;
+        var full = dz.start <= 0.05 && dz.end >= 99.95;
+        var from = isoOf(axisMin + dz.start / 100 * span), to = isoOf(axisMin + dz.end / 100 * span);
+        if (cfg.onWindowChange) cfg.onWindowChange(full ? null : from, full ? null : to);
+      });
+      applyWindow(curWin.from, curWin.to);
     }
-    function update(year, types, rate) {
-      curYear = year; curTypes = types; if (rate != null) curRate = !!rate;
+    // Push the full view (window + outcomes + overlay) to the chart. Window-only
+    // changes from a slider drag bypass this (the chart already moved) — see app.js.
+    function setView(view) {
+      view = view || {};
+      if (view.types) curTypes = view.types;
+      if (view.rate != null) curRate = !!view.rate;
+      curWin = { from: view.from || null, to: view.to || null };
       if (!chart) return;
       var t = theme();
       chart.setOption({
-        xAxis: { min: yearWindow()[0], max: yearWindow()[1] },
         yAxis: [{}, { show: curRate }],
         series: [
           { data: linePoints() }, markerSeries("hike", t), markerSeries("hold", t), markerSeries("cut", t),
           { name: "Cash rate", data: curRate ? ratePoints() : [] }
         ]
       });
+      applyWindow(curWin.from, curWin.to);
     }
     render();
     var raf;
     window.addEventListener("resize", function () { cancelAnimationFrame(raf); raf = requestAnimationFrame(function () { if (chart) chart.resize(); }); });
-    return { update: update, rebuild: function () { render(); }, resize: function () { if (chart) chart.resize(); } };
+    return { setView: setView, rebuild: function () { render(); }, resize: function () { if (chart) chart.resize(); } };
   }
 
   // ---------- render: full-record table (NFR-005) ----------
@@ -418,6 +515,7 @@
   function renderDetail(container, row) {
     var c = typeof container === "string" ? document.getElementById(container) : container;
     var d = row.decision, s = row.score, o = describeOutcome(d), b = stanceBucket(s.net), cb = confidenceBucket(s.confidence);
+    var summary = s.tone_summary || buildHeadline(d, s); // FR-012: LLM summary, deterministic fallback
 
     var comps = Object.keys(s.components || {}).map(function (name) {
       var comp = s.components[name], extra = "";
@@ -446,6 +544,7 @@
       '<div class="detail-head"><strong>' + formatDate(d.date) + "</strong>"
         + '<span class="chip"><span class="glyph" aria-hidden="true">' + o.glyph + "</span> " + o.label + " · " + fmtRate(d.cash_rate_target) + "</span>"
         + '<a class="read" href="' + d.source_url + '" rel="noopener">Read the RBA statement <span class="ar">→</span></a></div>'
+      + '<p class="detail-summary">' + escapeHtml(summary) + "</p>"
       + '<div class="detail-reconciled"><p class="eyebrow">Reconciled result</p>'
         + '<p><span class="num big">' + signed(s.net) + '</span> <span class="stance-tag stance-' + b.key + '">' + b.label + "</span></p>"
         + miniScale(s.net)
@@ -465,6 +564,8 @@
     dominantSubDimension: dominantSubDimension, describeOutcome: describeOutcome,
     joinDecisions: joinDecisions, buildHeadline: buildHeadline, buildScoresCsv: buildScoresCsv,
     cashRateAxisBounds: cashRateAxisBounds,
+    windowForYear: windowForYear, yearForWindow: yearForWindow,
+    encodeViewState: encodeViewState, decodeViewState: decodeViewState,
     // browser-only
     prefersReducedMotion: prefersReducedMotion, cssVar: cssVar, countUp: countUp,
     initTheme: initTheme, setupFilters: setupFilters, revealOnLoad: revealOnLoad,

@@ -80,6 +80,8 @@ a{ color:inherit; text-decoration:none; }
 .hero .eyebrow{ margin-bottom:clamp(28px,5vw,52px); }
 .hero-statement{ font-size:clamp(1.7rem,4.6vw,2.9rem); font-weight:500; line-height:1.18; letter-spacing:-.02em; max-width:20ch; text-wrap:balance; margin:0; }
 .hero-statement .accent{ color:var(--accent); }
+/* When the hero shows the LLM tone summary (1–2 sentences), render it as a readable lead, not a giant punch line. */
+.hero-statement--summary{ font-size:clamp(1.3rem,2.7vw,1.8rem); line-height:1.34; letter-spacing:-.01em; max-width:50ch; }
 
 .hero-figure{ margin-top:clamp(44px,8vw,88px); display:grid; gap:clamp(40px,7vw,72px); grid-template-columns:1fr; align-items:end; }
 @media (min-width:820px){ .hero-figure{ grid-template-columns:auto 1fr; } }
@@ -228,6 +230,7 @@ td a:hover{ text-decoration:underline; text-underline-offset:3px; }
 .evi-chip .pol{ font-weight:600; }
 .evi-chip .dim{ color:var(--muted); }
 .detail-foot{ margin-top:18px; font-size:.8rem; color:var(--muted); }
+.detail-summary{ margin:14px 0 0; font-size:1.05rem; line-height:1.58; color:var(--ink-2); max-width:70ch; }
 .detail-reconciled{ margin-top:6px; }
 .stance-tag{ font-size:.7rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--accent); margin-left:8px; white-space:nowrap; }
 .scale.mini{ display:block; height:8px; margin-top:8px; max-width:260px; }

@@ -59,7 +59,14 @@
     var out = C.describeOutcome(d);
 
     byId("hero-eyebrow").textContent = "Latest decision · " + C.formatDate(d.date);
-    byId("hero-h").innerHTML = headlineHtml(d, s);
+    // FR-012: the LLM tone summary leads when present; the deterministic headline is the fallback.
+    var heroH = byId("hero-h");
+    if (s.tone_summary) {
+      heroH.textContent = s.tone_summary;
+      heroH.classList.add("hero-statement--summary");
+    } else {
+      heroH.innerHTML = headlineHtml(d, s);
+    }
 
     byId("stance-num").textContent = C.signed(s.net);
     var labelEl = byId("stance-label");
@@ -137,37 +144,68 @@
     document.documentElement.setAttribute("data-revealed", "1");
   }
 
-  // ---- record section: chart + table + detail + filters ----
+  // ---- record section: chart + table + detail + filters (FR-003/005/010) ----
   function initRecord(rows) {
     var tbody = byId("record-tbody");
     var detailSection = byId("detail-section");
     var detailEl = byId("detail");
+    var statusEl = byId("filter-status");
+    var yearSel = byId("filter-year");
+    var rateCheck = byId("filter-rate");
+    var checks = Array.prototype.slice.call(document.querySelectorAll('input[name="type"]'));
 
     var byIdMap = {};
     rows.forEach(function (r) { byIdMap[r.decision.id] = r; });
 
-    var chart = C.buildStanceChart("chart", rows, { onSelect: openDetail });
+    // canonical, shareable view-state (FR-010): date window + outcomes + overlay
+    var view = { from: null, to: null, types: { cut: true, hold: true, hike: true }, rate: false };
+
+    var chart = C.buildStanceChart("chart", rows, { onSelect: openDetail, onWindowChange: onDragWindow });
     window.__rbaChart = chart;
 
-    function applyFilter(year, types) {
-      return rows.filter(function (r) {
-        return (year === "all" || C.yearOf(r.decision.date) === year) && types[r.decision.outcome.action];
+    function inWindow(r) {
+      var d = r.decision.date;
+      return (!view.from || d >= view.from) && (!view.to || d <= view.to);
+    }
+    function readToggles() {
+      var t = {}; checks.forEach(function (cb) { t[cb.value] = cb.checked; }); view.types = t;
+      view.rate = !!(rateCheck && rateCheck.checked);
+    }
+    function setUrl() {
+      // encodeViewState reads `out`; our view keeps outcomes under `types`.
+      var qs = C.encodeViewState({ from: view.from, to: view.to, out: view.types, rate: view.rate });
+      history.replaceState(null, "", location.pathname + qs + location.hash);
+    }
+    // Render everything from `view`. `fromDrag` = the chart already moved (slider
+    // drag), so sync the table/URL/Year display but don't push the window back to it.
+    function applyView(fromDrag) {
+      if (!fromDrag) chart.setView({ from: view.from, to: view.to, types: view.types, rate: view.rate });
+      if (yearSel) yearSel.value = C.yearForWindow(view.from, view.to) || "all";
+      var filtered = rows.filter(function (r) { return inWindow(r) && view.types[r.decision.outcome.action]; });
+      var n = C.renderRecordTable(tbody, filtered);
+      if (statusEl) {
+        var yr = C.yearForWindow(view.from, view.to);
+        var scope = view.from && view.to ? (yr ? " in " + yr : " in range") : "";
+        statusEl.textContent = "Showing " + n + " of " + rows.length + " decisions" + scope + ".";
+      }
+      setUrl();
+    }
+
+    // coalesce rapid-fire slider drags to one render per frame
+    var dragRaf = null, dragWin = null;
+    function onDragWindow(from, to) {
+      dragWin = { from: from, to: to };
+      if (dragRaf) return;
+      dragRaf = requestAnimationFrame(function () {
+        dragRaf = null; view.from = dragWin.from; view.to = dragWin.to; applyView(true);
       });
     }
-    var rateCheck = byId("filter-rate");
+
     C.setupFilters({
-      yearSel: byId("filter-year"),
-      checks: Array.prototype.slice.call(document.querySelectorAll('input[name="type"]')),
-      resetBtn: byId("filter-reset"),
-      statusEl: byId("filter-status"),
-      rows: rows,
-      rateCheck: rateCheck,
-      onApply: function (year, types) {
-        var filtered = applyFilter(year, types);
-        var n = C.renderRecordTable(tbody, filtered);
-        chart.update(year, types, rateCheck && rateCheck.checked);
-        return n;
-      }
+      yearSel: yearSel, checks: checks, rateCheck: rateCheck, resetBtn: byId("filter-reset"), rows: rows,
+      onYear: function (year) { var w = C.windowForYear(year); view.from = w.from; view.to = w.to; applyView(); },
+      onToggle: function () { readToggles(); applyView(); },
+      onReset: function () { view = { from: null, to: null, types: { cut: true, hold: true, hike: true }, rate: false }; applyView(); }
     });
 
     // delegated row selection (click + keyboard)
@@ -187,11 +225,18 @@
       if (!r) return;
       C.renderDetail(detailEl, r);
       detailSection.hidden = false;
-      if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+      // keep the view query, just set/refresh the decision hash
+      if (location.hash !== "#" + id) history.replaceState(null, "", location.pathname + location.search + "#" + id);
       detailSection.scrollIntoView({ behavior: C.prefersReducedMotion() ? "auto" : "smooth", block: "start" });
     }
 
-    // deep link on load + on hash change
+    // initial: restore the view from the URL, reflect it into the controls, render, then open any deep-linked decision
+    var decoded = C.decodeViewState(location.search);
+    view.from = decoded.from; view.to = decoded.to; view.types = decoded.out; view.rate = decoded.rate;
+    checks.forEach(function (cb) { cb.checked = !!view.types[cb.value]; });
+    if (rateCheck) rateCheck.checked = !!view.rate;
+    applyView();
+
     function fromHash() {
       var id = decodeURIComponent(location.hash.replace(/^#/, ""));
       if (id && byIdMap[id]) openDetail(id);

@@ -97,6 +97,39 @@ test("cashRateAxisBounds — anchored at 0, headroom above the peak, stable", ()
   assert.deepEqual(C.cashRateAxisBounds([{ decision: {} }]), { min: 0, max: 5 });
 });
 
+test("windowForYear / yearForWindow — round-trip a calendar year", () => {
+  assert.deepEqual(C.windowForYear("2023"), { from: "2023-01-01", to: "2023-12-31" });
+  assert.deepEqual(C.windowForYear("all"), { from: null, to: null });
+  assert.equal(C.yearForWindow("2023-01-01", "2023-12-31"), "2023");
+  assert.equal(C.yearForWindow("2022-06-01", "2024-03-01"), null); // custom range -> not a year
+  assert.equal(C.yearForWindow(null, null), null);
+});
+
+test("encodeViewState / decodeViewState — round-trip, defaults omitted (FR-010)", () => {
+  const allOut = { cut: true, hold: true, hike: true };
+  // default view -> empty query
+  assert.equal(C.encodeViewState({ from: null, to: null, out: allOut, rate: false }), "");
+  assert.equal(C.encodeViewState({}), "");
+  // year window only
+  assert.equal(
+    C.encodeViewState({ from: "2023-01-01", to: "2023-12-31", out: allOut, rate: false }),
+    "?from=2023-01-01&to=2023-12-31"
+  );
+  // custom range + outcome subset + rate on
+  const full = { from: "2022-06-01", to: "2024-03-01", out: { cut: true, hold: false, hike: true }, rate: true };
+  assert.equal(C.encodeViewState(full), "?from=2022-06-01&to=2024-03-01&out=cut,hike&rate=1");
+  assert.deepEqual(C.decodeViewState(C.encodeViewState(full)), full);
+  // decode empty -> defaults (all outcomes on)
+  assert.deepEqual(C.decodeViewState(""), { from: null, to: null, out: allOut, rate: false });
+  assert.deepEqual(C.decodeViewState("?rate=1"), { from: null, to: null, out: allOut, rate: true });
+  // all outcomes off survives the round-trip (out= with empty value)
+  const noneOut = { cut: false, hold: false, hike: false };
+  assert.equal(C.encodeViewState({ out: noneOut }), "?out=");
+  assert.deepEqual(C.decodeViewState("?out="), { from: null, to: null, out: noneOut, rate: false });
+  // junk dates are ignored
+  assert.equal(C.decodeViewState("?from=nope&to=2023-12-31").from, null);
+});
+
 test("buildScoresCsv — header, one row per decision, FR-008 columns", () => {
   const rows = [
     { decision: { date: "2020-02-04", source_url: "https://www.rba.gov.au/a", outcome: { action: "hold", change_bps: 0 }, cash_rate_target: 0.75 },
