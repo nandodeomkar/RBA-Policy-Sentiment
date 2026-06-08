@@ -33,3 +33,4 @@ LEXICON_PATH = LEXICON_DIR / "lexicon.json"
 # Caches (opposite git policies — see .gitignore and the design doc §10).
 RAW_CACHE_DIR = SCORER_ROOT / ".cache" / "raw"  # gitignored: holds full page text
 LLM_CACHE_DIR = SCORER_ROOT / "cache" / "llm"  # committed: structured responses only
+SUMMARY_CACHE_DIR = SCORER_ROOT / "cache" / "summary"  # committed: derived prose only (FR-012)

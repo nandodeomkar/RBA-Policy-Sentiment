@@ -26,6 +26,7 @@ from typing import Any
 from rba_scorer.ingest.fetch import fetch as _fetch
 from rba_scorer.paths import DECISIONS_PATH, ENGINE_VERSION_PATH, LEXICON_PATH, SCORES_PATH
 from rba_scorer.score import llm as llm_component
+from rba_scorer.score import summary as summary_component
 from rba_scorer.score import transformer as transformer_component
 from rba_scorer.score.base import ComponentResult
 from rba_scorer.score.engine import engine_version_record, write_engine_version
@@ -108,6 +109,8 @@ def run_score(
     llm_version: str | None = None,
     transformer_version: str | None = None,
     use_transformer: bool = True,
+    summary_provider: Callable[[dict, dict], str] | None = None,
+    use_summaries: bool = True,
     force: bool = False,
     clock: Callable[[], str] = _utc_now_iso,
     write: bool = True,
@@ -176,6 +179,24 @@ def run_score(
             f"scored 0 of {len(decisions)} decisions ({failures} failed) — not writing; "
             "existing scores preserved. Check the logged failures."
         )
+
+    # Plain-language tone summary (FR-012) — presentational, versioned separately
+    # from engine_version. Compute-once on its own axis: reuse a record's summary
+    # while its tone_summary_version is current; (re)generate otherwise. Runs before
+    # write, so a missing key aborts loudly without clobbering existing scores.
+    if use_summaries:
+        summarize = summary_provider or summary_component.summary_for
+        summary_version = summary_component.tone_summary_version()
+        decisions_by_id = {d["id"]: d for d in decisions}
+        for record in scores.values():
+            if (
+                not force
+                and record.get("tone_summary")
+                and record.get("tone_summary_version") == summary_version
+            ):
+                continue
+            record["tone_summary"] = summarize(decisions_by_id[record["decision_id"]], record)
+            record["tone_summary_version"] = summary_version
 
     if write:
         write_scores(scores, scores_path)

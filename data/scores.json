@@ -223,7 +223,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-01.html",
-    "scored_at": "2026-06-07T16:56:07Z"
+    "scored_at": "2026-06-07T16:56:07Z",
+    "tone_summary": "The Board held rates steady at 0.75%, leaning slightly dovish despite mixed signals. While global growth looked reasonable and inflation remained low, near-term headwinds from bushfires and coronavirus, combined with weak consumption, kept the door open to further rate cuts if needed.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-03-03": {
     "decision_id": "2020-03-03",
@@ -397,7 +399,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-06.html",
-    "scored_at": "2026-06-07T16:56:27Z"
+    "scored_at": "2026-06-07T16:56:27Z",
+    "tone_summary": "The Reserve Bank leaned dovish, cutting the cash rate by 25 basis points to 0.5% to cushion the economy against the coronavirus outbreak. Weak growth, low inflation, and employment concerns drove the decision to ease policy further.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-03-19": {
     "decision_id": "2020-03-19",
@@ -519,7 +523,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-08.html",
-    "scored_at": "2026-06-07T16:56:35Z"
+    "scored_at": "2026-06-07T16:56:35Z",
+    "tone_summary": "The Reserve Bank leaned dovish, cutting the cash rate to 0.25 per cent to support jobs and credit during economic stress. While confident inflation would stay on track, the Board prioritised supporting employment and growth.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-04-07": {
     "decision_id": "2020-04-07",
@@ -628,7 +634,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-11.html",
-    "scored_at": "2026-06-07T16:56:45Z"
+    "scored_at": "2026-06-07T16:56:45Z",
+    "tone_summary": "The RBA leaned dovish, holding rates at 0.25% and signalling it would keep them low until employment recovered. While the Board saw some scope to reduce bond purchases, it remained committed to supporting the economy through the pandemic.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-05-05": {
     "decision_id": "2020-05-05",
@@ -841,7 +849,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-13.html",
-    "scored_at": "2026-06-07T16:56:53Z"
+    "scored_at": "2026-06-07T16:56:53Z",
+    "tone_summary": "The Reserve Bank leaned dovish, holding rates at 0.25% as it confronted a sharp economic downturn with unemployment rising sharply and output expected to fall about 10%. The Board signalled it stood ready to do more if needed, though it slightly scaled back bond purchases for now.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-06-02": {
     "decision_id": "2020-06-02",
@@ -950,7 +960,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-15.html",
-    "scored_at": "2026-06-07T16:57:03Z"
+    "scored_at": "2026-06-07T16:57:03Z",
+    "tone_summary": "The Board leaned dovish, holding rates at a record low while emphasizing it would keep support in place until employment recovered and inflation returned to target. The focus was on sustaining the economy through the downturn rather than tightening policy.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-07-07": {
     "decision_id": "2020-07-07",
@@ -1085,7 +1097,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-17.html",
-    "scored_at": "2026-06-07T16:57:11Z"
+    "scored_at": "2026-06-07T16:57:11Z",
+    "tone_summary": "The Reserve Bank held rates steady at 0.25%, leaning slightly dovish overall. While the Board noted that the economic downturn was less severe than feared and conditions had stabilised, it remained cautious about employment and inflation, signalling no rate rises until progress on both fronts was clear.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-08-04": {
     "decision_id": "2020-08-04",
@@ -1220,7 +1234,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-18.html",
-    "scored_at": "2026-06-07T16:57:19Z"
+    "scored_at": "2026-06-07T16:57:19Z",
+    "tone_summary": "The Reserve Bank leaned dovish, holding rates at 0.25% as it focused on weak employment and below-target inflation. The Board signalled rates would stay low until the economy showed clearer progress on jobs and prices.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-09-01": {
     "decision_id": "2020-09-01",
@@ -1385,7 +1401,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-20.html",
-    "scored_at": "2026-06-07T16:57:30Z"
+    "scored_at": "2026-06-07T16:57:30Z",
+    "tone_summary": "The Reserve Bank leaned dovish, holding rates at 0.25% as it focused on subdued growth, weak wage and price pressures, and the need to support employment. The Board committed to keeping rates low for as long as needed to help the economy recover.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-10-06": {
     "decision_id": "2020-10-06",
@@ -1533,7 +1551,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-24.html",
-    "scored_at": "2026-06-07T16:57:39Z"
+    "scored_at": "2026-06-07T16:57:39Z",
+    "tone_summary": "The Reserve Bank leaned dovish, holding rates at 0.25% and signalling it would keep support in place for as long as needed. Weak employment and subdued wage pressures drove the cautious tone, though the Board expressed confidence inflation would eventually return to target.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-11-03": {
     "decision_id": "2020-11-03",
@@ -1737,7 +1757,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-28.html",
-    "scored_at": "2026-06-07T16:57:46Z"
+    "scored_at": "2026-06-07T16:57:46Z",
+    "tone_summary": "The Reserve Bank leaned slightly hawkish despite cutting rates by 15 basis points, as recent economic data improved and GDP growth returned. However, the Board remained focused on supporting jobs and keeping rates low for years ahead, reflecting concern about persistent unemployment and weak inflation.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2020-12-01": {
     "decision_id": "2020-12-01",
@@ -1915,7 +1937,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2020/mr-20-32.html",
-    "scored_at": "2026-06-07T16:57:54Z"
+    "scored_at": "2026-06-07T16:57:54Z",
+    "tone_summary": "The Reserve Bank held rates steady at 0.1% with a dovish lean, focused on supporting jobs and keeping rates low for years ahead. Weak growth, low inflation, and high unemployment drove the cautious tone, though some labour market tightness offered a modest counterweight.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-02-02": {
     "decision_id": "2021-02-02",
@@ -2089,7 +2113,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-01.html",
-    "scored_at": "2026-06-07T16:58:01Z"
+    "scored_at": "2026-06-07T16:58:01Z",
+    "tone_summary": "The Reserve Bank leaned dovish, holding rates at 0.1% and adding $100 billion in bond purchases. Low inflation, subdued wage pressures, and a commitment to keep conditions supportive drove the decision to maintain highly accommodative policy.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-03-02": {
     "decision_id": "2021-03-02",
@@ -2241,7 +2267,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-03.html",
-    "scored_at": "2026-06-07T16:58:10Z"
+    "scored_at": "2026-06-07T16:58:10Z",
+    "tone_summary": "The Board held rates steady at 0.1%, leaning slightly dovish overall. While acknowledging a tight labour market and stronger-than-expected recovery, the statement emphasised subdued wage and price pressures, with no rate rises expected before 2024 at the earliest.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-04-06": {
     "decision_id": "2021-04-06",
@@ -2394,7 +2422,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-04.html",
-    "scored_at": "2026-06-07T16:58:19Z"
+    "scored_at": "2026-06-07T16:58:19Z",
+    "tone_summary": "The RBA held rates steady at 0.1%, leaning slightly hawkish on growth but dovish on inflation and jobs. The Board emphasized that wage and price pressures remain subdued and don't expect to raise rates until 2024 at the earliest.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-05-04": {
     "decision_id": "2021-05-04",
@@ -2559,7 +2589,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-06.html",
-    "scored_at": "2026-06-07T16:58:27Z"
+    "scored_at": "2026-06-07T16:58:27Z",
+    "tone_summary": "The Board held rates steady, leaning slightly hawkish on strong economic recovery and employment gains, but tempered by subdued inflation pressures. It signalled no rate rises until inflation sustainably reaches target, likely not before 2024.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-06-01": {
     "decision_id": "2021-06-01",
@@ -2739,7 +2771,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-09.html",
-    "scored_at": "2026-06-07T16:58:35Z"
+    "scored_at": "2026-06-07T16:58:35Z",
+    "tone_summary": "The Board held rates steady while leaning slightly hawkish, encouraged by stronger-than-expected economic recovery, labour shortages, and wage pressures. However, it tempered this outlook by noting inflation remains subdued and signalling no rate rises until 2024 at the earliest.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-07-06": {
     "decision_id": "2021-07-06",
@@ -2944,7 +2978,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-13.html",
-    "scored_at": "2026-06-07T16:58:42Z"
+    "scored_at": "2026-06-07T16:58:42Z",
+    "tone_summary": "The Board leaned hawkish on employment and growth, noting a stronger-than-expected recovery and labour shortages, but held rates steady at 0.1% because inflation remains subdued and unlikely to reach target until 2024. The mixed signals reflect confidence that the economy is improving faster than forecast, yet price pressures remain too weak to justify tightening.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-08-03": {
     "decision_id": "2021-08-03",
@@ -3162,7 +3198,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-14.html",
-    "scored_at": "2026-06-07T16:58:50Z"
+    "scored_at": "2026-06-07T16:58:50Z",
+    "tone_summary": "The Board leaned hawkish, holding rates steady while acknowledging stronger-than-expected economic recovery, tight labour markets, and rising inflation. However, it maintained a cautious stance by committing not to raise rates until inflation is sustainably within target—a condition not expected before 2024.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-09-07": {
     "decision_id": "2021-09-07",
@@ -3310,7 +3348,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-19.html",
-    "scored_at": "2026-06-07T16:58:57Z"
+    "scored_at": "2026-06-07T16:58:57Z",
+    "tone_summary": "The Reserve Bank leaned dovish, holding rates steady at 0.1% as it confronted near-term economic weakness from lockdowns, rising unemployment, and subdued inflation. The Board committed to keeping financial conditions very loose, extending bond purchases and signalling rates would stay low until at least 2024.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-10-05": {
     "decision_id": "2021-10-05",
@@ -3458,7 +3498,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-22.html",
-    "scored_at": "2026-06-07T16:59:04Z"
+    "scored_at": "2026-06-07T16:59:04Z",
+    "tone_summary": "The Reserve Bank leaned dovish, holding rates steady at 0.1% as it assessed temporary economic weakness from lockdowns, weak employment, and inflation still below target. The Board signalled it won't raise rates until inflation sustainably reaches its 2–3% band, which it doesn't expect before 2024.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-11-02": {
     "decision_id": "2021-11-02",
@@ -3645,7 +3687,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-24.html",
-    "scored_at": "2026-06-07T16:59:09Z"
+    "scored_at": "2026-06-07T16:59:09Z",
+    "tone_summary": "The Reserve Bank held rates steady and leaned slightly dovish, emphasizing patience on inflation despite some early progress toward its target. The Board saw the economy recovering and employment improving, but kept the door firmly closed on rate rises for now.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2021-12-07": {
     "decision_id": "2021-12-07",
@@ -3780,7 +3824,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2021/mr-21-29.html",
-    "scored_at": "2026-06-07T16:59:16Z"
+    "scored_at": "2026-06-07T16:59:16Z",
+    "tone_summary": "The Board leaned slightly hawkish, holding rates steady while signalling confidence that wages and inflation will gradually pick up as the labour market tightens. It emphasized patience on rate rises, waiting for inflation to be sustainably on target before acting.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-02-01": {
     "decision_id": "2022-02-01",
@@ -4045,7 +4091,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-02.html",
-    "scored_at": "2026-06-07T16:59:24Z"
+    "scored_at": "2026-06-07T16:59:24Z",
+    "tone_summary": "The Board leaned slightly hawkish, holding rates steady while ending its bond-buying program as the labour market strengthened and inflation rose faster than expected. However, it signalled patience, saying it won't raise rates until inflation is clearly and sustainably back within its target band.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-03-01": {
     "decision_id": "2022-03-01",
@@ -4223,7 +4271,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-05.html",
-    "scored_at": "2026-06-07T16:59:35Z"
+    "scored_at": "2026-06-07T16:59:35Z",
+    "tone_summary": "The Board leaned hawkish, holding rates steady while acknowledging inflation had risen faster than expected and the job market was resilient. However, it signalled patience, saying it would wait for inflation to clearly settle within its target range before raising rates.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-04-05": {
     "decision_id": "2022-04-05",
@@ -4414,7 +4464,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-11.html",
-    "scored_at": "2026-06-07T16:59:43Z"
+    "scored_at": "2026-06-07T16:59:43Z",
+    "tone_summary": "The Board held rates steady but leaned hawkish, focused on rising inflation and strong demand despite tight labour markets. The statement signalled concern about price pressures and wages growth, though acknowledged employment strength and accommodative financial conditions.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-05-03": {
     "decision_id": "2022-05-03",
@@ -4631,7 +4683,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-12.html",
-    "scored_at": "2026-06-07T16:59:51Z"
+    "scored_at": "2026-06-07T16:59:51Z",
+    "tone_summary": "The Reserve Bank leaned hawkish, raising the cash rate by 25 basis points to 0.35% in response to inflation rising faster and higher than expected, combined with a tight labour market and rising wages. The Board signalled it was beginning to withdraw pandemic-era support and indicated further rate rises ahead.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-06-07": {
     "decision_id": "2022-06-07",
@@ -4861,7 +4915,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-14.html",
-    "scored_at": "2026-06-07T17:00:00Z"
+    "scored_at": "2026-06-07T17:00:00Z",
+    "tone_summary": "The Reserve Bank leaned hawkish, raising the cash rate by 50 basis points to 0.85% in response to inflation rising higher and faster than expected. The Board signalled more rate rises ahead as it works to bring inflation back under control.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-07-05": {
     "decision_id": "2022-07-05",
@@ -5093,7 +5149,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-20.html",
-    "scored_at": "2026-06-07T17:00:09Z"
+    "scored_at": "2026-06-07T17:00:09Z",
+    "tone_summary": "The Reserve Bank leaned hawkish, raising the cash rate by 50 basis points to 1.35% to combat high inflation. The decision was driven by strong demand, a very tight labour market, and rising wages, with the Board signalling more rate rises ahead to bring inflation back under control.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-08-02": {
     "decision_id": "2022-08-02",
@@ -5352,7 +5410,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-21.html",
-    "scored_at": "2026-06-07T17:00:18Z"
+    "scored_at": "2026-06-07T17:00:18Z",
+    "tone_summary": "The Reserve Bank leaned hawkish, raising the cash rate by 50 basis points to 1.85 per cent. Inflation at its highest in decades and a very tight labour market drove the decision, though the Board noted some moderation in price pressures.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-09-06": {
     "decision_id": "2022-09-06",
@@ -5649,7 +5709,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-28.html",
-    "scored_at": "2026-06-07T17:00:28Z"
+    "scored_at": "2026-06-07T17:00:28Z",
+    "tone_summary": "The Reserve Bank leaned hawkish, raising the cash rate by 50 basis points to 2.35 per cent. Inflation at its highest in decades and a very tight labour market drove the decision, though the Board acknowledged some moderation in price pressures.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-10-04": {
     "decision_id": "2022-10-04",
@@ -5840,7 +5902,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-33.html",
-    "scored_at": "2026-06-07T17:00:36Z"
+    "scored_at": "2026-06-07T17:00:36Z",
+    "tone_summary": "The Reserve Bank leaned hawkish, raising the cash rate by 25 basis points to 2.6 per cent. The Board focused on inflation being too high and signalled further rate rises ahead, citing a very tight labour market and rising wages as key concerns.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-11-01": {
     "decision_id": "2022-11-01",
@@ -6058,7 +6122,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-36.html",
-    "scored_at": "2026-06-07T17:00:46Z"
+    "scored_at": "2026-06-07T17:00:46Z",
+    "tone_summary": "The Reserve Bank leaned hawkish, focused on bringing down inflation that it judged too high. It raised the cash rate by 25 basis points to 2.85 per cent, citing a tight labour market and expected further price rises, though it acknowledged growth was slowing.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2022-12-06": {
     "decision_id": "2022-12-06",
@@ -6288,7 +6354,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2022/mr-22-41.html",
-    "scored_at": "2026-06-07T17:00:56Z"
+    "scored_at": "2026-06-07T17:00:56Z",
+    "tone_summary": "The Reserve Bank leaned hawkish, raising the cash rate by 25 basis points to 3.1 per cent. Inflation at 6.9 per cent and expected to peak near 8 per cent was the main driver, though the Board acknowledged growth would moderate ahead.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-02-07": {
     "decision_id": "2023-02-07",
@@ -6519,7 +6587,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-04.html",
-    "scored_at": "2026-06-07T17:01:05Z"
+    "scored_at": "2026-06-07T17:01:05Z",
+    "tone_summary": "The Board leaned hawkish, focused on bringing down inflation that had reached 7.8 per cent amid a tight labour market and rising wages. It raised the cash rate by 25 basis points to 3.35 per cent, signalling more increases ahead to return inflation to target.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-03-07": {
     "decision_id": "2023-03-07",
@@ -6791,7 +6861,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-07.html",
-    "scored_at": "2026-06-07T17:01:15Z"
+    "scored_at": "2026-06-07T17:01:15Z",
+    "tone_summary": "The Board leaned hawkish, driven mainly by concern about inflation and a tight labour market, despite signs that growth is slowing. It raised the cash rate by 25 basis points to 3.6 per cent, signalling it will keep tightening policy to bring inflation back to target.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-04-04": {
     "decision_id": "2023-04-04",
@@ -7009,7 +7081,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-08.html",
-    "scored_at": "2026-06-07T17:01:25Z"
+    "scored_at": "2026-06-07T17:01:25Z",
+    "tone_summary": "The RBA held rates steady at 3.6% while leaning slightly hawkish, focused on controlling inflation despite signs of economic slowdown. The Board signalled it may raise rates further to combat price pressures and wage risks, even as growth slows and unemployment is expected to rise.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-05-02": {
     "decision_id": "2023-05-02",
@@ -7267,7 +7341,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-10.html",
-    "scored_at": "2026-06-07T17:01:35Z"
+    "scored_at": "2026-06-07T17:01:35Z",
+    "tone_summary": "The Board leaned hawkish, raising the cash rate by 25 basis points to 3.85% as inflation at 7% remained too high and the labour market stayed very tight. While growth was slowing, the focus was on bringing inflation down, though the Board acknowledged the path to a soft landing was narrow.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-06-06": {
     "decision_id": "2023-06-06",
@@ -7498,7 +7574,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-13.html",
-    "scored_at": "2026-06-07T17:01:44Z"
+    "scored_at": "2026-06-07T17:01:44Z",
+    "tone_summary": "The Reserve Bank leaned hawkish, raising the cash rate by 25 basis points to 4.1 per cent, driven primarily by persistent inflation concerns. Despite signs of economic slowdown and moderating employment growth, the Board judged that further rate rises may be needed to bring inflation back under control.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-07-04": {
     "decision_id": "2023-07-04",
@@ -7690,7 +7768,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-16.html",
-    "scored_at": "2026-06-07T17:01:52Z"
+    "scored_at": "2026-06-07T17:01:52Z",
+    "tone_summary": "The Board leaned hawkish, holding rates steady at 4.1% while signalling inflation remains the priority. Though economic growth has slowed, the Board emphasized that higher rates are working and more tightening may be needed to bring inflation back to target.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-08-01": {
     "decision_id": "2023-08-01",
@@ -7883,7 +7963,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-19.html",
-    "scored_at": "2026-06-07T17:01:59Z"
+    "scored_at": "2026-06-07T17:01:59Z",
+    "tone_summary": "The Reserve Bank held rates steady at 4.1% with a cautiously hawkish lean, focused on bringing inflation down from 6% despite weak economic growth. The Board signalled it may raise rates further if needed, citing a tight labour market and the need to restore price stability.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-09-05": {
     "decision_id": "2023-09-05",
@@ -8103,7 +8185,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-23.html",
-    "scored_at": "2026-06-07T17:02:08Z"
+    "scored_at": "2026-06-07T17:02:08Z",
+    "tone_summary": "The Board held rates steady at 4.1%, leaning slightly dovish overall. While inflation remains elevated and the labour market is tight, slowing growth and easing price pressures led the Board to pause, though it signalled further rate rises may still be needed.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-10-03": {
     "decision_id": "2023-10-03",
@@ -8375,7 +8459,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-25.html",
-    "scored_at": "2026-06-07T17:02:17Z"
+    "scored_at": "2026-06-07T17:02:17Z",
+    "tone_summary": "The Reserve Bank held rates steady at 4.1%, leaning slightly dovish overall. While inflation remains elevated and the labour market is tight, the Board was swayed by slowing growth and weak household spending, though it signalled further rate rises may still be needed to bring inflation back to target.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-11-07": {
     "decision_id": "2023-11-07",
@@ -8645,7 +8731,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-30.html",
-    "scored_at": "2026-06-07T17:02:25Z"
+    "scored_at": "2026-06-07T17:02:25Z",
+    "tone_summary": "The Reserve Bank leaned hawkish on inflation concerns, raising the cash rate by 25 basis points to 4.35%, citing stubborn price pressures that are proving more persistent than expected. Despite weak economic growth and a softening job market, the Board prioritized bringing inflation back to target.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2023-12-05": {
     "decision_id": "2023-12-05",
@@ -8850,7 +8938,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2023/mr-23-35.html",
-    "scored_at": "2026-06-07T17:02:35Z"
+    "scored_at": "2026-06-07T17:02:35Z",
+    "tone_summary": "The Board leaned slightly hawkish, holding rates steady at 4.35% while flagging that inflation remained stubbornly high and further rate rises might be needed. Concern about persistent inflation outweighed signs of slowing growth and easing job market conditions.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2024-02-06": {
     "decision_id": "2024-02-06",
@@ -9067,7 +9157,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-01.html",
-    "scored_at": "2026-06-07T17:02:44Z"
+    "scored_at": "2026-06-07T17:02:44Z",
+    "tone_summary": "The Board held rates steady at 4.35% but leaned hawkish, focused on stubborn inflation and tight labour market conditions. While inflation has started easing, it remains elevated, and the Board signalled it's not ruling out further rate rises to bring it back to target.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2024-03-19": {
     "decision_id": "2024-03-19",
@@ -9423,7 +9515,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-05.html",
-    "scored_at": "2026-06-07T17:02:52Z"
+    "scored_at": "2026-06-07T17:02:52Z",
+    "tone_summary": "The Board held rates steady at 4.35%, striking a broadly neutral tone. While inflation remains a concern and the labour market is still tight, moderating price pressures and weakening growth gave the Board reason to pause and assess further.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2024-05-07": {
     "decision_id": "2024-05-07",
@@ -9679,7 +9773,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-08.html",
-    "scored_at": "2026-06-07T17:03:01Z"
+    "scored_at": "2026-06-07T17:03:01Z",
+    "tone_summary": "The Reserve Bank held rates steady at 4.35%, leaning hawkish on inflation concerns. While economic growth has weakened, the Board remained focused on stubborn inflation—particularly in services—and a still-tight labour market, signalling it was not yet ready to cut rates.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2024-06-18": {
     "decision_id": "2024-06-18",
@@ -9936,7 +10032,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-12.html",
-    "scored_at": "2026-06-07T17:03:11Z"
+    "scored_at": "2026-06-07T17:03:11Z",
+    "tone_summary": "The Reserve Bank held rates steady at 4.35%, leaning slightly hawkish. While inflation has fallen and growth is weak, the Board remains concerned that inflation is still too high and falling slower than expected, with persistent cost pressures keeping it above target.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2024-08-06": {
     "decision_id": "2024-08-06",
@@ -10181,7 +10279,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-15.html",
-    "scored_at": "2026-06-07T17:03:22Z"
+    "scored_at": "2026-06-07T17:03:22Z",
+    "tone_summary": "The Board leaned slightly hawkish, holding rates steady at 4.35% as inflation remained stubbornly above target despite some recent falls. Weak growth and rising unemployment pulled against inflation concerns, but persistent price pressures and upside risks kept the Board cautious about cutting rates soon.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2024-09-24": {
     "decision_id": "2024-09-24",
@@ -10387,7 +10487,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-18.html",
-    "scored_at": "2026-06-07T17:03:33Z"
+    "scored_at": "2026-06-07T17:03:33Z",
+    "tone_summary": "The Board leaned hawkish, holding rates steady at 4.35% as inflation remained stubbornly above target despite some recent falls. While growth was weak, persistent price pressures and a tight job market meant the Board kept policy restrictive to bring inflation back to its 2–3% goal.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2024-11-05": {
     "decision_id": "2024-11-05",
@@ -10633,7 +10735,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-24.html",
-    "scored_at": "2026-06-07T17:03:44Z"
+    "scored_at": "2026-06-07T17:03:44Z",
+    "tone_summary": "The Board held rates steady at 4.35%, leaning slightly hawkish. While inflation has fallen, it remains above target and the economy still shows demand-supply imbalance, so the Board kept policy restrictive to ensure inflation returns sustainably to target by 2026.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2024-12-10": {
     "decision_id": "2024-12-10",
@@ -10918,7 +11022,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2024/mr-24-27.html",
-    "scored_at": "2026-06-07T17:03:57Z"
+    "scored_at": "2026-06-07T17:03:57Z",
+    "tone_summary": "The Reserve Bank held rates steady at 4.35%, striking a broadly neutral tone. Inflation has fallen significantly but remains above target, while economic growth is weak—the Board saw progress on price pressures but judged it too early to cut rates.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2025-02-18": {
     "decision_id": "2025-02-18",
@@ -11178,7 +11284,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-03.html",
-    "scored_at": "2026-06-07T17:04:08Z"
+    "scored_at": "2026-06-07T17:04:08Z",
+    "tone_summary": "The Reserve Bank cut rates by 25 basis points to 4.1 per cent, leaning slightly dovish overall. Inflation has fallen faster than expected and growth is weak, but the Board signalled caution about cutting further, citing persistent wage pressures and a tight labour market.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2025-04-01": {
     "decision_id": "2025-04-01",
@@ -11383,7 +11491,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-10.html",
-    "scored_at": "2026-06-07T17:04:18Z"
+    "scored_at": "2026-06-07T17:04:18Z",
+    "tone_summary": "The Board held rates steady at 4.1%, striking a broadly neutral tone. Inflation has fallen substantially and wage pressures have eased, but the Board remains cautious about the outlook and sees policy as still restrictive, so it's not yet ready to cut.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2025-05-20": {
     "decision_id": "2025-05-20",
@@ -11653,7 +11763,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-13.html",
-    "scored_at": "2026-06-07T17:04:26Z"
+    "scored_at": "2026-06-07T17:04:26Z",
+    "tone_summary": "The Board leaned dovish, focusing on inflation falling substantially and growth weakening. It cut the cash rate by 25 basis points to 3.85 per cent, saying looser monetary policy was now appropriate.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2025-07-08": {
     "decision_id": "2025-07-08",
@@ -11871,7 +11983,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-17.html",
-    "scored_at": "2026-06-07T17:04:36Z"
+    "scored_at": "2026-06-07T17:04:36Z",
+    "tone_summary": "The Reserve Bank leaned dovish, holding rates steady at 3.85% while noting that inflation has fallen substantially and growth remains subdued. The Board wanted more confirmation that inflation is on track before making its next move.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2025-08-12": {
     "decision_id": "2025-08-12",
@@ -12088,7 +12202,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-22.html",
-    "scored_at": "2026-06-07T17:04:45Z"
+    "scored_at": "2026-06-07T17:04:45Z",
+    "tone_summary": "The Reserve Bank leaned dovish and cut the cash rate by 25 basis points to 3.6%, citing falling inflation and easing labour market conditions. The Board remained cautious about the outlook despite the rate cut.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2025-09-30": {
     "decision_id": "2025-09-30",
@@ -12305,7 +12421,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-27.html",
-    "scored_at": "2026-06-07T17:04:54Z"
+    "scored_at": "2026-06-07T17:04:54Z",
+    "tone_summary": "The Board held rates steady at 3.6%, leaning slightly dovish overall. While inflation has fallen substantially and remains in target, the Board noted some persistent inflation risks and signs of recovering demand, warranting a cautious pause rather than further cuts.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2025-11-04": {
     "decision_id": "2025-11-04",
@@ -12523,7 +12641,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-31.html",
-    "scored_at": "2026-06-07T17:05:03Z"
+    "scored_at": "2026-06-07T17:05:03Z",
+    "tone_summary": "The Reserve Bank held rates steady at 3.6%, leaning slightly hawkish on concerns that inflation has picked up more than expected and remains sticky. Labour costs are rising and demand is outpacing supply, prompting the Board to stay cautious despite some inflation having fallen.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2025-12-09": {
     "decision_id": "2025-12-09",
@@ -12740,7 +12860,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2025/mr-25-33.html",
-    "scored_at": "2026-06-07T17:05:14Z"
+    "scored_at": "2026-06-07T17:05:14Z",
+    "tone_summary": "The Board held rates steady at 3.6%, struck a cautious tone on inflation, and noted that growth and housing activity have picked up more than expected. While inflation has fallen overall, recent signs of a broader pick-up and tight labour markets prompted the Board to remain watchful rather than move in either direction.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2026-02-03": {
     "decision_id": "2026-02-03",
@@ -12996,7 +13118,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2026/mr-26-03.html",
-    "scored_at": "2026-06-07T17:05:22Z"
+    "scored_at": "2026-06-07T17:05:22Z",
+    "tone_summary": "The Reserve Bank raised rates by 25 basis points to 3.85%, striking a broadly neutral tone. While inflation has fallen from peaks, the Board was concerned about stronger-than-expected demand, tight labour markets, and persistent wage pressures, judging a rate rise appropriate despite mixed signals.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2026-03-17": {
     "decision_id": "2026-03-17",
@@ -13278,7 +13402,9 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2026/mr-26-08.html",
-    "scored_at": "2026-06-07T17:05:29Z"
+    "scored_at": "2026-06-07T17:05:29Z",
+    "tone_summary": "The Reserve Bank raised rates by 25 basis points to 4.1%, leaning slightly dovish overall despite the hike. Inflation has fallen substantially from its 2022 peak, but the Board acted because price pressures picked up sharply in late 2025 and the labour market tightened, creating upside risks to inflation.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   },
   "2026-05-05": {
     "decision_id": "2026-05-05",
@@ -13543,6 +13669,8 @@
     ],
     "engine_version": "engine-2026.06-57c7cd6e",
     "source_url": "https://www.rba.gov.au/media-releases/2026/mr-26-12.html",
-    "scored_at": "2026-06-07T17:05:37Z"
+    "scored_at": "2026-06-07T17:05:37Z",
+    "tone_summary": "The Reserve Bank leaned hawkish and raised the cash rate by 25 basis points to 4.35%, driven by a sharp pickup in inflation from higher fuel prices and capacity pressures. While growth concerns tempered the stance, the Board judged that controlling inflation—which is expected to stay above target—took priority.",
+    "tone_summary_version": "summary-p1:claude-haiku-4-5-20251001"
   }
 }

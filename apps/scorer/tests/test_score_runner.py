@@ -8,10 +8,12 @@ import statistics
 
 import pytest
 
+from rba_scorer.score import summary
 from rba_scorer.score.base import ComponentResult, EvidencePhrase
 from rba_scorer.score.runner import NoDecisionsError, run_score
 
 _FIXED_CLOCK = "2026-01-01T00:00:00Z"
+_FAKE_SUMMARY = "Leaned hawkish on inflation while holding the cash rate steady."
 
 
 def _decision(decision_id: str, url: str) -> dict:
@@ -50,6 +52,7 @@ def _run(tmp_path, **overrides):
         engine_version_path=tmp_path / "engine_version.json",
         llm_scorer=_fake_llm,
         transformer_scorer=_fake_transformer,
+        summary_provider=lambda _decision, _score: _FAKE_SUMMARY,
         clock=lambda: _FIXED_CLOCK,
     )
     kwargs.update(overrides)
@@ -90,6 +93,12 @@ def test_run_score_writes_reconciled_records(tmp_path) -> None:
     assert rec["source_url"] == "u/hawk"  # provenance (NFR-006)
     assert rec["scored_at"] == _FIXED_CLOCK
     assert comp["transformer"].get("sub_scores") is None  # net only
+
+    # Tone summary (FR-012) — attached, versioned separately from engine_version.
+    assert rec["tone_summary"] == _FAKE_SUMMARY
+    assert rec["tone_summary_version"] == summary.tone_summary_version()
+    assert "summary" not in rec["engine_version"]  # the summary never moves the score's version
+
     assert (tmp_path / "scores.json").exists()
     assert (tmp_path / "engine_version.json").exists()
 
@@ -202,6 +211,53 @@ def test_run_score_skips_failing_pages(tmp_path) -> None:
     scores = _run(tmp_path, text_provider=provider)
     assert "good" in scores
     assert "bad" not in scores  # one bad page is skipped, not fatal
+
+
+def test_without_summaries_omits_the_field(tmp_path) -> None:
+    _write_decisions(tmp_path, [_decision("d", "u")])
+    scores = _run(tmp_path, text_provider=lambda _u: "Inflation high.", use_summaries=False)
+    assert "tone_summary" not in scores["d"]  # no key needed, fields simply absent
+    assert "tone_summary_version" not in scores["d"]
+
+
+def test_summary_reused_unless_version_or_force(tmp_path) -> None:
+    _write_decisions(tmp_path, [_decision("d", "u")])
+    calls = {"n": 0}
+
+    def provider(_decision, _score):
+        calls["n"] += 1
+        return "a summary"
+
+    _run(tmp_path, text_provider=lambda _u: "Inflation high.", summary_provider=provider)
+    assert calls["n"] == 1
+    # Re-run: score reused (same engine_version) AND summary current → no new call.
+    _run(tmp_path, text_provider=lambda _u: "Inflation high.", summary_provider=provider)
+    assert calls["n"] == 1
+    # --force re-scores → fresh records → the summary is regenerated.
+    _run(
+        tmp_path,
+        text_provider=lambda _u: "Inflation high.",
+        summary_provider=provider,
+        force=True,
+    )
+    assert calls["n"] == 2
+
+
+def test_summary_failure_aborts_without_wiping_scores(tmp_path) -> None:
+    from rba_scorer.score.summary import SummaryUnavailableError
+
+    _write_decisions(tmp_path, [_decision("d", "u")])
+    scores_path = tmp_path / "scores.json"
+    scores_path.write_text('{"sentinel": 1}', encoding="utf-8")  # pre-existing good data
+
+    def boom(_decision, _score):
+        raise SummaryUnavailableError("no key")
+
+    # A missing key for summaries is batch-fatal — it aborts before write, leaving
+    # the prior scores.json untouched (not overwritten with an unsummarised set).
+    with pytest.raises(SummaryUnavailableError):
+        _run(tmp_path, text_provider=lambda _u: "Inflation high.", summary_provider=boom)
+    assert scores_path.read_text(encoding="utf-8") == '{"sentinel": 1}'
 
 
 def test_run_score_without_decisions_raises(tmp_path) -> None:

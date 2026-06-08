@@ -36,14 +36,19 @@ def cmd_ingest(args: argparse.Namespace) -> int:
 def cmd_score(args: argparse.Namespace) -> int:
     from rba_scorer.score.llm import LLMUnavailableError
     from rba_scorer.score.runner import NoDecisionsError, ScoringError, run_score
+    from rba_scorer.score.summary import SummaryUnavailableError
     from rba_scorer.score.transformer import TransformerUnavailableError
 
     try:
-        scores = run_score(force=args.force, use_transformer=not args.without_transformer)
+        scores = run_score(
+            force=args.force,
+            use_transformer=not args.without_transformer,
+            use_summaries=not args.without_summaries,
+        )
     except (NoDecisionsError, ScoringError) as exc:
         logger.error("%s", exc)
         return 1
-    except (LLMUnavailableError, TransformerUnavailableError) as exc:
+    except (LLMUnavailableError, TransformerUnavailableError, SummaryUnavailableError) as exc:
         logger.error("%s", exc)
         return 1
     logger.info("scored %d decisions -> data/scores.json", len(scores))
@@ -116,6 +121,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--without-transformer",
         action="store_true",
         help="Run lexicon+LLM only — skip the heavy FOMC-RoBERTa step (plan step 15).",
+    )
+    p_score.add_argument(
+        "--without-summaries",
+        action="store_true",
+        help="Skip the plain-language tone summaries (FR-012; first generation needs an API key).",
     )
     p_score.set_defaults(func=cmd_score)
 
