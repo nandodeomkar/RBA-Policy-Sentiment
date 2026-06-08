@@ -77,3 +77,5 @@ always-on service to fall over:
 - [ ] **Download CSV** returns a well-formed file (header + one row per decision)
 - [ ] **Methodology page** loads; corpus size, engine + component versions fill from live data
 - [ ] **Cash-rate overlay (FR-004):** off by default; the **Cash rate** toggle adds a right-hand `%` axis + stepped line aligned to the time axis; the line shows its target % on hover; Year/Outcome filters still drive chart + table with it on; **Reset** clears it; legible in light/dark/~375px
+- [ ] **Date zoom + shareable URL (FR-010):** the slider windows the chart **and** the table together; the Year select sets the window and a custom drag flips Year to "All"; **Reset** clears window/outcomes/overlay and the query; a copied URL restores the window + outcomes + overlay + open decision
+- [ ] **Tone summary (FR-012):** the plain-language summary shows on the hero **and** in every decision's detail panel, and falls back to the deterministic headline when a record has no `tone_summary`

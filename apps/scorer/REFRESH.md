@@ -50,6 +50,10 @@ Run steps 1–4 from `apps/scorer/`, step 5 from `apps/web/`.
    - The existing decisions carry the current `engine_version`, so they are **reused
      byte-identical** (compute-once). Only the **new** decision is scored, with one live
      Claude call (then cached) + the lexicon + the transformer.
+   - It also generates the new decision's plain-language **`tone_summary`** (FR-012) — a
+     second short, cached Claude call, stamped with `tone_summary_version` **separately**
+     from `engine_version` (re-wording a summary never re-scores anything). Pass
+     `--without-summaries` to skip it (e.g. a no-key run).
    - Writes `data/scores.json` and refreshes `data/engine_version.json`.
    - **If it exits non-zero, stop here** (see *If something fails* below) — `scores.json`
      is left untouched, so the live site is unaffected.
@@ -83,6 +87,8 @@ Run steps 1–4 from `apps/scorer/`, step 5 from `apps/web/`.
    - `data/decisions.json`, `data/scores.json`, `data/engine_version.json` — the published contract.
    - `apps/scorer/cache/llm/*.json` — the new decision's cached LLM response (short phrases +
      rationale only; this is what makes re-runs deterministic and is safe to commit).
+   - `apps/scorer/cache/summary/*.json` — the new decision's cached tone summary (derived
+     prose only; same commit policy as the LLM cache).
 
    Do **not** commit `apps/scorer/.cache/raw/` (gitignored — it holds full page text) or
    `apps/web/data/` (gitignored — generated on deploy).
@@ -113,7 +119,3 @@ Run steps 1–4 from `apps/scorer/`, step 5 from `apps/web/`.
 `engine-2026.06-57c7cd6e` = lexicon `lex-v1` + LLM `claude-haiku-4-5-20251001:llm-p1` +
 transformer `fed-stance` + `reconcile-v1`. The full record is in
 [`data/engine_version.json`](../../data/engine_version.json).
-
-<!-- M3 forward marker: once FR-012 lands, the `score` step will also generate each
-decision's cached, descriptive `tone_summary` (versioned separately from engine_version).
-Add that substep here when it ships — it does not change anything above. -->
