@@ -46,9 +46,11 @@ acceptance criteria pass.
 ## Milestone 2 — Context + currency
 *Exit criteria (PRD §11): cash-rate overlay live; the manual refresh process is documented and working.*
 
-- [ ] **Cash-rate overlay on the timeline** — implements FR-004 · DoD: PRD §8
-- [ ] **Manual refresh workflow** — implements FR-009 · DoD: PRD §8 (maintainer-triggered ingest + score of a new decision; document the runbook)
-- [ ] **Reliability & decision-day resilience** — NFR-007, NFR-008 · DoD: PRD §9 (static-first; last good data stays live if the job fails)
+> **Status — 2026-06-08:** **Built on `feat/m2-m3`; verified locally; pending deploy.** Cash-rate overlay (FR-004) and the refresh runbook + resilience docs (FR-009, NFR-007/008) are done. Overlay: a **"Cash rate"** toggle (off by default) adds a right-hand `%` axis + stepped cash-rate line aligned to the time axis, with a per-point tooltip; stable axis bounds; Reset clears it; light/dark/mobile; the table's existing **Cash rate** column is the accessible equivalent; pure `cashRateAxisBounds` unit-tested (12 web tests green); verified in preview (default-off, toggle, Year-filter interplay, tooltip, both themes, no console errors). Runbook: **`apps/scorer/REFRESH.md`** — dry-run validated end-to-end (ingest no-op, score **64/64 reused byte-identical**, pytest **89 passed**, sync 64-row CSV); engine-version + fail-safe rules documented. Resilience: static-first / last-good-data / spike-absorption / fetch-fail fallback (re-confirmed in preview) written up in `apps/web/README.md`. Plan: [M2 implementation plan](../../superpowers/plans/2026-06-08-rba-m2-implementation-plan.md). **Remaining:** merge to `main` → Vercel (stays no-index); FR-009's genuinely-new-decision path is confirmed opportunistically at the next RBA meeting.
+
+- [x] **Cash-rate overlay on the timeline** — implements FR-004 · DoD: PRD §8 — ✅ *Toggle (off by default) → right-hand `%` axis + stepped cash-rate line aligned to the same time axis; per-point tooltip; Reset clears it; stable bounds; light/dark; table column = accessible equivalent. Verified in preview. (Goes live with the M2 deploy.)*
+- [x] **Manual refresh workflow** — implements FR-009 · DoD: PRD §8 (maintainer-triggered ingest + score of a new decision; document the runbook) — ✅ *`apps/scorer/REFRESH.md` — ingest+score a new decision, engine-version + fail-safe rules, deploy + verify. **Dry-run validated** (64/64 reused byte-identical, 89 tests). The genuinely-new-decision path runs at the next RBA meeting.*
+- [x] **Reliability & decision-day resilience** — NFR-007, NFR-008 · DoD: PRD §9 (static-first; last good data stays live if the job fails) — ✅ *Static-first; a failed job aborts before write so last good data stays live; CDN absorbs decision-day spikes; fetch-fail fallback re-confirmed in preview. Documented in `apps/web/README.md`.*
 
 ## Milestone 3 — Depth (post-launch)
 *Exit criteria (PRD §11): date zoom/filter; latest-decision plain-language summary.*
